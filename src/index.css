@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+@theme {
+  --color-primary: #8c6d5a;
+  --color-secondary: #182418;
+  --color-accent: #e5af14;
+  --color-text-main: #2a2d2a;
+  --color-text-light: #565c56;
+  --color-text-muted: #a9b2a9;
+  --color-bg-light: #e8eee8;
+  --color-bg-lighter: #f0f3f9;
+  --color-bg-lightest: #f3f7f3;
+  --color-bg-dark: #465446;
+  
+  --font-sans: "Funnel Display", sans-serif;
+  --font-text: "Outfit", sans-serif;
+}
+
+body {
+  font-family: var(--font-text);
+  color: var(--color-text-main);
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+}
+
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+/* Base resets */
+@layer base {
+  a {
+    @apply transition-colors duration-300;
+  }
+}
+
+/* Swiper overrides */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+}
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  fill: none !important;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}
