@@ -60,7 +60,7 @@ const Header = () => {
             <img src="https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/logo-2.png" alt="Decoria" className="h-8 brightness-0 invert" />
             <button onClick={() => setMobileMenuOpen(false)} className="text-white"><X size={32} /></button>
           </div>
-          <nav className="flex flex-col space-y-6 text-white text-2xl font-sans">
+          <nav className="flex flex-col space-y-6 text-white text-2xl font-sans" onClick={() => setMobileMenuOpen(false)}>
            <Link to="/" className="hover:text-accent">Home</Link>
             <Link to="/about" className="hover:text-accent">
     About

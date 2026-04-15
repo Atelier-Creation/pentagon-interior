@@ -7,6 +7,7 @@ import WhyChooseUs from './sections/homePage/WhyChooseUs';
 import MarqueeSection from './sections/homePage/MarqueeSection';
 import Projects from './sections/homePage/Projects';
 import Testimonials from './sections/homePage/Testimonials';
+import ContactUs from './sections/homePage/ContactUs';
 import Footer from './sections/homePage/Footer';
 
 export default function HomePage() {
@@ -21,6 +22,7 @@ export default function HomePage() {
         <MarqueeSection />
         <Projects />
         <Testimonials />
+        <ContactUs />
       </main>
       <Footer />
     </div>

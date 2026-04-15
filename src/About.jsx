@@ -64,7 +64,7 @@ const visibleMembers = allMembers.slice(
        {/* dark green overlay */}
        <div className="absolute inset-0 bg-[#1f3d2b]/80"></div>
        {/*  BOOKING DROPDOWN (LEFT SIDE BELOW HEADER) */}
-       <div className="absolute top-28 left-[300px] z-20 group">
+       <div className="absolute top-28 left-4 md:left-[300px] z-20 group">
        
        {/* BUTTON */}
        <button className="text-white font-medium flex items-center gap-1">
@@ -112,27 +112,25 @@ const visibleMembers = allMembers.slice(
 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
     {/* LEFT SIDE */}
     {/* LEFT SIDE (FIXED PERFECT ALIGNMENT) */}
-<div className="relative w-full h-[560px]">
+<div className="relative w-full h-[400px] md:h-[560px]">
 
   {/* BIG IMAGE */}
   <img
     src="https://images.unsplash.com/photo-1600585152915-d208bec867a1"
-    className="absolute top-0 left-0 w-[420px] h-[420px] object-cover rounded-[40px]"
+    className="absolute top-0 left-0 w-[80%] md:w-[420px] h-[300px] md:h-[420px] object-cover rounded-[40px]"
   />
 
   {/* SMALL IMAGE (OVERLAP RIGHT) */}
   <img
     src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-    className="absolute top-[200px] left-[260px] w-[380px] h-[260px] object-cover rounded-3xl shadow-xl"
+    className="absolute top-[150px] md:top-[200px] right-0 md:left-[260px] w-[70%] md:w-[380px] h-[200px] md:h-[260px] object-cover rounded-3xl shadow-xl"
   />
 
   {/* CARD (BOTTOM LEFT CENTER) */}
-  <div className="absolute left-[120px] bottom-[40px] bg-[#2f4638] text-white px-8 py-6 rounded-2xl shadow-lg">
-    <h3 className="text-4xl font-bold leading-none">20+</h3>
+  <div className="absolute left-[5%] md:left-[120px] bottom-[20px] md:bottom-[40px] bg-[#2f4638] text-white px-8 py-6 rounded-2xl shadow-lg z-10">
+    <h3 className="text-3xl md:text-4xl font-bold leading-none">20+</h3>
     <p className="text-sm opacity-80 mt-1">Project Completed</p>
   </div>
-
-  
 
 </div>
     {/* RIGHT SIDE */}
@@ -163,7 +161,7 @@ const visibleMembers = allMembers.slice(
       </div>
 
       {/* HEADING */}
-      <h2 className="text-6xl font-semibold leading-[1.1] tracking-tight mb-6 text-gray-900">
+      <h2 className="text-4xl md:text-6xl font-semibold leading-[1.1] tracking-tight mb-6 text-gray-900">
         Innovating Interiors,<br />Inspiring Lives
       </h2>
 
@@ -230,9 +228,9 @@ const visibleMembers = allMembers.slice(
       </p>
 
       {/* TITLE */}
-      <h2 className="text-6xl font-bold leading-tight mb-6">
-        The Principles <br />
-        Behind Everything <br />
+      <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+        The Principles <br className="hidden md:block" />
+        Behind Everything <br className="hidden md:block" />
         We Do
       </h2>
 
@@ -271,15 +269,15 @@ const visibleMembers = allMembers.slice(
     <div
   onMouseEnter={() => setShowCircle(false)}
   onMouseLeave={() => setShowCircle(true)}
-  className={`w-[420px] h-[420px] bg-white rounded-full flex flex-col items-center justify-center text-center p-10 shadow-xl transition-all duration-300 ${
-    showCircle ? "opacity-100 scale-100" : "opacity-0 scale-90"
+  className={`w-full md:w-[420px] h-[350px] md:h-[420px] bg-white rounded-full flex flex-col items-center justify-center text-center p-10 shadow-xl transition-all duration-300 mt-12 md:mt-0 ${
+    showCircle ? "opacity-100 scale-100" : "md:opacity-0 md:scale-90"
   }`}
 >
   <Trophy className="w-8 h-8 text-gray-400 mb-2" />
 
   <p className="text-gray-500">Clean & Minimal</p>
 
-  <h3 className="text-2xl font-bold mt-2 mb-4">
+  <h3 className="text-xl md:text-2xl font-bold mt-2 mb-4">
     Contemporary Design
   </h3>
 
@@ -322,42 +320,27 @@ const visibleMembers = allMembers.slice(
     </p>
 
     {/* MAIN IMAGE */}
-    <div className="relative flex justify-center">
+    <div className="relative flex flex-col md:flex-row justify-center items-center gap-8">
 
       <img
         src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-        className="w-[700px] h-[380px] object-cover rounded-3xl shadow-lg"
+        className="w-full md:w-[700px] h-[300px] md:h-[380px] object-cover rounded-3xl shadow-lg"
       />
 
       {/* LEFT CIRCLE */}
-      <div className="absolute left-[120px] top-[40px] w-[240px] h-[240px] bg-white rounded-full shadow-lg flex flex-col items-center justify-center text-center p-6">
-
-      <Trophy className="w-8 h-8 text-gray-400 mb-2" />
-
-
-        <p className="text-xs text-gray-400">ND AWARDS</p>
-
-        <h3 className="font-semibold mt-2">
-          Trusted Interior <br /> Design Firm
-        </h3>
-
-        <p className="text-gray-400 mt-2">2026</p>
+      <div className="md:absolute md:left-[120px] md:top-[40px] w-[240px] h-[240px] bg-white rounded-full shadow-lg flex flex-col items-center justify-center text-center p-6">
+         <Trophy className="w-8 h-8 text-gray-400 mb-2" />
+         <p className="text-xs text-gray-400">ND AWARDS</p>
+         <h3 className="font-semibold mt-2">Trusted Interior <br /> Design Firm</h3>
+         <p className="text-gray-400 mt-2">2026</p>
       </div>
 
       {/* RIGHT CIRCLE */}
-      <div className="absolute right-[120px] top-[40px] w-[240px] h-[240px] bg-white rounded-full shadow-lg flex flex-col items-center justify-center text-center p-6">
-
-       
-
-<Trophy className="w-8 h-8 text-gray-400 mb-2" />
-
-        <p className="text-xs text-gray-400">ND AWARDS</p>
-
-        <h3 className="font-semibold mt-2">
-          Trusted Interior <br /> Design Firm
-        </h3>
-
-        <p className="text-gray-400 mt-2">2026</p>
+      <div className="md:absolute md:right-[120px] md:top-[40px] w-[240px] h-[240px] bg-white rounded-full shadow-lg flex flex-col items-center justify-center text-center p-6">
+         <Trophy className="w-8 h-8 text-gray-400 mb-2" />
+         <p className="text-xs text-gray-400">ND AWARDS</p>
+         <h3 className="font-semibold mt-2">Trusted Interior <br /> Design Firm</h3>
+         <p className="text-gray-400 mt-2">2026</p>
       </div>
 
     </div>
@@ -421,15 +404,15 @@ const visibleMembers = allMembers.slice(
   {/* CARDS */}
  <div className="overflow-hidden max-w-7xl mx-auto">
   <div
-    className="flex gap-10 transition-transform duration-500"
+    className="flex gap-6 md:gap-10 transition-transform duration-500"
     style={{
-      transform: `translateX(-${page * 100}%)`,
+      transform: `translateX(-${page * (window.innerWidth < 768 ? 100 : 33.33)}%)`,
     }}
   >
  {visibleMembers.map((item, i) => (
      <div
   key={i}
-  className="min-w-[33.33%] bg-white rounded-3xl overflow-hidden border shadow-sm hover:shadow-lg transition"
+  className="min-w-full md:min-w-[33.33%] bg-white rounded-3xl overflow-hidden border shadow-sm hover:shadow-lg transition"
 >
 
         {/* IMAGE */}

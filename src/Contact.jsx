@@ -30,7 +30,7 @@ export default function Contact() {
   {/* dark green overlay */}
   <div className="absolute inset-0 bg-[#1f3d2b]/80"></div>
   {/*  BOOKING DROPDOWN (LEFT SIDE BELOW HEADER) */}
-  <div className="absolute top-28 left-[300px] z-20 group">
+  <div className="absolute top-28 left-4 md:left-[300px] z-20 group">
   
   {/* BUTTON */}
   <button className="text-white font-medium flex items-center gap-1">
@@ -94,7 +94,7 @@ export default function Contact() {
   {/* <div className="absolute inset-0 bg-gradient-to-r from-[#2f4638] via-[#2f4638]/90 to-transparent"></div> */}
 
   {/* CURVE SHAPE */}
-  <div className="absolute right-[20%] top-[-100px] w-[500px] h-[500px] bg-[#3e5445] rounded-full opacity-40 blur-3xl"></div>
+  <div className="absolute right-[10%] md:right-[20%] top-[-100px] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#3e5445] rounded-full opacity-40 blur-3xl"></div>
 
 </div>
 
@@ -106,11 +106,11 @@ export default function Contact() {
   ✕ GET IN TOUCH
 </div>
 
-      <h2 className="text-6xl md:text-7xl font-semibold leading-[1.1] tracking-tight mb-6">
+      <h2 className="text-4xl md:text-7xl font-semibold leading-[1.1] tracking-tight mb-6">
         Start Your Conversation
       </h2>
 
-      <p className="text-gray-300 text-lg leading-relaxed mb-12 max-w-lg">
+      <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-12 max-w-lg">
         Reach us anytime, let’s design your dream together.
       </p>
 
@@ -147,7 +147,7 @@ export default function Contact() {
     </div>
 
     {/* RIGHT SIDE */}
-<div className="relative flex flex-col justify-center items-start text-left z-10 h-full pl-16">
+<div className="relative flex flex-col justify-center items-start text-left z-10 h-full md:pl-16">
       
 
       {/* PLANT */}
@@ -215,17 +215,17 @@ export default function Contact() {
   {["LA", "BOS", "NY"].map((city, i) => (
     <div
       key={i}
-      className="max-w-7xl w-full mx-auto bg-[#f6f7f8] rounded-3xl p-10 md:p-12 mb-10 flex items-center justify-between gap-10 shadow-sm border border-gray-200"
+      className="max-w-7xl w-full mx-auto bg-[#f6f7f8] rounded-3xl p-6 md:p-12 mb-10 flex flex-col md:flex-row items-center justify-between gap-10 shadow-sm border border-gray-200"
     >
       
       {/* LEFT TEXT */}
-      <div className="w-[35%]">
+      <div className="w-full md:w-[35%] text-center md:text-left">
         <p className="text-gray-600 leading-relaxed">
           34 Sunset Boulevard, Suite 500 Los Angeles,
           CA 90026 United States.
         </p>
 
-        <button className="mt-6 flex items-center gap-3 border border-[#1f3d2b] rounded-full px-6 py-3 group hover:bg-[#1f3d2b] transition">
+        <button className="mt-6 flex items-center justify-center md:justify-start gap-3 border border-[#1f3d2b] rounded-full px-6 py-3 group hover:bg-[#1f3d2b] transition mx-auto md:mx-0">
           
           <span className="w-10 h-10 flex items-center justify-center rounded-full border border-[#1f3d2b] group-hover:bg-white group-hover:text-[#1f3d2b] transition">
             →
@@ -239,7 +239,7 @@ export default function Contact() {
       </div>
 
       {/* CENTER IMAGE */}
-      <div className="relative w-[420px] h-[240px] rounded-2xl overflow-hidden">
+      <div className="relative w-full md:w-[420px] h-[240px] rounded-2xl overflow-hidden shadow-md">
         <img
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
           className="w-full h-full object-cover"
@@ -252,7 +252,7 @@ export default function Contact() {
       </div>
 
       {/* RIGHT CONTACT */}
-      <div className="w-1/3 space-y-6">
+      <div className="w-full md:w-1/3 space-y-6 flex flex-col items-center md:items-start">
 
         {/* PHONE */}
         <div className="flex items-center gap-4">

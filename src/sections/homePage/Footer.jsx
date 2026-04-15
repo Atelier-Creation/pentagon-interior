@@ -1,63 +1,94 @@
 import React from 'react';
-import { ChevronRight, ArrowRight } from 'lucide-react';
+import { FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white pt-20 pb-10">
-      <div className="container mx-auto px-4 max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          <div className="space-y-6">
-            <img src="https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/logo-2.png" alt="Decoria" className="h-10 brightness-0 invert" />
-            <p className="text-white/70">
-              Transforming spaces through thoughtful design and innovative layout solutions for global living.
+    <footer className="relative bg-[#2f4638] text-white overflow-hidden pt-24 pb-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-8 grid md:grid-cols-3 gap-16">
+        <div className="space-y-10">
+          <div>
+            <h2 className="text-4xl font-bold mb-4 font-sans">Need Help?</h2>
+            <p className="text-gray-300">
+              Send Mail us at{" "}
+              <span className="underline font-semibold">
+                info@decoria.com
+              </span>
             </p>
-            <div className="flex space-x-4">
-              {['Facebook', 'Twitter', 'Instagram'].map(social => (
-                <a key={social} href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:border-accent transition-colors">
-                  <span className="sr-only">{social}</span>
-                  <div className="w-4 h-4 bg-white rounded-sm" style={{clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)'}}></div>
-                </a>
-              ))}
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-semibold mb-2 font-sans">Newsletter</h3>
+            <p className="text-gray-300 mb-4">
+              Get exclusive offers and news delivered monthly.
+            </p>
+
+            <div className="flex items-center bg-white/10 rounded-xl px-4 py-3">
+              <FaEnvelope className="text-gray-300 mr-3" />
+              <input
+                placeholder="Your email address"
+                className="bg-transparent outline-none flex-1 text-white placeholder:text-gray-500"
+              />
+              <button className="bg-white text-black rounded-full w-10 h-10 flex items-center justify-center hover:bg-accent transition-colors">
+                ➤
+              </button>
             </div>
           </div>
-          
-          <div>
-            <h4 className="text-xl font-bold mb-6 font-sans">Quick Links</h4>
-            <ul className="space-y-3">
-              {['About Us', 'Services', 'Our Projects', 'Pricing Plans', 'Contact'].map(link => (
-                <li key={link}><a href="#" className="text-white/70 hover:text-accent transition-colors flex items-center gap-2"><ChevronRight size={14}/> {link}</a></li>
-              ))}
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-xl font-bold mb-6 font-sans">Contact Info</h4>
-            <ul className="space-y-4 text-white/70">
-              <li>123 Design Avenue, Suite 456<br/>Sydney, Australia 2000</li>
-              <li>info@decoria.steelthemes.com</li>
-              <li className="text-xl font-bold text-white">+61 (0) 2 9123 4567</li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-xl font-bold mb-6 font-sans">Newsletter</h4>
-            <p className="text-white/70 mb-4">Subscribe to our newsletter for latest updates and design tips.</p>
-            <form className="relative">
-              <input type="email" placeholder="Your Email Address" className="w-full bg-white/10 border border-white/20 rounded-full py-4 pl-6 pr-16 focus:outline-none focus:border-accent text-white" />
-              <button type="submit" className="absolute right-2 top-2 bottom-2 bg-accent hover:bg-white hover:text-primary text-primary w-12 rounded-full flex items-center justify-center transition-colors">
-                <ArrowRight size={20} />
+
+          <div className="flex gap-4">
+            {['Instagram', 'Facebook', 'TwitterX'].map((social) => (
+              <button key={social} className="px-5 py-2 border border-white/20 rounded-full flex items-center gap-2 hover:bg-white hover:text-[#2f4638] transition-all text-sm">
+                {social}
               </button>
-            </form>
+            ))}
           </div>
         </div>
-        
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
-          <p>© {new Date().getFullYear()} Decoria by Steelthemes. Recreated.</p>
-          <div className="flex space-x-6">
-            <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-6 font-sans">Essentials</h3>
+          <ul className="space-y-3 text-gray-400">
+            {['Our Story', 'How We Work', 'Services & Solutions', 'Case Studies', 'Client Testimonials', 'FAQs & Help', 'Blog & Insights'].map((item) => (
+              <li key={item} className="hover:text-white transition-colors cursor-pointer">{item}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-6 font-sans">Quick Links</h3>
+          <ul className="space-y-3 text-gray-400 mb-10">
+            {['Explore Our Work', 'Start Your Project', 'Meet the Team', 'Read Our Insights', 'Request a Quote', 'Let’s Connect'].map((item) => (
+              <li key={item} className="hover:text-white transition-colors cursor-pointer">{item}</li>
+            ))}
+          </ul>
+
+          <div className="space-y-4 pt-4 border-t border-white/10">
+            <div>
+              <p className="text-gray-400 text-sm">Just Mail Us:</p>
+              <p className="font-semibold">Brimmer St, Boston, MA 02108</p>
+            </div>
+
+            <div>
+              <p className="text-gray-400 text-sm">Phone</p>
+              <p className="font-semibold">[+44] 987 65 4321 & 31</p>
+            </div>
           </div>
         </div>
+      </div>
+
+      <div className="relative mt-20 overflow-hidden py-4 border-y border-white/5">
+        <div className="absolute inset-4 big-dash-box pointer-events-none"></div>
+
+        <div className="absolute top-3 left-3 w-3 h-3 border border-white/30"></div>
+        <div className="absolute top-3 right-3 w-3 h-3 border border-white/30"></div>
+        <div className="absolute bottom-3 left-3 w-3 h-3 border border-white/30"></div>
+        <div className="absolute bottom-3 right-3 w-3 h-3 border border-white/30"></div>
+
+        <div className="whitespace-nowrap animate-marquee text-[120px] md:text-[160px] font-bold tracking-wide text-transparent stroke-text opacity-15">
+          Reliable ✦ Quality Assured ✦ Budget Friendly ✦ Reliable ✦ Quality Assured ✦ Budget Friendly ✦
+        </div>
+      </div>
+
+      <div className="relative z-10 text-center mt-12 text-gray-400 text-sm px-8">
+        <p>Copyrights © {new Date().getFullYear()} Decoria. All rights reserved.</p>
       </div>
     </footer>
   );
