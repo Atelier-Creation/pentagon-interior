@@ -17,7 +17,8 @@ const Hero = () => {
     <section className="h-screen w-full relative">
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
-        autoplay={{ delay: 6000, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        speed={1200}
         pagination={{ clickable: true, el: '.swiper-pagination' }}
         navigation={{
           prevEl: prevRef.current,
