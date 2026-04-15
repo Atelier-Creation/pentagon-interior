@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Search, ShoppingCart, ArrowRight, Menu, X } from 'lucide-react';
 import logo from '../../assets/logo-2.png';
+import { Link } from "react-router-dom";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,12 +21,20 @@ const Header = () => {
         </a>
         
         <nav className="hidden lg:flex items-center space-x-8 text-white font-medium">
-          <a href="#" className="hover:text-accent transition-colors">Home</a>
+          <Link to="/" className="hover:text-accent transition-colors">
+  Home
+</Link>
+  <Link to="/about" className="hover:text-accent transition-colors">
+    About
+  </Link>
           <a href="#" className="hover:text-accent transition-colors">Pages</a>
           <a href="#" className="hover:text-accent transition-colors">Services</a>
           <a href="#" className="hover:text-accent transition-colors">Projects</a>
           <a href="#" className="hover:text-accent transition-colors">Blog</a>
-          <a href="#" className="hover:text-accent transition-colors">Contact</a>
+         <Link to="/contact" className="hover:text-accent transition-colors">
+  Contact
+</Link>
+
         </nav>
 
         <div className="hidden lg:flex items-center space-x-6 text-white">
@@ -52,11 +61,16 @@ const Header = () => {
             <button onClick={() => setMobileMenuOpen(false)} className="text-white"><X size={32} /></button>
           </div>
           <nav className="flex flex-col space-y-6 text-white text-2xl font-sans">
-            <a href="#" className="hover:text-accent">Home</a>
+           <Link to="/" className="hover:text-accent">Home</Link>
+            <Link to="/about" className="hover:text-accent">
+    About
+  </Link>
             <a href="#" className="hover:text-accent">Pages</a>
             <a href="#" className="hover:text-accent">Services</a>
             <a href="#" className="hover:text-accent">Projects</a>
-            <a href="#" className="hover:text-accent">Contact</a>
+            <Link to="/contact" className="hover:text-accent">
+  Contact
+</Link>
           </nav>
         </div>
       )}
