@@ -76,17 +76,13 @@ const Hero = () => {
                       {/* Rotating text SVG */}
                       <svg viewBox="0 0 100 100" className="w-full h-full text-white uppercase tracking-[0.1em] font-sans font-bold animate-[spin_12s_linear_infinite]">
                         <path id={`textPath-legacy-${i}`} d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent"></path>
-                        <text className="text-[9.5px] fill-current">
-                          <textPath href={`#textPath-legacy-${i}`} startOffset="0%">A LEGACY OF PURPOSEFUL DESIGN - </textPath>
+                        <text className="text-[7.7px] fill-current">
+                          <textPath href={`#textPath-legacy-${i}`} startOffset="0%">Pantagon construction & interiors - </textPath>
                         </text>
                       </svg>
                       {/* inner Icon */}
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-white">
-                          <path stroke="currentColor" strokeWidth="1.5" d="M3 21h18M5 21V12h4v3h4v3h4v3" />
-                          <path fill="currentColor" d="M15 13c0-2-1-3-2-3s-2 1-2 3h4z" />
-                          <rect x="12" y="13" width="2" height="2" fill="currentColor" />
-                        </svg>
+                        <img src="/fav-logo.png" alt="Pentagon Construction & Interiors" className='w-10 h-10 brightness-0 invert' />
                       </div>
                     </div>
                     <div>
