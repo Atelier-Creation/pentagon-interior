@@ -39,8 +39,7 @@ const steps = [
 
 export default function HowWeWork() {
   return (
-    <section className="relative bg-[#384238] text-white py-28 overflow-hidden">
-
+<section className="relative bg-primary text-white py-28 overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 max-w-[1400px] text-center">
 
         {/* TOP LABEL */}
