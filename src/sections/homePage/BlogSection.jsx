@@ -30,7 +30,7 @@ const blogs = [
 
 export default function BlogSection() {
   return (
-<section className="py-28 bg-white">
+<section className="py-15 bg-white">
       <div className="max-w-[1350px] mx-auto px-6 lg:px-10">
 
         {/* TOP */}

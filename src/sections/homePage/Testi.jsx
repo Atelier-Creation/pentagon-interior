@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Star, ArrowLeft, ArrowRight } from "lucide-react";
 
 const testimonials = [
   {
@@ -86,8 +87,8 @@ export default function Testimonials() {
   </div>
 
   {/* CENTER RATING */}
-  <div className="px-5 py-2 border border-gray-300 rounded-full text-sm bg-white shadow-sm">
-    ⭐ {t.rating} OUT OF 5
+  <div className="px-5 py-2 border border-gray-300 rounded-full text-sm bg-white shadow-sm flex items-center gap-2">
+    <Star size={16} className="text-[#fbbc05] fill-[#fbbc05]" /> <span className="font-medium text-gray-700">{t.rating} OUT OF 5</span>
   </div>
 
   {/* RIGHT LINE + DIAMONDS */}
@@ -108,17 +109,16 @@ export default function Testimonials() {
         {/* PREV */}
         <button
           onClick={prev}
-          className="absolute left-[-120px] top-1/2 -translate-y-1/2 text-gray-400 flex items-center gap-2"
+          className="absolute left-[20px] lg:left-[-120px] top-[110%] lg:top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary flex items-center gap-2 transition-colors font-medium font-sans"
         >
-          ← <span>Prev</span>
+          <ArrowLeft size={20} /> <span>Prev</span>
         </button>
 
-        {/* NEXT */}
         <button
           onClick={next}
-          className="absolute right-[-120px] top-1/2 -translate-y-1/2 text-gray-400 flex items-center gap-2"
+          className="absolute right-[20px] lg:right-[-120px] top-[110%] lg:top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary flex items-center gap-2 transition-colors font-medium font-sans"
         >
-          <span>Next</span> →
+          <span>Next</span> <ArrowRight size={20} />
         </button>
 
       </div>

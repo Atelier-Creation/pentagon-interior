@@ -28,9 +28,9 @@ export default function HomePage() {
         <HowWeWork />
         <Performance />
         <Testi />
-        <PromoVideo /> 
+        <PromoVideo />
         <MarqueeSection />
-        <BlogSection /> 
+        <BlogSection />
         <Projects />
         <Testimonials />
         <ContactUs />

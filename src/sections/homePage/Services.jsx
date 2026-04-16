@@ -81,7 +81,7 @@ const Services = () => {
             {services.map((srv, idx) => (
               <div 
                 key={idx}
-                className="group relative w-full h-[120px] lg:h-[160px] flex items-stretch border-b border-white/20 hover:border-white transition-colors duration-500 cursor-pointer"
+                className="group relative w-full min-h-[120px] lg:h-[160px] py-4 lg:py-0 flex items-stretch border-b border-white/20 hover:border-white transition-colors duration-500 cursor-pointer"
               >
                 {/* Hover Top Border line override to fake both active borders */}
                 <div className="absolute top-[-1px] left-0 right-0 h-[1px] bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>

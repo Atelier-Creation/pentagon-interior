@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6">
           <div className="max-w-2xl">
             <span className="text-accent uppercase tracking-widest text-sm font-semibold block mb-2">Recent Creations</span>
             <h2 className="text-4xl md:text-5xl font-bold font-sans text-text-main">A Selection of Our Hand-Crafted Projects</h2>

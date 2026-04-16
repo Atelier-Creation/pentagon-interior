@@ -30,19 +30,19 @@ const MarqueeSection = () => {
           <div key={i} className="group/item relative flex items-center shrink-0 px-8">
 
             <span
-              className="text-[80px] lg:text-[130px] font-sans font-black uppercase transition-all duration-300 text-transparent group-hover/item:text-primary/10"
+              className="text-[50px] md:text-[80px] lg:text-[130px] font-sans font-black uppercase transition-all duration-300 text-transparent group-hover/item:text-primary/10"
               style={{ WebkitTextStroke: '2px #d8d0cbff', paddingBottom: '10px' }}
             >
               {item.text}
             </span>
 
             {/* The Separator Star */}
-            <svg className="w-12 h-12 lg:w-16 lg:h-16 mx-10 text-primary/30 group-hover/item:text-primary/10 transition-colors" viewBox="0 0 24 24" fill="currentColor">
+            <svg className="w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16 mx-6 md:mx-10 text-primary/30 group-hover/item:text-primary/10 transition-colors" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2C12 7.52285 16.4772 12 22 12C16.4772 12 12 16.4772 12 22C12 16.4772 7.52285 12 2 12C7.52285 12 12 7.52285 12 2Z" />
             </svg>
 
             {/* Center Floating Pop-up Card */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] h-[140px] lg:w-[320px] lg:h-[180px] rounded-[6rem] lg:rounded-[8rem] overflow-hidden opacity-0 scale-[0.3] group-hover/item:opacity-100 group-hover/item:scale-100 z-50 pointer-events-none transition-all duration-500 ease-out shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-[5px] border-white">
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[180px] h-[100px] md:w-[240px] md:h-[140px] lg:w-[320px] lg:h-[180px] rounded-[4rem] md:rounded-[6rem] lg:rounded-[8rem] overflow-hidden opacity-0 scale-[0.3] group-hover/item:opacity-100 group-hover/item:scale-100 z-50 pointer-events-none transition-all duration-500 ease-out shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-[5px] border-white">
               <img src={item.img} alt={item.text} className="w-full h-full object-cover" />
             </div>
 

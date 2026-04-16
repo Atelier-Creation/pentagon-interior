@@ -117,7 +117,7 @@ const WhyChooseUs = () => {
               viewport={{ once: true }}
               className="w-full lg:w-[35%] flex justify-center"
             >
-              <div className="w-[340px] md:w-[380px] h-[520px] rounded-t-[2.5rem] rounded-b-[15rem] border border-gray-300 overflow-hidden flex flex-col bg-white shadow-sm">
+              <div className="w-full max-w-[340px] md:max-w-[380px] h-[520px] rounded-t-[2.5rem] rounded-b-[15rem] border border-gray-300 overflow-hidden flex flex-col bg-white shadow-sm">
                 
                 {/* Top Info section */}
                 <div className="flex flex-col justify-center px-10 pt-10 pb-6 relative z-10 bg-white">

@@ -49,7 +49,7 @@ const Hero = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="text-5xl md:text-7xl lg:text-[5.5rem] text-white font-sans font-bold leading-[1.05] tracking-tight mb-16 relative w-fit"
+                    className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] text-white font-sans font-bold leading-[1.05] tracking-tight mb-8 sm:mb-16 relative w-fit mt-8 sm:mt-0"
                   >
                     {slide.line1} <br /> {slide.line2} <br />
                     <span className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-8 mt-2">
@@ -70,9 +70,9 @@ const Hero = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="inline-flex items-center border border-white/20 rounded-[4rem] pr-16 pl-6 py-5 backdrop-blur-sm bg-black/10"
+                    className="flex sm:inline-flex items-center border border-white/20 rounded-[2rem] sm:rounded-[4rem] px-6 sm:pr-16 sm:pl-6 py-4 sm:py-5 backdrop-blur-sm bg-black/10 flex-col sm:flex-row text-center sm:text-left w-full sm:w-auto"
                   >
-                    <div className="w-32 h-32 relative mr-8 flex-shrink-0">
+                    <div className="w-24 h-24 sm:w-32 sm:h-32 relative sm:mr-8 flex-shrink-0 mb-2 sm:mb-0">
                       {/* Rotating text SVG */}
                       <svg viewBox="0 0 100 100" className="w-full h-full text-white uppercase tracking-[0.1em] font-sans font-bold animate-[spin_12s_linear_infinite]">
                         <path id={`textPath-legacy-${i}`} d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent"></path>
@@ -86,8 +86,8 @@ const Hero = () => {
                       </div>
                     </div>
                     <div>
-                      <div className="text-white text-[2rem] font-bold font-sans mb-1">1500 +</div>
-                      <div className="text-white/80 text-sm leading-relaxed font-sans font-medium tracking-wide">
+                      <div className="text-white text-2xl sm:text-[2rem] font-bold font-sans mb-1">1500 +</div>
+                      <div className="text-white/80 text-xs sm:text-sm leading-relaxed font-sans font-medium tracking-wide">
                         Unique Spaces Designed<br />and Counting
                       </div>
                     </div>
@@ -95,7 +95,7 @@ const Hero = () => {
                 </div>
 
                 {/* Right Area */}
-                <div className="md:w-[35%] flex flex-col justify-end h-full pt-16">
+                <div className="md:w-[35%] flex flex-col justify-end h-full pt-8 md:pt-16 pb-12 md:pb-0 items-center md:items-start text-center md:text-left">
                   <motion.div 
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}

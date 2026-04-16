@@ -12,7 +12,7 @@ export default function PromoVideo() {
       {/* CENTER CIRCLE */}
       <div className="relative z-10 flex items-center justify-center h-full">
 
-        <div className="relative w-[420px] h-[420px] rounded-full bg-[#384238]/90 backdrop-blur flex flex-col items-center justify-center text-center text-white p-10">
+        <div className="relative w-[420px] h-[420px] rounded-full bg-[#927562d4]/90 backdrop-blur flex flex-col items-center justify-center text-center text-white p-10">
 
           {/* SMALL ICON */}
           <div className="mb-4">

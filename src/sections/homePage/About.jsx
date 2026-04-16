@@ -13,7 +13,7 @@ const About = () => {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="w-full md:w-3/4 lg:w-[32%] relative flex flex-col"
+            className="w-full md:w-1/2 lg:w-[32%] mx-auto lg:mx-0 relative flex flex-col"
           >
             {/* Folder Tab / Flap on the right */}
             <div className="hidden lg:flex absolute top-20 bottom-20 -right-12 w-12 border-y border-r border-gray-300 rounded-r-3xl z-0 items-center justify-center">
@@ -25,7 +25,7 @@ const About = () => {
             </div>
 
             {/* Main Left Card Wrapper */}
-            <div className="border border-gray-300 rounded-t-[3rem] rounded-b-[15rem] bg-white relative z-10 flex flex-col items-center pt-14 overflow-hidden h-[550px] w-full">
+            <div className="border border-gray-300 rounded-t-[3rem] rounded-b-[15rem] bg-white relative z-10 flex flex-col items-center pt-14 overflow-hidden h-[480px] sm:h-[550px] w-full max-w-[400px] mx-auto lg:max-w-none">
 
               {/* Top content */}
               <div className="z-20 flex flex-col items-center text-center px-10 relative bg-white">
@@ -60,7 +60,7 @@ const About = () => {
 
               {/* Giant Stroke 13 */}
               <div
-                className="text-[200px] leading-[0.8] font-bold text-white z-20 mt-2 relative font-sans tracking-tighter mix-blend-normal"
+                className="text-[140px] sm:text-[200px] leading-[0.8] font-bold text-white z-20 mt-2 relative font-sans tracking-tighter mix-blend-normal"
                 style={{ WebkitTextStroke: '2px #2a2d2a' }}
               >
                 13
@@ -87,7 +87,7 @@ const About = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="w-full lg:w-[40%] flex flex-col justify-center py-4 lg:pl-10"
+            className="w-full md:w-1/2 lg:w-[40%] flex flex-col justify-center py-4 lg:pl-10"
           >
             {/* Small Badge */}
             <div className="border border-gray-200 rounded-full py-1.5 px-3 w-max flex items-center gap-2 mb-6">
@@ -141,10 +141,10 @@ const About = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="w-full md:w-1/2 lg:w-[28%] flex flex-col items-center relative mt-12 lg:mt-0"
+            className="w-full md:w-1/2 lg:w-[28%] max-w-[400px] mx-auto lg:max-w-none flex flex-col items-center relative mt-12 lg:mt-0"
           >
             {/* The Background Dark Box */}
-            <div className="bg-primary rounded-t-[2.5rem] rounded-b-[15rem] w-full relative overflow-hidden h-[450px] flex flex-col items-center text-center shadow-md pt-12 pb-8">
+            <div className="bg-primary rounded-t-[2.5rem] rounded-b-[15rem] w-full relative overflow-hidden h-[400px] sm:h-[450px] flex flex-col items-center text-center shadow-md pt-12 pb-8">
               {/* Internal Image layer */}
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&w=600&q=80')] bg-cover bg-center mix-blend-overlay opacity-30"></div>
               {/* Gradient overlay for readability */}
