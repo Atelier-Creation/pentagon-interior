@@ -22,47 +22,19 @@ export default function Contact() {
   className="h-[420px] flex items-center justify-center relative text-white"
   style={{
     backgroundImage:
-      "url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2070&auto=format&fit=crop')",
+      "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')",
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}
 >
   {/* dark green overlay */}
   <div className="absolute inset-0 bg-primary-dark/80"></div>
-  {/*  BOOKING DROPDOWN (LEFT SIDE BELOW HEADER) */}
-  <div className="absolute top-28 left-4 md:left-[300px] z-20 group">
-  
-  {/* BUTTON */}
-  <button className="text-white font-medium flex items-center gap-1">
-    Booking ▾
-  </button>
 
-  {/* DROPDOWN */}
-  <div className="absolute left-0 mt-3 w-52 bg-white text-black rounded-xl shadow-lg 
-                  opacity-0 invisible 
-                  group-hover:opacity-100 group-hover:visible 
-                  transition-all duration-300">
-
-    <div className="px-4 py-3 border-b hover:bg-gray-100 cursor-pointer">
-      Events
-    </div>
-
-    <div className="px-4 py-3 border-b hover:bg-gray-100 cursor-pointer">
-      Booking Page 1
-    </div>
-
-    <div className="px-4 py-3 hover:bg-gray-100 cursor-pointer">
-      Booking Page 2
-    </div>
-
-  </div>
-
-</div>
   <div className="relative text-center">
     <h1 className="text-5xl md:text-6xl font-bold">
       Contact Us
     </h1>
-   <p className="mt-4 text-gray-300 text-lg flex justify-center gap-2">
+   <p className="mt-4 text-white/70 text-lg flex justify-center gap-2">
   <Link to="/" className="hover:text-white cursor-pointer">
     Home
   </Link>
@@ -83,7 +55,7 @@ export default function Contact() {
   className="absolute right-0 top-0 h-full w-[60%]"
   style={{
     backgroundImage:
-      "url('https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=2070&auto=format&fit=crop')",
+      "url('https://images.unsplash.com/photo-1541888941259-7a974dfb9a51?q=80&w=2070&auto=format&fit=crop')",
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}
@@ -110,7 +82,7 @@ export default function Contact() {
         Start Your Conversation
       </h2>
 
-      <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-12 max-w-lg">
+      <p className="text-white/70 text-base md:text-lg leading-relaxed mb-12 max-w-lg">
         Reach us anytime, let’s design your dream together.
       </p>
 
@@ -166,7 +138,7 @@ export default function Contact() {
       <FaMapMarkerAlt />
     </div>
     <div>
-      <p className="text-sm text-gray-300">Just Mail Us:</p>
+      <p className="text-sm text-white/70">Just Mail Us:</p>
       <p className="font-semibold">Brimmer St, Boston, MA 02108</p>
     </div>
   </div>
@@ -177,7 +149,7 @@ export default function Contact() {
       <FaPhoneAlt />
     </div>
     <div>
-      <p className="text-sm text-gray-300">Need help? Call Us:</p>
+      <p className="text-sm text-white/70">Need help? Call Us:</p>
       <p className="font-semibold">+1800900122</p>
     </div>
   </div>
@@ -188,7 +160,7 @@ export default function Contact() {
       <FaEnvelope />
     </div>
     <div>
-      <p className="text-sm text-gray-300">Just Mail Us:</p>
+      <p className="text-sm text-white/70">Just Mail Us:</p>
       <p className="font-semibold">support@gmail.com</p>
     </div>
   </div>
@@ -281,127 +253,7 @@ export default function Contact() {
     </div>
   ))}
 </div>
-{/* 
-<div className="relative bg-[#2f4638] text-white overflow-hidden pt-24 pb-16">
 
-  
-
-
-  <div className="relative z-10 max-w-7xl mx-auto px-8 grid md:grid-cols-3 gap-16">
-
-    
-    <div className="space-y-10">
-
-      <div>
-        <h2 className="text-4xl font-bold mb-4">Need Help?</h2>
-        <p className="text-gray-300">
-          Send Mail us at{" "}
-          <span className="underline font-semibold">
-            info@decoria.com
-          </span>
-        </p>
-      </div>
-
-   
-      <div>
-        <h3 className="text-2xl font-semibold mb-2">Newsletter</h3>
-        <p className="text-gray-300 mb-4">
-          Get exclusive offers and news delivered monthly.
-        </p>
-
-        <div className="flex items-center bg-white/10 rounded-xl px-4 py-3">
-          <FaEnvelope className="text-gray-300 mr-3" />
-          <input
-            placeholder="Your email address"
-            className="bg-transparent outline-none flex-1 text-white"
-          />
-          <button className="bg-white text-black rounded-full w-10 h-10 flex items-center justify-center">
-            ➤
-          </button>
-        </div>
-      </div>
-
-      <div className="flex gap-4">
-        <button className="px-4 py-2 border rounded-full flex items-center gap-2">
-          Instagram
-        </button>
-        <button className="px-4 py-2 border rounded-full flex items-center gap-2">
-          Facebook
-        </button>
-        <button className="px-4 py-2 border rounded-full flex items-center gap-2">
-          TwitterX
-        </button>
-      </div>
-
-    </div>
-
-   
-    <div>
-      <h3 className="text-xl font-semibold mb-6">Essentials</h3>
-      <ul className="space-y-3 text-gray-300">
-        <li>Our Story</li>
-        <li>How We Work</li>
-        <li>Services & Solutions</li>
-        <li>Case Studies</li>
-        <li>Client Testimonials</li>
-        <li>FAQs & Help</li>
-        <li>Blog & Insights</li>
-      </ul>
-    </div>
-
-    
-    <div>
-      <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
-      <ul className="space-y-3 text-gray-300 mb-10">
-        <li>Explore Our Work</li>
-        <li>Start Your Project</li>
-        <li>Meet the Team</li>
-        <li>Read Our Insights</li>
-        <li>Request a Quote</li>
-        <li>Let’s Connect</li>
-      </ul>
-
-      <div className="space-y-4">
-        <p className="text-gray-400">Just Mail Us:</p>
-        <p className="font-semibold">
-          Brimmer St, Boston, MA 02108
-        </p>
-
-        <p className="text-gray-400 mt-4">Phone</p>
-        <p className="font-semibold">
-          [+44] 987 65 4321 & 31
-        </p>
-      </div>
-    </div>
-
-  </div>
-<div className="relative mt-20 overflow-hidden py-2">
-
-  <div className="absolute inset-4 big-dash-box pointer-events-none"></div>
-
-
-  <div className="absolute top-3 left-3 w-3 h-3 border border-white/30"></div>
-  <div className="absolute top-3 right-3 w-3 h-3 border border-white/30"></div>
-  <div className="absolute bottom-3 left-3 w-3 h-3 border border-white/30"></div>
-  <div className="absolute bottom-3 right-3 w-3 h-3 border border-white/30"></div>
-
- 
-  <div className="whitespace-nowrap animate-marquee 
-      text-[140px] md:text-[180px] 
-      font-bold tracking-wide 
-      text-transparent stroke-text opacity-40">
-
-    Reliable ✦ Quality Assured ✦ Budget Friendly ✦ Reliable ✦
-
-  </div>
-
-</div>
- 
-  <div className="relative z-10 text-center mt-16 text-gray-300 border-t border-white/10 pt-6">
-    Copyrights© 2026 Decoria. All rights reserved.
-  </div>
-
-</div> */}
          <Footer />
    
     </>

@@ -9,7 +9,7 @@
 }
 
 .animate-marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee 15s linear infinite;
 }
 .big-dash {
   border-top: 2px dashed rgba(87, 72, 53, 0.25);

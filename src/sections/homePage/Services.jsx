@@ -44,7 +44,7 @@ const Services = () => {
     {
       num: '04',
       title: 'Custom Furniture & Fixtures',
-      image: 'https://images.unsplash.com/photo-1540932239986-30128078f3f5?auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&w=600&q=80',
       desc: "Designing and sourcing bespoke furniture pieces that perfectly match your desired aesthetic and dimensions.",
       details: ['Bespoke Cabinetry', 'Upholstery Selection', 'Fixture Sourcing'],
       icon: (
@@ -113,7 +113,7 @@ const Services = () => {
                   <div className="absolute right-0 top-1/2 -translate-y-1/2 z-[100] w-[340px] h-[360px] rounded-[1.5rem] overflow-hidden opacity-0 invisible scale-95 group-hover:opacity-100 group-hover:visible group-hover:scale-100 group-hover:pointer-events-auto shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 transition-all duration-500 origin-center hidden lg:block mr-8 pointer-events-none">
                     <img src={srv.image} className="absolute inset-0 w-full h-full object-cover" alt={srv.title} />
                     {/* Glassmorphism Inner Card Overlay */}
-                    <div className="absolute inset-3 rounded-[1.2rem] bg-gradient-to-br from-primary/95 to-primary/80 backdrop-blur-sm p-7 flex flex-col justify-center border border-white/10">
+                    <div className="absolute inset-3 rounded-[1.2rem] bg-gradient-to-br from-primary/65 to-primary/50 backdrop-blur-xs p-7 flex flex-col justify-center border border-white/10">
                       <p className="text-white/80 text-[14px] leading-relaxed mb-6 font-text">
                         {srv.desc}
                       </p>

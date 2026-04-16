@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="space-y-10">
           <div>
             <h2 className="text-4xl font-bold mb-4 font-sans">Need Help?</h2>
-            <p className="text-gray-300">
+            <p className="text-white/80">
               Send Mail us at{" "}
               <span className="underline font-semibold">
                 info@decoria.com
@@ -18,15 +18,15 @@ const Footer = () => {
 
           <div>
             <h3 className="text-2xl font-semibold mb-2 font-sans">Newsletter</h3>
-            <p className="text-gray-300 mb-4">
+            <p className="text-white/80 mb-4">
               Get exclusive offers and news delivered monthly.
             </p>
 
             <div className="flex items-center bg-white/10 rounded-xl px-4 py-3">
-              <FaEnvelope className="text-gray-300 mr-3" />
+              <FaEnvelope className="text-white/80 mr-3" />
               <input
                 placeholder="Your email address"
-                className="bg-transparent outline-none flex-1 text-white placeholder:text-gray-500"
+                className="bg-transparent outline-none flex-1 text-white placeholder:text-white/50"
               />
               <button className="bg-white text-black rounded-full w-10 h-10 flex items-center justify-center hover:bg-accent transition-colors">
                 ➤
@@ -45,7 +45,7 @@ const Footer = () => {
 
         <div>
           <h3 className="text-xl font-semibold mb-6 font-sans">Essentials</h3>
-          <ul className="space-y-3 text-gray-400">
+          <ul className="space-y-3 text-white/60">
             {['Our Story', 'How We Work', 'Services & Solutions', 'Case Studies', 'Client Testimonials', 'FAQs & Help', 'Blog & Insights'].map((item) => (
               <li key={item} className="hover:text-white transition-colors cursor-pointer">{item}</li>
             ))}
@@ -54,7 +54,7 @@ const Footer = () => {
 
         <div>
           <h3 className="text-xl font-semibold mb-6 font-sans">Quick Links</h3>
-          <ul className="space-y-3 text-gray-400 mb-10">
+          <ul className="space-y-3 text-white/60 mb-10">
             {['Explore Our Work', 'Start Your Project', 'Meet the Team', 'Read Our Insights', 'Request a Quote', 'Let’s Connect'].map((item) => (
               <li key={item} className="hover:text-white transition-colors cursor-pointer">{item}</li>
             ))}
@@ -62,12 +62,12 @@ const Footer = () => {
 
           <div className="space-y-4 pt-4 border-t border-white/10">
             <div>
-              <p className="text-gray-400 text-sm">Just Mail Us:</p>
+              <p className="text-white/60 text-sm">Just Mail Us:</p>
               <p className="font-semibold">Brimmer St, Boston, MA 02108</p>
             </div>
 
             <div>
-              <p className="text-gray-400 text-sm">Phone</p>
+              <p className="text-white/60 text-sm">Phone</p>
               <p className="font-semibold">[+44] 987 65 4321 & 31</p>
             </div>
           </div>
@@ -87,8 +87,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="relative z-10 text-center mt-12 text-gray-400 text-sm px-8">
-        <p>Copyrights © {new Date().getFullYear()} Decoria. All rights reserved.</p>
+      <div className="relative z-10 text-center mt-12 text-white/60 text-sm px-8">
+        <p>Copyrights © {new Date().getFullYear()} Pentagon Constructions & Interiors. All rights reserved.</p>
       </div>
     </footer>
   );
