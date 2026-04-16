@@ -1,20 +1,17 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
-import 'swiper/css/pagination';
 
 const Testimonials = () => {
   return (
     <section className="relative py-24 bg-bg-lightest">
-      <div className="absolute inset-0 bg-[url('https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/pattern-dot-1-1.png')] bg-center bg-cover opacity-30 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[url('https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/pattern-dot-1-1.png')] bg-center bg-cover opacity-5 pointer-events-none"></div>
       <div className="container relative mx-auto px-4 max-w-4xl text-center z-10">
         <h2 className="text-4xl md:text-5xl font-bold font-sans text-text-main mb-12">Client Feedback</h2>
-        
         <Swiper
-          modules={[Pagination, Autoplay]}
-          pagination={{ clickable: true }}
+          modules={[Autoplay]}
           autoplay={{ delay: 4000 }}
           className="pb-16"
         >
