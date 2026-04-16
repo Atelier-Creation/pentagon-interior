@@ -100,7 +100,7 @@ const WhyChooseUs = () => {
                   </text>
                 </svg>
                 {/* Center Dark Base underneath the text ring */}
-                <div className="w-[66px] h-[66px] bg-[#384238] rounded-full flex items-center justify-center relative z-10 shadow-lg">
+                <div className="w-[66px] h-[66px] bg-primary rounded-full flex items-center justify-center relative z-10 shadow-lg">
                   <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" className="w-7 h-7">
                     <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                     <polyline points="9 22 9 12 15 12 15 22" />
@@ -161,14 +161,14 @@ const WhyChooseUs = () => {
                          </svg>
                        </div>
                        {/* Core circle mask */}
-                       <div className="w-[56px] h-[56px] rounded-full bg-[#f0f4f1] border border-gray-200 relative z-10 flex items-center justify-center text-[#384238] group-hover:bg-[#384238] group-hover:text-white transition-colors duration-300 shadow-sm">
+                       <div className="w-[56px] h-[56px] rounded-full bg-[#f0f4f1] border border-gray-200 relative z-10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300 shadow-sm">
                           {feature.icon}
                        </div>
                      </div>
 
                      {/* Text Body */}
                      <div className="pt-1">
-                       <h4 className="text-[18px] font-bold font-sans text-[#2a2d2a] mb-1.5 tracking-tight group-hover:text-[#384238] transition-colors">{feature.title}</h4>
+                       <h4 className="text-[18px] font-bold font-sans text-[#2a2d2a] mb-1.5 tracking-tight group-hover:text-primary transition-colors">{feature.title}</h4>
                        <p className="text-gray-500 text-[14px] leading-relaxed max-w-[92%]">{feature.desc}</p>
                      </div>
                    </div>

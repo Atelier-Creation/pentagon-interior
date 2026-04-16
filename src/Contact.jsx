@@ -28,7 +28,7 @@ export default function Contact() {
   }}
 >
   {/* dark green overlay */}
-  <div className="absolute inset-0 bg-[#1f3d2b]/80"></div>
+  <div className="absolute inset-0 bg-primary-dark/80"></div>
   {/*  BOOKING DROPDOWN (LEFT SIDE BELOW HEADER) */}
   <div className="absolute top-28 left-4 md:left-[300px] z-20 group">
   
@@ -73,7 +73,7 @@ export default function Contact() {
 </div>
 
  {/* 🔹 CONTACT SECTION */}
-<div className="relative py-32 px-8 bg-[#2f4638] text-white overflow-hidden">
+<div className="relative py-32 px-8 bg-primary text-white overflow-hidden">
 
 {/* RIGHT SIDE IMAGE WITH SOFT BLEND */}
 <div className="absolute inset-0 pointer-events-none">
@@ -89,12 +89,12 @@ export default function Contact() {
   }}
 >
   {/* DARK OVERLAY */}
-<div className="absolute inset-0 bg-[#2f4638]/60"></div></div>
+<div className="absolute inset-0 bg-primary/60"></div></div>
   {/* GRADIENT BLEND (IMPORTANT 🔥) */}
   {/* <div className="absolute inset-0 bg-gradient-to-r from-[#2f4638] via-[#2f4638]/90 to-transparent"></div> */}
 
   {/* CURVE SHAPE */}
-  <div className="absolute right-[10%] md:right-[20%] top-[-100px] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#3e5445] rounded-full opacity-40 blur-3xl"></div>
+  <div className="absolute right-[10%] md:right-[20%] top-[-100px] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-primary-light rounded-full opacity-40 blur-3xl"></div>
 
 </div>
 
@@ -118,27 +118,27 @@ export default function Contact() {
       <div className="bg-white/95 backdrop-blur-md p-12 rounded-3xl shadow-2xl text-black max-w-xl border border-gray-200">
 
         <div className="grid grid-cols-2 gap-4 mb-4">
-         <input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1f3d2b] transition" placeholder="Name" />
-<input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1f3d2b] transition" placeholder="Email" />
+         <input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Name" />
+<input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Email" />
         </div>
 
         <div className="grid grid-cols-2 gap-4 mb-4">
-          <input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1f3d2b] transition" placeholder="Subject" />
-<input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1f3d2b] transition" placeholder="Phone" />
+          <input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Subject" />
+<input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Phone" />
         </div>
 
        <textarea
   placeholder="Your message"
-  className="w-full p-4 border border-gray-300 rounded-xl h-36 mb-4 focus:outline-none focus:ring-2 focus:ring-[#1f3d2b] transition"
+  className="w-full p-4 border border-gray-300 rounded-xl h-36 mb-4 focus:outline-none focus:ring-2 focus:ring-primary transition"
 ></textarea>
 
-       <button className="flex items-center gap-3 border border-[#1f3d2b] rounded-full px-6 py-3 group hover:bg-[#1f3d2b] transition">
+       <button className="flex items-center gap-3 border border-primary rounded-full px-6 py-3 group hover:bg-primary transition">
   
-  <span className="w-10 h-10 flex items-center justify-center rounded-full border border-[#1f3d2b] group-hover:bg-white group-hover:text-[#1f3d2b] transition">
+  <span className="w-10 h-10 flex items-center justify-center rounded-full border border-primary group-hover:bg-white group-hover:text-primary transition">
     →
   </span>
 
-  <span className="text-[#1f3d2b] group-hover:text-white font-medium">
+  <span className="text-primary group-hover:text-white font-medium">
     Submit
   </span>
 
@@ -225,13 +225,13 @@ export default function Contact() {
           CA 90026 United States.
         </p>
 
-        <button className="mt-6 flex items-center justify-center md:justify-start gap-3 border border-[#1f3d2b] rounded-full px-6 py-3 group hover:bg-[#1f3d2b] transition mx-auto md:mx-0">
+        <button className="mt-6 flex items-center justify-center md:justify-start gap-3 border border-primary rounded-full px-6 py-3 group hover:bg-primary transition mx-auto md:mx-0">
           
-          <span className="w-10 h-10 flex items-center justify-center rounded-full border border-[#1f3d2b] group-hover:bg-white group-hover:text-[#1f3d2b] transition">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full border border-primary group-hover:bg-white group-hover:text-primary transition">
             →
           </span>
 
-          <span className="text-[#1f3d2b] group-hover:text-white font-medium">
+          <span className="text-primary group-hover:text-white font-medium">
             View On Map
           </span>
 

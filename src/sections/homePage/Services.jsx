@@ -56,7 +56,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-24 bg-[#384238] text-white relative font-text overflow-hidden">
+    <section className="py-24 bg-primary text-white relative font-text overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         
         {/* Header Block */}
@@ -98,8 +98,8 @@ const Services = () => {
                       <line x1="0" y1="100%" x2="100%" y2="0" stroke="currentColor" strokeWidth="1" />
                     </svg>
                   </div>
-                  <div className="w-[60px] h-[60px] lg:w-[74px] lg:h-[74px] rounded-full border border-white/20 bg-[#465446] group-hover:bg-white flex items-center justify-center z-10 transition-colors duration-500 shadow-sm relative shadow-black/20">
-                    <div className="text-white group-hover:text-[#384238] transition-colors duration-500">
+                  <div className="w-[60px] h-[60px] lg:w-[74px] lg:h-[74px] rounded-full border border-white/20 bg-primary-dark group-hover:bg-white flex items-center justify-center z-10 transition-colors duration-500 shadow-sm relative shadow-black/20">
+                    <div className="text-white group-hover:text-primary-dark transition-colors duration-500">
                       {srv.icon}
                     </div>
                   </div>
@@ -113,7 +113,7 @@ const Services = () => {
                   <div className="absolute right-0 top-1/2 -translate-y-1/2 z-[100] w-[340px] h-[360px] rounded-[1.5rem] overflow-hidden opacity-0 invisible scale-95 group-hover:opacity-100 group-hover:visible group-hover:scale-100 group-hover:pointer-events-auto shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 transition-all duration-500 origin-center hidden lg:block mr-8 pointer-events-none">
                     <img src={srv.image} className="absolute inset-0 w-full h-full object-cover" alt={srv.title} />
                     {/* Glassmorphism Inner Card Overlay */}
-                    <div className="absolute inset-3 rounded-[1.2rem] bg-gradient-to-br from-[#2a302a]/95 to-[#2a302a]/80 backdrop-blur-sm p-7 flex flex-col justify-center border border-white/10">
+                    <div className="absolute inset-3 rounded-[1.2rem] bg-gradient-to-br from-primary/95 to-primary/80 backdrop-blur-sm p-7 flex flex-col justify-center border border-white/10">
                       <p className="text-white/80 text-[14px] leading-relaxed mb-6 font-text">
                         {srv.desc}
                       </p>
@@ -132,7 +132,7 @@ const Services = () => {
                 {/* Col 4: Arrow CTA Button */}
                 <div className="w-[60px] md:w-auto lg:w-[150px] shrink-0 flex items-center justify-end md:justify-center relative z-10 w-full pr-2 md:pr-0">
                   <button className="w-10 h-10 lg:w-14 lg:h-14 rounded-full border border-white/20 bg-transparent flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-500 hover:scale-105 active:scale-95">
-                    <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6 text-white group-hover:text-[#384238] transition-colors duration-500" />
+                    <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6 text-white group-hover:text-primary-dark transition-colors duration-500" />
                   </button>
                 </div>
                 

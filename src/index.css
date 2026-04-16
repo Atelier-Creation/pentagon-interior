@@ -2,15 +2,17 @@
 @import "tailwindcss";
 @theme {
   --color-primary: #8c6d5a;
-  --color-secondary: #182418;
+  --color-primary-light: #ad9180;
+  --color-primary-dark: #6b5141;
+  --color-secondary: #4b362a;
   --color-accent: #e5af14;
   --color-text-main: #2a2d2a;
   --color-text-light: #565c56;
   --color-text-muted: #a9b2a9;
-  --color-bg-light: #e8eee8;
-  --color-bg-lighter: #f0f3f9;
-  --color-bg-lightest: #f3f7f3;
-  --color-bg-dark: #465446;
+  --color-bg-light: #f4f1ef;
+  --color-bg-lighter: #f9f7f6;
+  --color-bg-lightest: #ffffff;
+  --color-bg-dark: #5a4639;
   
   --font-sans: "Funnel Display", sans-serif;
   --font-text: "Outfit", sans-serif;
@@ -63,5 +65,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .big-dash-box {
-  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border: 1px dashed rgba(140, 109, 90, 0.3);
 }

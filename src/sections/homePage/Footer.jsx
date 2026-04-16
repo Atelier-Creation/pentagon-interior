@@ -3,7 +3,7 @@ import { FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="relative bg-[#2f4638] text-white overflow-hidden pt-24 pb-16">
+    <footer className="relative bg-primary text-white overflow-hidden pt-24 pb-16">
       <div className="relative z-10 max-w-7xl mx-auto px-8 grid md:grid-cols-3 gap-16">
         <div className="space-y-10">
           <div>
@@ -36,7 +36,7 @@ const Footer = () => {
 
           <div className="flex gap-4">
             {['Instagram', 'Facebook', 'TwitterX'].map((social) => (
-              <button key={social} className="px-5 py-2 border border-white/20 rounded-full flex items-center gap-2 hover:bg-white hover:text-[#2f4638] transition-all text-sm">
+              <button key={social} className="px-5 py-2 border border-white/20 rounded-full flex items-center gap-2 hover:bg-white hover:text-primary transition-all text-sm">
                 {social}
               </button>
             ))}

@@ -129,7 +129,7 @@ const About = () => {
               <div className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-text-main mr-2 group-hover:border-primary group-hover:text-primary transition-colors">
                 <ArrowRight size={18} />
               </div>
-              <div className="bg-[#384238] text-white font-sans font-bold text-[13px] tracking-wide px-6 h-10 rounded-[3rem] flex items-center justify-center group-hover:bg-primary transition-colors">
+              <div className="bg-primary text-white font-sans font-bold text-[13px] tracking-wide px-6 h-10 rounded-[3rem] flex items-center justify-center group-hover:bg-primary transition-colors">
                 More About Us
               </div>
             </a>
@@ -144,11 +144,11 @@ const About = () => {
             className="w-full md:w-1/2 lg:w-[28%] flex flex-col items-center relative mt-12 lg:mt-0"
           >
             {/* The Background Dark Box */}
-            <div className="bg-[#384238] rounded-t-[2.5rem] rounded-b-[15rem] w-full relative overflow-hidden h-[450px] flex flex-col items-center text-center shadow-md pt-12 pb-8">
+            <div className="bg-primary rounded-t-[2.5rem] rounded-b-[15rem] w-full relative overflow-hidden h-[450px] flex flex-col items-center text-center shadow-md pt-12 pb-8">
               {/* Internal Image layer */}
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&w=600&q=80')] bg-cover bg-center mix-blend-overlay opacity-30"></div>
               {/* Gradient overlay for readability */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[#384238]/90 via-[#384238]/60 to-[#384238]/90 z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/60 to-primary/90 z-10"></div>
 
               <div className="relative z-20 flex flex-col items-center h-full w-full">
                 <h4 className="text-white font-bold text-[18px] mb-6 leading-snug font-sans tracking-wide">
@@ -169,7 +169,7 @@ const About = () => {
                 {/* Avatar Group */}
                 <div className="flex items-center justify-center -space-x-4 mb-2 relative">
                   <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=150&q=80" alt="Reviewer" className="w-[66px] h-[66px] rounded-full border-[3px] border-white object-cover" />
-                  <div className="w-[76px] h-[76px] rounded-full border-[3px] border-white bg-[#384238] text-white flex items-center justify-center font-bold text-[22px] z-10 font-sans shadow-md">
+                  <div className="w-[76px] h-[76px] rounded-full border-[3px] border-white bg-primary text-white flex items-center justify-center font-bold text-[22px] z-10 font-sans shadow-md">
                     4.5
                   </div>
                   <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Reviewer" className="w-[66px] h-[66px] rounded-full border-[3px] border-white object-cover z-0" />
