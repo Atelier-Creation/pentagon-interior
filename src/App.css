@@ -11,6 +11,7 @@
 .animate-marquee {
   animation: marquee 20s linear infinite;
 }
+
 .big-dash {
   border-top: 2px dashed rgba(87, 72, 53, 0.25);
 }
@@ -31,6 +32,7 @@
 .animate-zoomSlow {
   animation: zoomSlow 20s ease-in-out infinite alternate;
 }
+
 .bg-animate {
   background-image: url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6");
   background-size: cover;
@@ -47,8 +49,9 @@
     transform: scale(1.1);
     background-position: 60% 40%;
   }
+}
 
-.big-dash-box-black{
-   border: 2px dashed rgba(70, 41, 9, 0.288);
-
+/* ✅ NOW CORRECT */
+.big-dash-box-black {
+  border: 2px dashed rgba(70, 41, 9, 0.288);
 }
