@@ -39,7 +39,7 @@ const steps = [
 
 export default function HowWeWork() {
   return (
-<section className="relative bg-primary text-white py-28 overflow-hidden">
+<section className="relative bg-primary text-white pt-10 pb-40 md:pt-28 md:pb-60 overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 max-w-[1400px] text-center">
 
         {/* TOP LABEL */}
@@ -50,22 +50,22 @@ export default function HowWeWork() {
         </div>
 
         {/* TITLE */}
-        <h2 className="text-5xl md:text-6xl font-semibold mb-4">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-6 tracking-tight">
           Design Made Easy in 3 Steps
         </h2>
 
-        <p className="text-white/70 mb-16">
-          From concept to completion, we've got you covered.
+        <p className="text-white/70 mb-12 sm:mb-16 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
+          From concept to completion, we've got you covered with a streamlined, worry-free process.
         </p>
 
         {/* STEPS */}
-        <div className="grid md:grid-cols-3 gap-14 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14 relative">
 
           {steps.map((step, index) => (
   <div key={step.id} className="relative">
 
     {/* ✅ CARD */}
-    <div className="relative border border-white/10 rounded-[25px] p-12 text-left bg-white/5 backdrop-blur">
+    <div className="relative border border-white/10 rounded-[2rem] p-8 sm:p-12 text-left bg-white/5 backdrop-blur hover:bg-white/[0.08] transition-colors duration-500">
 
       {/* NUMBER */}
       <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#8b6b55] w-10 h-10 flex items-center justify-center rotate-45">
@@ -118,9 +118,9 @@ export default function HowWeWork() {
 
       {/* 🔥 BOTTOM ARROW SHAPE */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-  <svg
+      <svg
     viewBox="0 0 1440 320"
-    className="w-full h-[180px]"
+    className="w-full h-[100px] md:h-[180px]"
     preserveAspectRatio="none"
   >
     <path

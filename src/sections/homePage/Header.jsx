@@ -27,11 +27,11 @@ const Header = () => {
   <Link to="/about" className="hover:text-accent transition-colors">
     About
   </Link>
-          <a href="#" className="hover:text-accent transition-colors">Pages</a>
+          {/* <a href="#" className="hover:text-accent transition-colors">Pages</a> */}
           <Link to="/services" className="hover:text-accent transition-colors">
   Services
 </Link>
-          <a href="#" className="hover:text-accent transition-colors">Projects</a>
+          <Link to="/projects" className="hover:text-accent transition-colors">Projects</Link>
           <a href="#" className="hover:text-accent transition-colors">Blog</a>
          <Link to="/contact" className="hover:text-accent transition-colors">
   Contact
@@ -71,7 +71,7 @@ const Header = () => {
 <Link to="/services" className="hover:text-accent">
   Services
 </Link>
-            <a href="#" className="hover:text-accent">Projects</a>
+            <Link to="/projects" className="hover:text-accent">Projects</Link>
             <Link to="/contact" className="hover:text-accent">
   Contact
 </Link>

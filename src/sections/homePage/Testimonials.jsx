@@ -17,7 +17,7 @@ const Testimonials = () => {
   const logos = [client1, client2, client3, client4, client5, client6, client7, client8];
 
   return (
-    <section className="relative py-28 bg-[#fff9f5] font-text overflow-hidden">
+    <section className="relative py-5 md:py-28 bg-[#fff9f5] font-text overflow-hidden">
       {/* The Background Plus Pattern */}
       <div className="absolute inset-0 bg-[url('https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/pattern-dot-1-1.png')] bg-center bg-cover opacity-10 pointer-events-none"></div>
       

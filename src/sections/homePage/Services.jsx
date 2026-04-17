@@ -56,7 +56,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-24 bg-primary text-white relative font-text overflow-hidden">
+    <section className="py-10 md:py-24 bg-primary text-white relative font-text overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         
         {/* Header Block */}

@@ -4,7 +4,7 @@ import { ArrowRight, X, Star } from 'lucide-react';
 
 const About = () => {
   return (
-    <section className="py-24 bg-white relative overflow-hidden font-text">
+    <section className="py-10 md:py-24 bg-white relative overflow-hidden font-text">
       <div className="container mx-auto px-4 lg:px-8 max-w-[1300px]">
         <div className="flex flex-col lg:flex-row gap-12 xl:gap-8 justify-between items-center lg:items-stretch">
 
@@ -179,7 +179,7 @@ const About = () => {
             </div>
 
             {/* Floating Review Pill */}
-            <div className="absolute bottom-45 left-1/2 -translate-x-1/2 bg-white rounded-full shadow-[0_10px_40px_rgb(0,0,0,0.27)] py-2.5 px-6 flex items-center gap-4 z-[100] border border-gray-100 whitespace-nowrap w-max">
+            <div className="absolute bottom-10 md:bottom-45 left-1/2 -translate-x-1/2 bg-white rounded-full shadow-[0_10px_40px_rgb(0,0,0,0.27)] py-2.5 px-6 flex items-center gap-4 z-[100] border border-gray-100 whitespace-nowrap w-max">
               <div className="flex items-center gap-2">
                 <Star className="text-[#fbbc05] fill-[#fbbc05]" size={22} />
                 <span className="font-bold text-[16px] text-[#0f172a] font-sans tracking-tight">Excellent</span>

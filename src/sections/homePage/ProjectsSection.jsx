@@ -70,17 +70,17 @@ export default function ProjectsSection() {
 const visible = data.slice(index, index + 2);
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-10 md:py-24 bg-white">
       <div className="container mx-auto px-4 lg:px-8 max-w-[1200px]">
       {/* HEADER */}
-      <div className="flex justify-between items-center mb-16">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-12 md:mb-16">
        <div className="flex flex-col gap-4">
 
   {/* TOP SMALL LABEL */}
-  <div className="flex items-center gap-3">
+  <div className="flex items-center gap-2">
     <span className="w-6 h-[1px] bg-gray-300"></span>
 
-    <div className="flex items-center gap-2 border border-gray-200 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-gray-700">
+    <div className="flex items-center gap-2 border border-gray-200 rounded-full px-4 py-1.5 text-[10px] md:text-xs font-semibold uppercase tracking-wide text-gray-700">
       ✦ OUR PROJECTS
     </div>
 
@@ -88,13 +88,13 @@ const visible = data.slice(index, index + 2);
   </div>
 
   {/* MAIN HEADING */}
-  <h2 className="text-6xl font-semibold tracking-tight text-[#2a2d2a]">
+  <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight text-[#2a2d2a]">
     Our Recent Creations
   </h2>
 
 </div>
 
-        <div className="flex gap-8 text-sm uppercase">
+        <div className="flex flex-wrap gap-4 md:gap-8 text-[11px] md:text-sm uppercase">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -119,15 +119,15 @@ const visible = data.slice(index, index + 2);
       </div>
 
       {/* CARDS */}
- <div className="flex gap-10 overflow-hidden">
+ <div className="flex flex-col lg:flex-row gap-6 md:gap-10">
   {visible.map((item, i) => (
     <div
       key={item.id}
       className={`
-        relative rounded-[30px] overflow-hidden group flex-shrink-0
+        relative rounded-[25px] md:rounded-[30px] overflow-hidden group w-full
         ${i === 0 
-  ? "w-[60%] h-[460px]"   // 🔥 slightly big
-  : "w-[40%] h-[460px]"}  // 🔥 enough space (no cut)
+  ? "lg:w-[60%] h-[350px] md:h-[460px]" 
+  : "lg:w-[40%] h-[350px] md:h-[460px]"}
       `}
     >
       {/* IMAGE */}
@@ -138,26 +138,26 @@ const visible = data.slice(index, index + 2);
       />
 
       {/* LEFT CARD */}
-      <div className="absolute left-8 top-1/2 -translate-y-1/2">
+      <div className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-[calc(100%-2rem)] md:w-auto overflow-hidden">
         <div className="
-          bg-white w-[420px] md:w-[340px] px-4 py-4 rounded-[25px] shadow-xl
+          bg-white w-full md:w-[340px] px-6 py-6 md:px-4 md:py-4 rounded-[20px] md:rounded-[25px] shadow-xl
           transition-all duration-500
-          group-hover:bg-green-900 group-hover:text-white
+          group-hover:bg-primary group-hover:text-white
         ">
-          <p className="text-xs uppercase mb-3 tracking-widest">
+          <p className="text-[10px] uppercase mb-2 md:mb-3 tracking-widest opacity-70">
             {item.category}
           </p>
 
-          <h3 className="text-2xl font-semibold mb-4 leading-snug">
+          <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 leading-snug">
             {item.title}
           </h3>
 
-          <p className="text-sm mb-5">
-            {item.location} {item.date}
+          <p className="text-[12px] md:text-sm mb-4 md:mb-5 opacity-80">
+            {item.location} • {item.date}
           </p>
 
-          <Link to="/" className="font-medium inline-block hover:underline">
-            → Project Details
+          <Link to={`/project/${item.id}`} className="text-xs md:text-sm font-bold uppercase tracking-widest inline-flex items-center gap-2 group/btn">
+            View Details <span className="transition-transform group-hover/btn:translate-x-1">→</span>
           </Link>
         </div>
       </div>

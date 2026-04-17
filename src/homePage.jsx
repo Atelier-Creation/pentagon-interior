@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import Header from './sections/homePage/Header';
 import Hero from './sections/homePage/Hero';
 import About from './sections/homePage/About';
@@ -21,19 +22,123 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
-        <About />
-        <Services />
-        <WhyChooseUs />
-        <ProjectsSection />
-        <HowWeWork />
-        <Performance />
-        <Testi />
-        <PromoVideo />
-        <MarqueeSection />
-        <BlogSection />
-        <Projects />
-        <Testimonials />
-        <ContactUs />
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
+          <About />
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Services />
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
+          <WhyChooseUs />
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
+          <ProjectsSection />
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
+          <HowWeWork />
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Performance />
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Testi />
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
+          <PromoVideo />
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
+          <MarqueeSection />
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
+          <BlogSection />
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Projects />
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Testimonials />
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
+          <ContactUs />
+        </motion.div>
       </main>
       <Footer />
     </div>

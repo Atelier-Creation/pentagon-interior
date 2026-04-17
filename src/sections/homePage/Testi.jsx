@@ -41,7 +41,7 @@ export default function Testimonials() {
   const t = testimonials[index];
 
   return (
-    <section className="py-28 bg-white text-center relative">
+    <section className="py-5 md:py-28 bg-white text-center relative">
 
       {/* LABEL */}
       <div className="mb-6">
@@ -51,12 +51,12 @@ export default function Testimonials() {
       </div>
 
       {/* TITLE */}
-      <h2 className="text-[64px] leading-[1.1] font-semibold mb-16 text-[#2b2f2b]">
+      <h2 className="text-2xl md:text-[64px] leading-[1.1] font-semibold mb-16 text-[#2b2f2b]">
         Genuine Feedback From Our <br /> Loyal Customers
       </h2>
 
       {/* CARD */}
-      <div className="relative max-w-[900px] mx-auto">
+      <div className="relative max-w-md md:max-w-[900px] mx-auto">
 
         {/* AVATAR */}
         <div className="absolute -top-10 left-1/2 -translate-x-1/2">
@@ -68,10 +68,10 @@ export default function Testimonials() {
         </div>
 
         {/* BOX */}
-        <div className="bg-white rounded-[100px] px-16 py-16 shadow-sm border border-gray-200">
+        <div className="bg-white rounded-[60px] md:rounded-[100px] px-5 md:px-16 py-10 md:py-16 shadow-sm border border-gray-200">
 
           {/* TEXT */}
-          <p className="text-[20px] text-gray-700 leading-[1.7] mb-10">
+          <p className="text-md md:text-[20px] text-gray-700 leading-[1.7] mb-10">
             “{t.text}”
           </p>
 
@@ -88,7 +88,7 @@ export default function Testimonials() {
 
   {/* CENTER RATING */}
   <div className="px-5 py-2 border border-gray-300 rounded-full text-sm bg-white shadow-sm flex items-center gap-2">
-    <Star size={16} className="text-[#fbbc05] fill-[#fbbc05]" /> <span className="font-medium text-gray-700">{t.rating} OUT OF 5</span>
+    <Star size={16} className="text-[#fbbc05] fill-[#fbbc05]" /> <span className="text-xs md:text-sm font-medium text-gray-700">{t.rating} / 5</span>
   </div>
 
   {/* RIGHT LINE + DIAMONDS */}

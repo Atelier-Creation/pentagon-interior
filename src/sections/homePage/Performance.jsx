@@ -22,25 +22,25 @@ export default function Performance() {
     }
   ];
   return (
-    <section className="py-15 bg-white">
+    <section className="py-10 md:py-15 bg-white">
       <div className="container">
 
         {/* GRID */}
         <div className="grid lg:grid-cols-[1.5fr_1fr] gap-16 items-center">
 
           {/* LEFT IMAGE */}
-          <div className="relative w-full h-[650px]">
+          <div className="relative w-full h-[350px] md:h-[650px]">
 
             {/* IMAGE WITH CLIP */}
             <div
-              className="relative  w-full h-full"
-              // style={{
-              //   clipPath: "polygon(0% 0%, 100% 0%, 100% 85%, 60% 100%, 0% 85%)",
-              // }}
+              className="relative  w-full md:h-full"
+            // style={{
+            //   clipPath: "polygon(0% 0%, 100% 0%, 100% 85%, 60% 100%, 0% 85%)",
+            // }}
             >
               <img
                 src="https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/room-planner-min.png"
-                className="w-full h-full object-fill"
+                className="w-full h-full object-contain md:object-fill"
                 alt=""
               />
             </div>
@@ -48,7 +48,7 @@ export default function Performance() {
             {/* ✅ ICONS (OUTSIDE CLIP, INSIDE WRAPPER) */}
 
             {points.map((item) => (
-              <div key={item.id} className={`absolute ${item.position} group`}>
+              <div key={item.id} className={`absolute ${item.position} group md:block hidden`}>
 
                 {/* + ICON */}
                 <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow cursor-pointer">
@@ -72,7 +72,7 @@ export default function Performance() {
             ))}
           </div>
           {/* RIGHT CONTENT */}
-          <div>
+          <div className="px-5 md:p-0">
 
             {/* LABEL */}
             <div className="mb-6">
@@ -82,7 +82,7 @@ export default function Performance() {
             </div>
 
             {/* TITLE */}
-            <h2 className="text-[64px] leading-[1.05] font-semibold text-[#2b2f2b] mb-8 tracking-tight">
+            <h2 className="text-2xl md:text-[64px] md:leading-[1.05] font-semibold text-[#2b2f2b] mb-8 tracking-tight">
               Our Performance in <br /> Plain View
             </h2>
 

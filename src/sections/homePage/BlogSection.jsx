@@ -30,40 +30,41 @@ const blogs = [
 
 export default function BlogSection() {
   return (
-<section className="py-15 bg-white">
+<section className="py-5 md:py-24 bg-white">
       <div className="max-w-[1350px] mx-auto px-6 lg:px-10">
 
         {/* TOP */}
-        <div className="flex items-start justify-between mb-16">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-8 mb-12 md:mb-16">
 
   {/* LEFT SIDE */}
   <div>
 
     {/* BADGE */}
-    <div className="flex items-center gap-4 mb-6">
+    <div className="flex items-center gap-3 mb-6">
 
       <span className="w-10 h-[1px] bg-gray-300"></span>
 
-      <div className="flex items-center gap-2 border border-gray-200 rounded-full px-5 py-2 text-[11px] font-semibold uppercase tracking-[2px] text-gray-600 bg-white">
+      <div className="flex items-center gap-2 border border-gray-200 rounded-full px-5 py-2 text-[10px] md:text-[11px] font-semibold uppercase tracking-[2px] text-gray-600 bg-white shadow-sm">
         ✦ OUR BLOG
       </div>
 
     </div>
 
     {/* HEADING */}
-    <h2 className="text-[64px] leading-[1.1] font-semibold text-[#2a2d2a] tracking-tight max-w-[700px]">
+    <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-[64px] leading-[1.1] font-semibold text-[#2a2d2a] tracking-tight max-w-[700px]">
       Latest Articles & Updates
     </h2>
 
   </div>
 
   {/* RIGHT SIDE LINK */}
-  <div className="mt-16">
+  <div className="md:mt-16">
     <a
       href="/"
-      className="flex items-center gap-2 text-gray-600 hover:text-black transition"
+      className="flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-[11px] hover:text-text-main transition group"
     >
-      → <span>View All Post</span>
+      <span className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center transition-colors group-hover:bg-primary group-hover:text-white">→</span>
+      <span>View All Posts</span>
     </a>
   </div>
 
@@ -73,87 +74,57 @@ export default function BlogSection() {
         <div className="grid md:grid-cols-3 gap-10">
           {blogs.map((blog) => (
             <div
-  key={blog.id}
-className="group bg-white rounded-[20px] overflow-hidden border border-gray-200 hover:shadow-lg hover:-translate-y-2 hover:scale-[1.02] transition duration-500">
-  {/* IMAGE */}
-  <div className="relative overflow-hidden rounded-t-[20px]">
+              key={blog.id} 
+              className="group bg-white rounded-[2rem] overflow-hidden border border-gray-100/80 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:-translate-y-2 transition-all duration-500"
+            >
+              {/* IMAGE WRAPPER */}
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={`${blog.image}?auto=format&fit=crop&w=800&q=80`}
+                  className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                  alt={blog.title}
+                />
+                
+                {/* FLOATING CATEGORY */}
+                <div className="absolute top-5 left-5">
+                   <span className="bg-white/90 backdrop-blur-md text-primary text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full shadow-sm">
+                     {blog.category}
+                   </span>
+                </div>
 
-    <img
-      src={`${blog.image}?auto=format&fit=crop&w=800&q=80`}
-      className="w-full h-[320px] object-cover transition duration-500 ease-in-out group-hover:scale-110 transition duration-500 ease-in-out group-hover:scale-110"
-      alt=""
-    />
+                {/* DATE OVERLAY */}
+                <div className="absolute bottom-5 right-5 bg-primary text-white w-14 h-14 rounded-2xl flex flex-col items-center justify-center shadow-lg transform group-hover:rotate-6 transition-transform">
+                  <span className="text-[10px] font-bold uppercase tracking-tighter opacity-80">Mar</span>
+                  <span className="text-xl font-bold leading-none">16</span>
+                </div>
+              </div>
 
-    {/* DATE BADGE */}
-    <div className="absolute top-4 right-4 bg-white rounded-full w-[70px] h-[90px] flex flex-col items-center justify-center shadow text-xs">
-      <span className="text-gray-500">MAR, 26</span>
-      <div className="mt-1 w-10 h-10 border rounded-full flex items-center justify-center text-sm font-semibold">
-        16
-      </div>
-    </div>
+              {/* CONTENT AREA */}
+              <div className="p-8">
+                {/* STATS ABOVE TITLE */}
+                <div className="flex items-center gap-6 mb-5 text-[11px] font-bold text-gray-400 uppercase tracking-widest">
+                  <span className="flex items-center gap-2">
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                    {blog.views} Views
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                    {blog.likes}
+                  </span>
+                </div>
 
-  </div>
-              {/* CONTENT */}
-              <div className="p-7">
-
-                {/* CATEGORY */}
-                <p className="text-xs text-gray-500 flex items-center gap-2 mb-3">
-                  <span className="flex items-center gap-2 text-gray-500">
-  <svg
-    className="w-4 h-4"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    viewBox="0 0 24 24"
-  >
-    <path d="M6 2h7l5 5v15H6z" />
-    <path d="M13 2v6h6" />
-  </svg>
-  {blog.category}
-</span>
-                </p>
-
-                {/* TITLE */}
-               <h3 className="text-[22px] font-semibold text-[#2b2f2b] leading-snug mb-6">
+                <h3 className="text-2xl font-bold text-text-main leading-tight mb-8 group-hover:text-primary transition-colors line-clamp-2">
                   {blog.title}
                 </h3>
 
-                {/* FOOTER */}
-                <div className="flex justify-between items-center text-sm text-gray-500">
-
-                  <span className="flex items-center gap-2">
-                    → Read More
-                  </span>
-
-                  <div className="flex items-center gap-4">
-                   <span className="flex items-center gap-1 text-gray-500">
-  <svg
-    className="w-4 h-4"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    viewBox="0 0 24 24"
-  >
-    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" />
-    <circle cx="12" cy="12" r="3" />
-  </svg>
-  {blog.views} Views
-</span> 
-                  <span className="flex items-center gap-1 text-gray-500">
-  <svg
-    className="w-4 h-4"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    viewBox="0 0 24 24"
-  >
-    <path d="M14 9V5a3 3 0 00-6 0v4" />
-    <path d="M5 15h14l-1.5 6h-11z" />
-  </svg>
-  {blog.likes} Likes
-</span>
-                  </div>
-
+                {/* BOTTOM LINK */}
+                <div className="pt-6 border-t border-gray-100 flex items-center justify-between">
+                  <a href="#" className="flex items-center gap-3 text-primary text-[11px] font-bold uppercase tracking-[0.2em] group/link">
+                    <span className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center transition-all group-hover/link:bg-primary group-hover/link:text-white group-hover/link:border-primary">
+                      →
+                    </span>
+                    Read More
+                  </a>
                 </div>
               </div>
             </div>
