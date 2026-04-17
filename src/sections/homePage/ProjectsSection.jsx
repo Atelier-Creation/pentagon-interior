@@ -142,6 +142,7 @@ const visible = data.slice(index, index + 2);
         <div className="
           bg-white w-full md:w-[340px] px-6 py-6 md:px-4 md:py-4 rounded-[20px] md:rounded-[25px] shadow-xl
           transition-all duration-500
+          group-hover:bg-[#8b6b55] group-hover:text-white
           group-hover:bg-primary group-hover:text-white
         ">
           <p className="text-[10px] uppercase mb-2 md:mb-3 tracking-widest opacity-70">
