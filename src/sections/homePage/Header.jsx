@@ -28,7 +28,9 @@ const Header = () => {
     About
   </Link>
           <a href="#" className="hover:text-accent transition-colors">Pages</a>
-          <a href="#" className="hover:text-accent transition-colors">Services</a>
+          <Link to="/services" className="hover:text-accent transition-colors">
+  Services
+</Link>
           <a href="#" className="hover:text-accent transition-colors">Projects</a>
           <a href="#" className="hover:text-accent transition-colors">Blog</a>
          <Link to="/contact" className="hover:text-accent transition-colors">
@@ -66,7 +68,9 @@ const Header = () => {
     About
   </Link>
             <a href="#" className="hover:text-accent">Pages</a>
-            <a href="#" className="hover:text-accent">Services</a>
+<Link to="/services" className="hover:text-accent">
+  Services
+</Link>
             <a href="#" className="hover:text-accent">Projects</a>
             <Link to="/contact" className="hover:text-accent">
   Contact

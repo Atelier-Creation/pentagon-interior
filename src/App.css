@@ -55,3 +55,14 @@
 .big-dash-box-black {
   border: 2px dashed rgba(70, 41, 9, 0.288);
 }
+.stroke-text {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.45);
+}
+@keyframes moveLight {
+  0% {
+    transform: translateX(-100%) translateY(-100%);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%);
+  }
+}

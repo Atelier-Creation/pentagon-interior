@@ -68,7 +68,7 @@ export default function HowWeWork() {
     <div className="relative border border-white/10 rounded-[25px] p-12 text-left bg-white/5 backdrop-blur">
 
       {/* NUMBER */}
-      <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#4b5a4b] w-10 h-10 flex items-center justify-center rotate-45">
+      <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#8b6b55] w-10 h-10 flex items-center justify-center rotate-45">
         <span className="-rotate-45 font-semibold">{step.id}</span>
       </div>
 
@@ -87,7 +87,7 @@ export default function HowWeWork() {
         </div>
 
         {/* ICON */}
-        <div className="absolute left-4 top-1/2 -translate-y-1/2 bg-[#384238] w-14 h-14 rounded-full flex items-center justify-center transition-all duration-500 group-hover:left-1/2 group-hover:-translate-x-1/2">
+        <div className="absolute left-4 top-1/2 -translate-y-1/2 bg-[#8b6b55] w-14 h-14 rounded-full flex items-center justify-center transition-all duration-500 group-hover:left-1/2 group-hover:-translate-x-1/2">
           {step.icon}
         </div>
       </div>
