@@ -3,7 +3,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const ContactUs = () => {
   return (
-    <section className="relative py-32 px-8 bg-primary text-white overflow-hidden">
+    <section className="relative py-32 px-8 bg-primary text-white overflow-hidden border-b-2 border-dashed border-gray-200">
       {/* RIGHT SIDE IMAGE WITH SOFT BLEND */}
       <div className="absolute inset-0 pointer-events-none">
         {/* IMAGE (RIGHT SIDE ONLY) */}

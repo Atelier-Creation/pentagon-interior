@@ -19,7 +19,7 @@ const Testimonials = () => {
   return (
     <section className="relative py-28 bg-[#fff9f5] font-text overflow-hidden">
       {/* The Background Plus Pattern */}
-      <div className="absolute inset-0 bg-[url('https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/pattern-dot-1-1.png')] bg-center bg-cover opacity-[0.15] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[url('https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/pattern-dot-1-1.png')] bg-center bg-cover opacity-10 pointer-events-none"></div>
       
       <div className="container relative mx-auto px-4 z-10 mb-20 flex flex-col items-center text-center">
         {/* BADGE */}
@@ -63,7 +63,7 @@ const Testimonials = () => {
                   ${i % 2 === 0 ? '-translate-y-6 sm:-translate-y-10' : 'translate-y-6 sm:translate-y-10'}
                 `}>
                    {/* Inscribed Circle exactly matching the UI */}
-                   <div className="absolute inset-0 m-0 rounded-full border border-gray-300/40 pointer-events-none transition-colors duration-300 group-hover:border-gray-300/80"></div>
+                   <div className="absolute inset-0 m-0 rounded-full border border-gray-300/20 pointer-events-none transition-colors duration-300 group-hover:border-gray-300/30"></div>
 
                    <img 
                      src={logo} 
