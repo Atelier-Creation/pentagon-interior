@@ -1,6 +1,7 @@
 import Header from "./sections/homePage/Header";
 import Footer from "./sections/homePage/Footer";
 import { Link } from "react-router-dom";
+import { Eye, Heart, ChevronRight, ArrowRight } from "lucide-react";
 
 export default function BlogPage() {
 
@@ -67,13 +68,13 @@ export default function BlogPage() {
 
         <div className="relative text-center">
           <h1 className="text-5xl md:text-6xl font-bold">
-            Blog Grid View 01
+            Our Blogs
           </h1>
 
-          <p className="mt-4 text-white/70 text-lg flex justify-center gap-2">
+          <p className="mt-4 text-white/70 text-lg flex justify-center items-center gap-2">
             <Link to="/" className="hover:text-white">Home</Link>
-            <span>›</span>
-            <span>Blog Grid View 01</span>
+            <ChevronRight size={16} />
+            <span>Our Blogs</span>
           </p>
         </div>
       </div>
@@ -120,10 +121,10 @@ export default function BlogPage() {
             {/* STATS */}
             <div className="flex items-center gap-6 mb-5 text-[11px] font-bold text-gray-400 uppercase tracking-widest">
               <span className="flex items-center gap-2">
-                👁 12 Views
+                <Eye size={14} className="text-[#8c6d5a]" /> 12 Views
               </span>
               <span className="flex items-center gap-2">
-                ❤️ 2
+                <Heart size={14} className="text-[#8c6d5a]" /> 2
               </span>
             </div>
 
@@ -139,7 +140,7 @@ export default function BlogPage() {
                 
                 <span className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center 
                 transition-all group-hover/link:bg-[#8c6d5a] group-hover/link:text-white group-hover/link:border-[#8c6d5a]">
-                  →
+                  <ArrowRight size={14} />
                 </span>
 
                 Read More

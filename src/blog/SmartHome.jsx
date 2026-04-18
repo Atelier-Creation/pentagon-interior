@@ -1,7 +1,5 @@
 import Header from "../sections/homePage/Header";
 import Footer from "../sections/homePage/Footer";
-import { Tag } from "lucide-react";
-import { Share2 } from "lucide-react";
 import React, { useState } from "react";
 
 import {
@@ -9,6 +7,12 @@ import {
   User,
   Eye,
   ThumbsUp,
+  ChevronRight,
+  CheckCircle2,
+  Tag,
+  Share2,
+  ArrowUpRight,
+  ArrowRight
 } from "lucide-react";
 import {
   Send,
@@ -107,13 +111,13 @@ return (
       Home
     </Link>
 
-    <span className="mx-3">›</span>
+    <ChevronRight size={14} />
 
     <Link to="/blog" className="hover:text-[#8c6d5a]">
       Smart Homes
     </Link>
 
-    <span className="mx-3">›</span>
+    <ChevronRight size={14} />
 
     <span className="text-gray-800">
       Smart Home Technology Reshaping Interior Architecture
@@ -154,7 +158,7 @@ are five simple yet impactful ways to start today.
     "Use pastel tones for a calming effect."
   ].map((item, i) => (
     <li key={i} className="flex items-start gap-3">
-      <span className="mt-1 text-[#8c6d5a]">▢</span>
+      <CheckCircle2 size={16} className="mt-1 text-[#8c6d5a]" />
       {item}
     </li>
   ))}
@@ -177,7 +181,7 @@ are five simple yet impactful ways to start today.
     "Place light-toned furniture near windows."
   ].map((item, i) => (
     <li key={i} className="flex items-start gap-3">
-      <span className="mt-1 text-[#8c6d5a]">▢</span>
+      <CheckCircle2 size={16} className="mt-1 text-[#8c6d5a]" />
       {item}
     </li>
   ))}
@@ -279,7 +283,7 @@ are five simple yet impactful ways to start today.
     "A clean, clutter-free home allows peace of mind to flourish."
   ].map((item, i) => (
     <li key={i} className="flex items-start gap-3">
-      <span className="text-[#8c6d5a] mt-1">▢</span>
+      <CheckCircle2 size={16} className="text-[#8c6d5a] mt-1" />
       <span>{item}</span>
     </li>
   ))}
@@ -294,7 +298,7 @@ are five simple yet impactful ways to start today.
     {/* TAGS */}
     <div>
       <h4 className="font-semibold mb-4 flex items-center gap-2 text-gray-800">
-        <span className="text-gray-400 text-lg">🏷</span>
+        <Tag size={18} className="text-gray-400" />
         Tags
       </h4>
 
@@ -384,7 +388,7 @@ are five simple yet impactful ways to start today.
           className="text-gray-900 font-medium flex items-center gap-2 hover:text-[#8c6d5a] transition"
         >
           Read All Post
-          <span className="text-lg">↗</span>
+          <ArrowUpRight size={18} />
         </a>
       </div>
     </div>
@@ -570,12 +574,24 @@ are five simple yet impactful ways to start today.
   <div className="border-t border-gray-200 pt-8">
     <h3 className="text-lg font-semibold mb-4">Categories</h3>
     <ul className="space-y-3 text-gray-700 text-sm">
-      <li>→ ARCHITECTURE 1</li>
-      <li>→ INDUSTRY NEWS 1</li>
-      <li>→ INTERIOR DESIGN 1</li>
-      <li>→ LIFESTYLE & TRENDS 2</li>
-      <li>→ MODERN LIVING 1</li>
-      <li>→ SMART HOMES 1</li>
+      <li className="flex items-center gap-2 group cursor-pointer hover:text-[#8c6d5a] transition">
+        <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" /> ARCHITECTURE 1
+      </li>
+      <li className="flex items-center gap-2 group cursor-pointer hover:text-[#8c6d5a] transition">
+        <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" /> INDUSTRY NEWS 1
+      </li>
+      <li className="flex items-center gap-2 group cursor-pointer hover:text-[#8c6d5a] transition">
+        <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" /> INTERIOR DESIGN 1
+      </li>
+      <li className="flex items-center gap-2 group cursor-pointer hover:text-[#8c6d5a] transition">
+        <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" /> LIFESTYLE & TRENDS 2
+      </li>
+      <li className="flex items-center gap-2 group cursor-pointer hover:text-[#8c6d5a] transition">
+        <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" /> MODERN LIVING 1
+      </li>
+      <li className="flex items-center gap-2 group cursor-pointer hover:text-[#8c6d5a] transition">
+        <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" /> SMART HOMES 1
+      </li>
     </ul>
   </div>
 

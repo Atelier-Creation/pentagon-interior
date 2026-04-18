@@ -88,13 +88,13 @@ export default function ProjectsSection() {
             </div>
 
             {/* MAIN HEADING */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight text-[#2a2d2a]">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight text-[#2a2d2a]">
               Our Recent Creations
             </h2>
 
           </div>
 
-          <div className="flex flex-wrap gap-4 md:gap-8 text-[11px] md:text-sm uppercase">
+          <div className="flex flex-wrap gap-4 md:gap-8 text-[12px] md:text-sm uppercase">
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -104,7 +104,7 @@ export default function ProjectsSection() {
                 }}
                 className={`transition ${active === cat
                     ? "text-black font-semibold"
-                    : "text-gray-400"
+                    : "text-gray-400 animate-pulse"
                   }`}
               >
                 {active === cat

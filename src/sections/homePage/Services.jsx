@@ -107,7 +107,7 @@ const Services = () => {
 
                 {/* Col 3: Title & Internal Popout Card */}
                 <div className="flex-1 flex items-center pl-6 lg:pl-12 relative z-10">
-                  <h3 className="text-xl md:text-2xl lg:text-[26px] font-bold font-sans text-white tracking-wide">{srv.title}</h3>
+                  <h3 className="text-md md:text-2xl lg:text-[26px] md:font-bold font-sans text-white tracking-wide">{srv.title}</h3>
 
                   {/* Absolute Popup Card that appears on right side */}
                   <div className="absolute right-0 top-1/2 -translate-y-1/2 z-[100] w-[340px] h-[360px] rounded-[1.5rem] overflow-hidden opacity-0 invisible scale-95 group-hover:opacity-100 group-hover:visible group-hover:scale-100 group-hover:pointer-events-auto shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 transition-all duration-500 origin-center hidden lg:block mr-8 pointer-events-none">
