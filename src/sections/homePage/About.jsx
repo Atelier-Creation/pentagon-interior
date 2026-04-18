@@ -179,7 +179,7 @@ const About = () => {
             </div>
 
             {/* Floating Review Pill */}
-            <div className="absolute bottom-10 md:bottom-45 left-1/2 -translate-x-1/2 bg-white rounded-full shadow-[0_10px_40px_rgb(0,0,0,0.27)] py-2.5 px-6 flex items-center gap-4 z-[100] border border-gray-100 whitespace-nowrap w-max">
+            <div className="absolute bottom-10 md:bottom-45 left-1/2 -translate-x-1/2 bg-white rounded-full shadow-[0_10px_40px_rgb(0,0,0,0.27)] py-2.5 px-6 flex items-center gap-4 z-40 border border-gray-100 whitespace-nowrap w-max">
               <div className="flex items-center gap-2">
                 <Star className="text-[#fbbc05] fill-[#fbbc05]" size={22} />
                 <span className="font-bold text-[16px] text-[#0f172a] font-sans tracking-tight">Excellent</span>

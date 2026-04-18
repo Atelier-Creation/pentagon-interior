@@ -15,11 +15,11 @@ const Header = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-primary/95 backdrop-blur-md py-3 shadow-lg' : 'bg-transparent py-6'}`}>
+      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-primary/95 backdrop-blur-md py-6 shadow-lg' : 'bg-transparent py-6'}`}>
         <div className="container mx-auto px-4 md:px-8 max-w-7xl flex items-center justify-between">
           <a href="#" className="flex-shrink-0">
             {/* <img src="https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/logo-2.png" alt="Decoria" className="h-8 md:h-10" style={{ filter: isScrolled ? 'brightness(0) invert(1)' : 'brightness(0) invert(1)' }} /> */}
-            <img src={logo} alt="Decoria" className="h-8 md:h-12" style={{ filter: isScrolled ? 'brightness(0) invert(1)' : 'brightness(0) invert(1)' }} />
+            <Link to="/"> <img src={logo} alt="Decoria" className="h-12 md:h-12" style={{ filter: isScrolled ? 'brightness(0) invert(1)' : 'brightness(0) invert(1)' }} /></Link>
           </a>
 
           <nav className="hidden lg:flex items-center space-x-8 text-white font-medium">
@@ -41,32 +41,23 @@ const Header = () => {
 
               {/* Dropdown */}
               <div className="absolute left-0 mt-4 w-56 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-
-                {/* <Link
-      to="/services/service1"
-      className="block px-4 py-3 hover:bg-gray-100"
-    >
-      Services 01
-    </Link>
-
-    <Link
-      to="/services/service2"
-      className="block px-4 py-3 hover:bg-gray-100"
-    >
-      Services 02
-    </Link> */}
-
+                <Link
+                to="/services"
+                className="block px-4 rounded-lg py-3 hover:bg-primary hover:text-white transition-all duration-300"
+              >
+               Our Services
+              </Link>
                 <Link
                   to="/execution-delivery"
-                  className="block px-4 py-3 hover:bg-gray-100"
+                  className="block px-4 rounded-lg py-3 hover:bg-primary hover:text-white transition-all duration-300"
                 >
                   Execution & Delivery
                 </Link>
               </div>
             </div>
-            <Link to="/services" className="hover:text-accent transition-colors">
+            {/* <Link to="/services" className="hover:text-accent transition-colors">
               Services
-            </Link>
+            </Link> */}
             <Link to="/projects" className="hover:text-accent transition-colors">Projects</Link>
             <Link to="/blog" className="hover:text-accent transition-colors">Blog</Link>
             <Link to="/contact" className="hover:text-accent transition-colors">
@@ -104,7 +95,7 @@ const Header = () => {
             className="fixed inset-0 bg-[#8c6d5a] z-[999] flex flex-col p-5 overflow-y-auto"
           >
             <div className="flex justify-between items-center mb-16">
-              <img src={logo} alt="Decoria" className="h-12 brightness-0 invert" />
+              <Link to="/"><img src={logo} alt="Decoria" className="h-12 brightness-0 invert" /></Link> 
               <button onClick={() => setMobileMenuOpen(false)} className="text-white hover:rotate-90 transition-transform duration-300">
                 <X size={36} />
               </button>
