@@ -87,7 +87,7 @@ return (
           </p>
 
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Smart Home Technology Reshaping Interior Architecture
+            Smart Home Technology...
           </h1>
 
           <div className="flex justify-center gap-6 mt-4 text-sm opacity-80">
