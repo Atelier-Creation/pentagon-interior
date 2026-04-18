@@ -11,7 +11,7 @@ const Footer = () => {
             <p className="text-white/80">
               Send Mail us at{" "}
               <span className="underline font-semibold">
-                info@decoria.com
+                pentagondesignfactory@gmail.com
               </span>
             </p>
           </div>
@@ -65,12 +65,12 @@ const Footer = () => {
           <div className="space-y-4 pt-4 border-t border-white/10">
             <div>
               <p className="text-white/60 text-sm">Just Mail Us:</p>
-              <p className="font-semibold">Brimmer St, Boston, MA 02108</p>
+              <p className="font-semibold">272/A,VOC Nagar,Ramanadhapuram Coimbatore-045</p>
             </div>
 
             <div>
               <p className="text-white/60 text-sm">Phone</p>
-              <p className="font-semibold">[+44] 987 65 4321 & 31</p>
+              <p className="font-semibold">9176828870</p>
             </div>
           </div>
         </div>

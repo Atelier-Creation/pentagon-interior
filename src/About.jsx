@@ -3,6 +3,9 @@ import Footer from "./sections/homePage/Footer";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Trophy, Building2, ChevronRight } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 export default function About() {
   const [showCircle, setShowCircle] = useState(true);
@@ -339,103 +342,79 @@ export default function About() {
         </div>
       </div>
       {/* 🔹 SECTION 4 (EXACT LIKE IMAGE 1) */}
-      <div className="py-24 px-6 bg-white">
+      {/* 🔹 SECTION 4 (SWIPER SLIDER) */}
+<div className="py-24 px-6 bg-white">
 
-        {/* HEADER WITH PREV NEXT */}
-        <div className="max-w-7xl mx-auto flex justify-between items-center mb-14">
+  {/* TITLE */}
+  <div className="max-w-7xl mx-auto mb-14">
+    <h2 className="text-5xl font-bold">
+      Our Recent Creations
+    </h2>
+  </div>
 
-          <h2 className="text-5xl font-bold">
-            Our Recent Creations
-          </h2>
+  {/* SWIPER */}
+  <Swiper
+    modules={[Autoplay]}
+    autoplay={{ delay: 2500, disableOnInteraction: false }}
+    loop={true}
+    spaceBetween={30}
+    breakpoints={{
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    }}
+  >
+    {allMembers.map((item, i) => (
+      <SwiperSlide key={i}>
+        <div className="min-w-[90%] sm:min-w-[48%] md:min-w-[31%] lg:min-w-[30%] 
+bg-white rounded-3xl overflow-hidden border shadow-sm hover:shadow-lg transition">
 
-          <div className="flex items-center gap-6 text-gray-400 font-medium">
-            <button
-              onClick={() => setPage((prev) => Math.max(prev - 1, 0))}
-              className="hover:text-black"
-            >
-              ‹ Prev
-            </button>
+          {/* IMAGE */}
+          <div className="relative group overflow-hidden rounded-t-3xl">
+           <img
+  src={item.img}
+  className="w-full h-[320px] object-cover rounded-t-3xl transition duration-500 group-hover:scale-110"
+/>
 
-            <button
-              onClick={() =>
-                setPage((prev) =>
-                  prev + 1 < Math.ceil(allMembers.length / itemsPerPage)
-                    ? prev + 1
-                    : prev
-                )
-              }
-              className="hover:text-black"
-            >
-              Next ›
-            </button>
-          </div>
+            {/* HOVER OVERLAY */}
+            <div className="absolute inset-0 bg-primary text-white flex flex-col items-center justify-center 
+              opacity-0 group-hover:opacity-100 transition duration-300 rounded-t-3xl">
+              <h3 className="text-xl font-semibold">{item.name}</h3>
+              <p className="text-sm opacity-80 mt-1">{item.role}</p>
 
-        </div>
-
-        {/* CARDS */}
-        <div className="overflow-hidden max-w-7xl mx-auto">
-          <div
-            className="flex gap-6 md:gap-10 transition-transform duration-500"
-            style={{
-              transform: `translateX(-${page * (window.innerWidth < 768 ? 100 : 33.33)}%)`,
-            }}
-          >
-            {visibleMembers.map((item, i) => (
-              <div
-                key={i}
-                className="min-w-full md:min-w-[33.33%] bg-white rounded-3xl overflow-hidden border shadow-sm hover:shadow-lg transition"
-              >
-
-                {/* IMAGE */}
-                <div className="relative group overflow-hidden rounded-t-3xl">
-                  <img
-                    src={item.img}
-                    className="w-full h-[320px] object-cover transition duration-500 group-hover:scale-110"
-                  />
-                  {/* GREEN HOVER OVERLAY */}
-                  <div className="absolute inset-0 bg-primary text-white flex flex-col items-center justify-center 
- opacity-0 group-hover:opacity-100 transition duration-300 rounded-t-3xl">
-                    <h3 className="text-xl font-semibold">{item.name}</h3>
-                    <p className="text-sm opacity-80 mt-1">{item.role}</p>
-
-                    {/* SOCIAL ICONS */}
-                    <div className="flex gap-4 mt-4 text-lg">
-                      <span className="cursor-pointer hover:scale-110">f</span>
-                      <span className="cursor-pointer hover:scale-110">📸</span>
-                      <span className="cursor-pointer hover:scale-110">𝕏</span>
-                    </div>
-
-                  </div>
-
-                  {/* CURVE OVERLAY */}
-                  <div className="absolute bottom-0 w-full bg-bg-light/80 rounded-t-[120px] pt-10 pb-6 text-center 
-group-hover:opacity-0 transition duration-300">
-                    <h3 className="text-xl font-semibold">{item.name}</h3>
-                    <p className="text-gray-500 text-sm mt-1">{item.role}</p>
-                  </div>
-                </div>
-
-                {/* EMAIL ROW */}
-                <div className="flex justify-between items-center px-5 py-4 border-t text-gray-600 text-sm">
-                  <span>✉ {item.email}</span>
-                  <span className="text-lg">→</span>
-                </div>
-
+              <div className="flex gap-4 mt-4 text-lg">
+                <span>f</span>
+                <span>📸</span>
+                <span>𝕏</span>
               </div>
+            </div>
 
-            ))}
+            {/* CURVE */}
+            <div className="absolute bottom-0 w-full bg-white/80 rounded-t-[120px] pt-10 pb-6 text-center 
+              group-hover:opacity-0 transition duration-300">
+              <h3 className="text-xl font-semibold">{item.name}</h3>
+              <p className="text-gray-500 text-sm mt-1">{item.role}</p>
+            </div>
+          </div>
+
+          {/* EMAIL */}
+<div className="flex justify-between items-center px-6 py-5 border-t text-gray-600 text-sm">            <span>✉ {item.email}</span>
+            <span>→</span>
           </div>
 
         </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
 
-        {/* FOOT BUTTON */}
-        <div className="text-center mt-12">
-          <button className="flex items-center gap-2 mx-auto text-black font-medium">
-            → Meet All Members
-          </button>
-        </div>
+  {/* FOOT */}
+  <div className="text-center mt-12">
+    <button className="flex items-center gap-2 mx-auto text-black font-medium">
+      → Meet All Members
+    </button>
+  </div>
 
-      </div>
+</div>
       <Footer />
     </>
   );

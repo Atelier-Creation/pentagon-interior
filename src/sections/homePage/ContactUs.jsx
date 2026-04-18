@@ -89,7 +89,7 @@ const ContactUs = () => {
               </div>
               <div>
                 <p className="text-sm text-white/70">Just Mail Us:</p>
-                <p className="font-semibold">Brimmer St, Boston, MA 02108</p>
+                <p className="font-semibold">272/A,VOC Nagar,Ramanadhapuram Coimbatore-045</p>
               </div>
             </div>
 
@@ -100,7 +100,7 @@ const ContactUs = () => {
               </div>
               <div>
                 <p className="text-sm text-white/70">Need help? Call Us:</p>
-                <p className="font-semibold">+1800900122</p>
+                <p className="font-semibold">9176828870</p>
               </div>
             </div>
 
@@ -111,7 +111,7 @@ const ContactUs = () => {
               </div>
               <div>
                 <p className="text-sm text-white/70">Just Mail Us:</p>
-                <p className="font-semibold">support@gmail.com</p>
+                <p className="font-semibold">pentagondesignfactory@gmail.com</p>
               </div>
             </div>
           </div>

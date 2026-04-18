@@ -132,7 +132,7 @@ const [activeIndex, setActiveIndex] = useState(0);
 </p>
 
   <h2 className="text-[34px] md:text-[38px] font-semibold tracking-tight">
-      +91 9876543210
+      9176828870
     </h2>
   </div>
 

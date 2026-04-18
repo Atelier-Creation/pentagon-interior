@@ -28,9 +28,40 @@ const Header = () => {
     About
   </Link>
           {/* <a href="#" className="hover:text-accent transition-colors">Pages</a> */}
-          <Link to="/services" className="hover:text-accent transition-colors">
-  Services
-</Link>
+         <div className="relative group">
+  {/* Main Menu Click */}
+  <Link
+    to="/services"
+    className="hover:text-accent transition-colors"
+  >
+    Services
+  </Link>
+
+  {/* Dropdown */}
+  <div className="absolute left-0 mt-4 w-56 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+    
+    {/* <Link
+      to="/services/service1"
+      className="block px-4 py-3 hover:bg-gray-100"
+    >
+      Services 01
+    </Link>
+
+    <Link
+      to="/services/service2"
+      className="block px-4 py-3 hover:bg-gray-100"
+    >
+      Services 02
+    </Link> */}
+
+    <Link
+      to="/execution-delivery"
+      className="block px-4 py-3 hover:bg-gray-100"
+    >
+      Execution & Delivery
+    </Link>
+  </div>
+</div>
           <Link to="/projects" className="hover:text-accent transition-colors">Projects</Link>
           <a href="#" className="hover:text-accent transition-colors">Blog</a>
          <Link to="/contact" className="hover:text-accent transition-colors">

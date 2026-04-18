@@ -139,7 +139,9 @@ export default function Contact() {
     </div>
     <div>
       <p className="text-sm text-white/70">Just Mail Us:</p>
-      <p className="font-semibold">Brimmer St, Boston, MA 02108</p>
+      <p className="font-semibold">272/A,VOC Nagar,Ramanadhapuram Coimbatore-045
+
+</p>
     </div>
   </div>
 
@@ -150,7 +152,7 @@ export default function Contact() {
     </div>
     <div>
       <p className="text-sm text-white/70">Need help? Call Us:</p>
-      <p className="font-semibold">+1800900122</p>
+      <p className="font-semibold">9176828870</p>
     </div>
   </div>
 
@@ -161,7 +163,7 @@ export default function Contact() {
     </div>
     <div>
       <p className="text-sm text-white/70">Just Mail Us:</p>
-      <p className="font-semibold">support@gmail.com</p>
+      <p className="font-semibold">pentagondesignfactory@gmail.com</p>
     </div>
   </div>
 
@@ -193,8 +195,7 @@ export default function Contact() {
       {/* LEFT TEXT */}
       <div className="w-full md:w-[35%] text-center md:text-left">
         <p className="text-gray-600 leading-relaxed">
-          34 Sunset Boulevard, Suite 500 Los Angeles,
-          CA 90026 United States.
+          272/A,VOC Nagar,Ramanadhapuram Coimbatore-045
         </p>
 
         <button className="mt-6 flex items-center justify-center md:justify-start gap-3 border border-primary rounded-full px-6 py-3 group hover:bg-primary transition mx-auto md:mx-0">
@@ -233,7 +234,7 @@ export default function Contact() {
           </div>
           <div>
             <p className="text-sm text-gray-500">Need help? Call Us:</p>
-            <p className="font-semibold">+1800900122</p>
+            <p className="font-semibold">9176828870</p>
           </div>
         </div>
 
@@ -244,7 +245,7 @@ export default function Contact() {
           </div>
           <div>
             <p className="text-sm text-gray-500">Just Mail Us:</p>
-            <p className="font-semibold">support@gmail.com</p>
+            <p className="font-semibold">pentagondesignfactory@gmail.com</p>
           </div>
         </div>
 
