@@ -64,11 +64,43 @@ const Header = () => {
     </Link>
   </div>
 </div>
-          <Link to="/services" className="hover:text-accent transition-colors">
+          {/* <Link to="/services" className="hover:text-accent transition-colors">
             Services
-          </Link>
+          </Link> */}
           <Link to="/projects" className="hover:text-accent transition-colors">Projects</Link>
-          <a href="#" className="hover:text-accent transition-colors">Blog</a>
+         <div className="relative group">
+  {/* Main Blog */}
+  <Link
+    to="/blog"
+    className="hover:text-accent transition-colors"
+  >
+    Blog
+  </Link>
+
+  {/* Dropdown */}
+  <div className="absolute left-0 mt-4 w-56 bg-white text-black rounded-lg shadow-lg opacity-0 invisible 
+  group-hover:opacity-100 group-hover:visible transition-all duration-300">
+
+
+   <div className="relative group">
+  {/* Main Blog */}
+ 
+
+  {/* Dropdown */}
+  <div className="absolute left-0 mt-4 w-56 bg-white text-black rounded-lg shadow-lg opacity-0 invisible 
+  group-hover:opacity-100 group-hover:visible transition-all duration-300">
+
+   
+
+    <Link to="/blog/details" className="block px-4 py-3 hover:bg-gray-100">
+      Blog Post Details
+    </Link>
+
+  </div>
+</div>
+
+  </div>
+</div>
           <Link to="/contact" className="hover:text-accent transition-colors">
             Contact
           </Link>
