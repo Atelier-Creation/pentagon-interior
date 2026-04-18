@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-primary/95 backdrop-blur-md py-6 shadow-lg' : 'bg-transparent py-6'}`}>
+      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-primary/95 backdrop-blur-md py-3 shadow-lg' : 'bg-transparent py-3'}`}>
         <div className="container mx-auto px-4 md:px-8 max-w-7xl flex items-center justify-between">
           <a href="#" className="flex-shrink-0">
             {/* <img src="https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/logo-2.png" alt="Decoria" className="h-8 md:h-10" style={{ filter: isScrolled ? 'brightness(0) invert(1)' : 'brightness(0) invert(1)' }} /> */}
