@@ -126,7 +126,7 @@ const Header = () => {
     </header>
     
     {/* Mobile Menu - Moved outside header for clean stacking */}
-    <AnimatePresence>
+    {/* <AnimatePresence>
       {mobileMenuOpen && (
         <motion.div 
           initial={{ y: '-100%' }}
@@ -163,7 +163,7 @@ const Header = () => {
               Contact
             </Link>
 
-          </nav>
+          </nav> */}
 
           <div className="hidden lg:flex items-center space-x-6 text-white">
             <button className="hover:text-accent transition-colors"><Search size={20} /></button>
@@ -179,9 +179,9 @@ const Header = () => {
           <button className="lg:hidden text-white" onClick={() => setMobileMenuOpen(true)}>
             <Menu size={28} />
           </button>
-        </div>
+        {/* </div>
 
-      </header>
+      </header> */}
 
       {/* Mobile Menu - Moved outside header for clean stacking */}
       <AnimatePresence>
