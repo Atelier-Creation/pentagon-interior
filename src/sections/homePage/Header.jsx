@@ -66,7 +66,7 @@ const Header = () => {
 
         </nav>
 
-        <div className="hidden lg:flex items-center space-x-6 text-white">
+        {/* <div className="hidden lg:flex items-center space-x-6 text-white">
           <button className="hover:text-accent transition-colors"><Search size={20} /></button>
           <div className="relative">
             <button className="hover:text-accent transition-colors"><ShoppingCart size={20} /></button>
@@ -75,7 +75,7 @@ const Header = () => {
           <a href="#" className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-full py-2 px-6 backdrop-blur-sm transition-all flex items-center gap-2">
             Get A Quote <ArrowRight size={16} />
           </a>
-        </div>
+        </div> */}
 
         <button className="lg:hidden text-white" onClick={() => setMobileMenuOpen(true)}>
           <Menu size={28} />
