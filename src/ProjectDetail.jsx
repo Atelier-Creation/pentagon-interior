@@ -74,8 +74,7 @@ const ProjectDetail = () => {
       
       <main>
         {/* 🔹 HERO SECTION */}
-        <section className="relative h-[450px] flex items-center justify-center text-white overflow-hidden">
-          <div 
+<section className="relative h-[260px] md:h-[450px] flex items-center justify-center text-white overflow-hidden">          <div 
             className="absolute inset-0 bg-cover bg-center" 
             style={{ 
               backgroundImage: `url('${project.image}')`,
@@ -84,12 +83,12 @@ const ProjectDetail = () => {
             <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
           </div>
           
-          <div className="relative text-center z-10 pt-20">
+          <div className="relative text-center z-10 pt-10 md:pt-20">
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl font-bold font-sans tracking-tight mb-6"
+              className="text-3xl sm:text-4xl md:text-7xl font-bold font-sans tracking-tight mb-6"
             >
               {project.title}
             </motion.h1>
@@ -110,13 +109,13 @@ const ProjectDetail = () => {
         </section>
 
         {/* 🔹 PROJECT INFO GRID */}
-        <section className="py-20 bg-white">
+        <section className="py-10 md:py-20 bg-white">
           <div className="container mx-auto px-4 max-w-7xl">
             <motion.div 
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-[#f8f8f8] rounded-[3rem] p-10 md:p-16"
+              className="bg-[#f8f8f8] rounded-[2rem] p-6 md:p-16"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-12">
                 <div className="flex gap-5">
@@ -184,7 +183,7 @@ const ProjectDetail = () => {
         </section>
 
         {/* 🔹 OVERVIEW SECTION */}
-        <section className="py-14 bg-white overflow-hidden">
+        <section className="py-8 md:py-14 bg-white overflow-hidden">
           <div className="container mx-auto px-4 max-w-7xl">
             <div className="grid lg:grid-cols-2 gap-20 items-start">
               <motion.div
@@ -261,7 +260,7 @@ const ProjectDetail = () => {
               pagination={{ clickable: true }}
               autoplay={{ delay: 5000 }}
               loop={project.gallery.length > 2}
-              className="rounded-[3rem] overflow-hidden shadow-2xl h-[500px] md:h-[700px]"
+              className="rounded-[2rem] overflow-hidden shadow-xl h-[250px] sm:h-[300px] md:h-[700px]"
             >
               {project.gallery.map((img, i) => (
                 <SwiperSlide key={i}>
@@ -273,7 +272,7 @@ const ProjectDetail = () => {
         </section>
 
         {/* 🔹 RELATED PROJECTS (Mockup of footer nav) */}
-        <section className="py-14 bg-white border-t border-gray-100">
+        <section className="py-8 md:py-14 bg-white border-t border-gray-100">
           <div className="container mx-auto px-4 max-w-7xl">
             <div className="flex items-end justify-between mb-16">
               <div>

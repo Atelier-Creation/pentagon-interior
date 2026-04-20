@@ -11,7 +11,7 @@ export default function About() {
   const [showCircle, setShowCircle] = useState(true);
   const [page, setPage] = useState(0);
   const itemsPerPage = 3;
-
+const [activeItem, setActiveItem] = useState(null);
   const allMembers = [
     {
       name: "Michael Smith",
@@ -107,21 +107,21 @@ className="absolute top-[120px] sm:top-[150px] md:top-[200px] right-0 md:left-[2
 
           </div>
           {/* RIGHT SIDE */}
-          <div className="md:-ml-6 text-center md:text-left">
+          <div className="md:-ml-6 text-left">
 
             {/* FOUNDATION BLOCK */}
-            <div className="flex items-start gap-4 mb-8">
+          <div className="flex items-start gap-3 sm:gap-4 mb-6">
 
               <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                 <Building2 size={24} />
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold">The Foundation</h3>
-                <p className="text-gray-500 text-sm mt-2 max-w-md">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold">The Foundation</h3>
+                <p className="text-gray-500 text-xs sm:text-sm mt-2 max-w-md">
                   <span className="font-semibold text-black">Since 2005</span>, we’ve been crafting innovative interiors and architecture that balance...
                 </p>
-                <button className="mt-3 flex items-center gap-2 font-medium text-black">
+                <button className="mt-2 flex items-center gap-2 text-sm sm:text-base font-medium text-black">
                   → Read More
                 </button>
               </div>
@@ -364,7 +364,7 @@ className="absolute top-[120px] sm:top-[150px] md:top-[200px] right-0 md:left-[2
   >
     {allMembers.map((item, i) => (
       <SwiperSlide key={i}>
-        <div className="bg-white rounded-3xl overflow-hidden border shadow-sm hover:shadow-lg transition">
+        <div className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition">
 
           {/* IMAGE */}
           <div className="relative group overflow-hidden rounded-t-3xl">

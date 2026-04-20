@@ -133,11 +133,11 @@ export default function Contact() {
       <div className="space-y-8 text-white mt-10">
 
   {/* ADDRESS */}
-  <div className="flex items-center gap-4">
-    <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+  <div className="flex items-start gap-4 w-full">
+<div className="w-12 h-12 min-w-[48px] rounded-full bg-white/10 flex items-center justify-center">
       <FaMapMarkerAlt />
     </div>
-    <div>
+   <div className="flex-1">
       <p className="text-sm text-white/70">Just Mail Us:</p>
       <p className="font-semibold">272/A,VOC Nagar,Ramanadhapuram Coimbatore-045
 
@@ -146,24 +146,26 @@ export default function Contact() {
   </div>
 
   {/* PHONE */}
-  <div className="flex items-center gap-4">
-    <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+  <div className="flex items-start gap-4 w-full">
+<div className="w-12 h-12 min-w-[48px] rounded-full bg-white/10 flex items-center justify-center">
       <FaPhoneAlt />
     </div>
-    <div>
+   <div className="flex-1">
       <p className="text-sm text-white/70">Need help? Call Us:</p>
       <p className="font-semibold">9176828870</p>
     </div>
   </div>
 
   {/* EMAIL */}
-  <div className="flex items-center gap-4">
-    <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+ <div className="flex items-start gap-4 w-full">
+<div className="w-12 h-12 min-w-[48px] rounded-full bg-white/10 flex items-center justify-center">
       <FaEnvelope />
     </div>
-    <div>
+ <div className="flex-1">
       <p className="text-sm text-white/70">Just Mail Us:</p>
-      <p className="font-semibold">pentagondesignfactory@gmail.com</p>
+<p className="font-semibold break-all text-sm leading-relaxed">
+  pentagondesignfactory@gmail.com
+</p>
     </div>
   </div>
 
@@ -228,24 +230,26 @@ export default function Contact() {
       <div className="w-full md:w-1/3 space-y-6 flex flex-col items-center md:items-start">
 
         {/* PHONE */}
-        <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-full border flex items-center justify-center text-gray-600">
-            <FaPhoneAlt />
+        <div className="flex items-start gap-4 w-full">
+<div className="w-12 h-12 min-w-[48px] rounded-full border flex items-center justify-center text-gray-600">
+              <FaPhoneAlt />
           </div>
-          <div>
+      <div className="flex-1">
             <p className="text-sm text-gray-500">Need help? Call Us:</p>
             <p className="font-semibold">9176828870</p>
           </div>
         </div>
 
         {/* EMAIL */}
-        <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-full border flex items-center justify-center text-gray-600">
-            <FaEnvelope />
+       <div className="flex items-start gap-4 w-full">
+<div className="w-12 h-12 min-w-[48px] rounded-full border flex items-center justify-center text-gray-600">
+              <FaEnvelope />
           </div>
-          <div>
+       <div className="flex-1">
             <p className="text-sm text-gray-500">Just Mail Us:</p>
-            <p className="font-semibold">pentagondesignfactory@gmail.com</p>
+<p className="font-semibold text-sm whitespace-nowrap">
+    pentagondesignfactory@gmail.com
+</p>
           </div>
         </div>
 

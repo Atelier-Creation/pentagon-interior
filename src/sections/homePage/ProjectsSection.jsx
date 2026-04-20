@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 const categories = ["all", "commercial", "residential", "hospitality"];
 
 const projectsData = [
@@ -157,8 +158,7 @@ export default function ProjectsSection() {
                   </p>
 
                   <Link to={`/project/${item.id}`} className="text-xs md:text-sm font-bold uppercase tracking-widest inline-flex items-center gap-2 group/btn">
-                    View Details <span className="transition-transform group-hover/btn:translate-x-1">→</span>
-                  </Link>
+ <ArrowRight size={16} /> </Link>
                 </div>
               </div>
             </div>

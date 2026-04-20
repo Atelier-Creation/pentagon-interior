@@ -75,19 +75,28 @@ const [start, setStart] = useState(0);
 
   {/* CARD */}
   {/* CARD */}
-  <div className="relative h-[180px] sm:h-[200px] md:h-[230px] w-full rounded-[30px] bg-[#eef1ef] overflow-hidden flex items-center justify-center text-center">
+<div
+    className="relative h-[180px] sm:h-[200px] md:h-[230px] w-full rounded-[30px] overflow-hidden flex items-center justify-center text-center"
+    style={{
+      backgroundImage: "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  >
 
+    {/* DARK OVERLAY */}
+    <div className="absolute inset-0 bg-black/40"></div>
     {/* GRID */}
-  <div className="absolute inset-0 overflow-hidden">
+  {/* <div className="absolute inset-0 overflow-hidden">
 
-  {/* BASE GRID */}
+ 
   <div className="absolute inset-0 
     bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),
          linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)]
     bg-[size:60px_60px] opacity-40">
   </div>
 
-  {/* MOVING LIGHT EFFECT */}
+
   <div className="absolute inset-0 
     bg-gradient-to-br from-transparent via-[#8b6b55]/40 to-transparent
     opacity-0 group-hover:opacity-100 
@@ -96,16 +105,16 @@ const [start, setStart] = useState(0);
   </div>
 
 </div>
-  
+   */}
     {/* CONTENT */}
     <div className="relative flex flex-col items-center transition-all duration-300 group-hover:-translate-y-4">
 
-      <h3 className="text-[22px] font-semibold text-[#2c2c2c]">
+      <h3 className="text-[22px] font-semibold text-white">
         Creative Planning
       </h3>
 
       {/* INSIDE TEXT */}
-<p className="text-[16px] leading-relaxed text-gray-500 mt-2 opacity-0 
+<p className="text-[16px] leading-relaxed text-white/80 mt-2 opacity-0 
   group-hover:opacity-100 transition">
   Tailored design concepts that balance beauty with functionality.
 </p>
@@ -144,21 +153,28 @@ const [start, setStart] = useState(0);
 {/* CENTER CARD */}
 <div className="group flex flex-col items-center">
 
+  
   {/* CARD */}
-  {/* CARD */}
-  <div className="relative h-[180px] sm:h-[200px] md:h-[230px] w-full rounded-[30px] bg-[#eef1ef] overflow-hidden flex items-center justify-center text-center">
-
+<div
+  className="relative h-[180px] sm:h-[200px] md:h-[230px] w-full rounded-[30px] overflow-hidden flex items-center justify-center text-center"
+  style={{
+backgroundImage: "url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  <div className="absolute inset-0 bg-black/50"></div>
     {/* GRID */}
-  <div className="absolute inset-0 overflow-hidden">
+  {/* <div className="absolute inset-0 overflow-hidden">
 
-  {/* BASE GRID */}
+ 
   <div className="absolute inset-0 
     bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),
          linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)]
     bg-[size:60px_60px] opacity-40">
   </div>
 
-  {/* MOVING LIGHT EFFECT */}
+
   <div className="absolute inset-0 
 bg-gradient-to-br from-transparent via-[#8b6b55]/40 to-transparent
    opacity-0 group-hover:opacity-100 
@@ -166,16 +182,16 @@ bg-gradient-to-br from-transparent via-[#8b6b55]/40 to-transparent
     animate-[moveLight_3s_linear_infinite]">
   </div>
 
-</div>
+</div> */}
     {/* CONTENT */}
     <div className="relative flex flex-col items-center transition-all duration-300 group-hover:-translate-y-4">
 
-      <h3 className="text-[22px] font-semibold text-[#2c2c2c]">
+      <h3 className="text-[22px] font-semibold text-white">
         Innovative Design
       </h3>
 
       {/* INSIDE TEXT */}
-      <p className="text-[16px] leading-relaxed text-gray-500 mt-2 opacity-0 
+      <p className="text-[16px] leading-relaxed text-white/80 mt-2 opacity-0 
         group-hover:opacity-100 transition">
         Unique interior and architectural ideas that bring spaces to life.
       </p>
@@ -216,19 +232,24 @@ bg-gradient-to-br from-transparent via-[#8b6b55]/40 to-transparent
 <div className="group flex flex-col items-center">
 
   {/* CARD */}
-  <div className="relative h-[180px] sm:h-[200px] md:h-[230px] w-full rounded-[30px] bg-[#eef1ef] overflow-hidden flex items-center justify-center text-center">
-
+  <div className="relative h-[180px] sm:h-[200px] md:h-[230px] w-full rounded-[30px] overflow-hidden flex items-center justify-center text-center"
+style={{
+  backgroundImage: "url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c')",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+}}>
+  <div className="absolute inset-0 bg-black/40"></div>
     {/* GRID */}
-  <div className="absolute inset-0 overflow-hidden">
+  {/* <div className="absolute inset-0 overflow-hidden">
 
-  {/* BASE GRID */}
+ 
   <div className="absolute inset-0 
     bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),
          linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)]
     bg-[size:60px_60px] opacity-40">
   </div>
 
-  {/* MOVING LIGHT EFFECT */}
+ 
   <div className="absolute inset-0 
    bg-gradient-to-br from-transparent via-[#8b6b55]/40 to-transparent
     opacity-0 group-hover:opacity-100 
@@ -236,16 +257,16 @@ bg-gradient-to-br from-transparent via-[#8b6b55]/40 to-transparent
     animate-[moveLight_3s_linear_infinite]">
   </div>
 
-</div>
+</div> */}
     {/* CONTENT */}
     <div className="relative flex flex-col items-center transition-all duration-300 group-hover:-translate-y-4">
 
-      <h3 className="text-[22px] font-semibold text-[#2c2c2c]">
+      <h3 className="text-[22px] font-semibold text-white">
         Creative Planning
       </h3>
 
       {/* INSIDE TEXT */}
-      <p className="text-[16px] leading-relaxed text-gray-500 mt-2 transition 
+      <p className="text-[16px] leading-relaxed text-white/80 mt-2 transition 
         opacity-0 group-hover:opacity-100 group-hover:-translate-y-2">
         Tailored design concepts that balance beauty with functionality.
       </p>
@@ -312,12 +333,13 @@ bg-gradient-to-br from-transparent via-[#8b6b55]/40 to-transparent
 </div> */}
 </section>
 <section
-  className="py-16 md:py-28 px-4 md:px-6 min-h-[650px] text-white relative"
+  className="py-16 md:py-28 px-4 md:px-6 min-h-[500px] md:min-h-[650px]text-white relative"
   style={{
     backgroundImage:
       "url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2070&auto=format&fit=crop')",
-    backgroundSize: "120%",
-    backgroundPosition: "center",
+   backgroundSize: "cover",
+backgroundRepeat: "no-repeat",
+backgroundPosition: "center",
   }}
 >
   {/* DARK OVERLAY */}
@@ -344,11 +366,11 @@ bg-gradient-to-br from-transparent via-[#8b6b55]/40 to-transparent
   </p>
 
 </div>
-  <div className="relative max-w-7xl mx-auto grid md:grid-cols-3 gap-10 px-6">
+  <div className="relative max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 px-6">
 {cardData.slice(start, start + 3).map((item, i) => (
   <div
     key={i}
-    className="group relative h-[320px] sm:h-[380px] md:h-[460px] rounded-3xl border border-white/30 overflow-hidden flex items-center justify-center"
+    className="group relative h-[260px] sm:h-[320px] md:h-[420px] rounded-3xl border border-white/30 overflow-hidden flex items-center justify-center"
   >
 
     {/* 🔥 HOVER IMAGE */}
@@ -371,15 +393,19 @@ bg-gradient-to-br from-transparent via-[#8b6b55]/40 to-transparent
     </div>
 
     {/* HEADING */}
-    <h2 className="absolute top-[38%] -translate-y-1/2 
+    <h2 className="absolute top-[45%] sm:top-[40%]-translate-y-1/2 
       text-[22px] sm:text-[28px] md:text-[36px]tracking-[6px] text-transparent stroke-text 
       text-center z-30">
       {item.title}
     </h2>
 
     {/* WHITE CARD */}
-   <div className="absolute bottom-6 bg-[#8b6b55] text-white p-7 
-  rounded-[30px] w-[90%] sm:w-[80%] md:w-[78%] shadow-xl z-30 
+   <div className="absolute bottom-4 sm:bottom-6 
+  bg-[#8b6b55] text-white 
+  p-4 sm:p-6 
+  rounded-[20px] sm:rounded-[30px] 
+  w-[92%] sm:w-[85%] md:w-[78%] 
+  shadow-xl z-30 
   opacity-100 group-hover:opacity-0 transition duration-300">
 
   <h3 className="font-semibold text-lg mb-2 text-white">
