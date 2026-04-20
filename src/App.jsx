@@ -11,8 +11,9 @@ import BlogPage from "./BlogPage";
 import BlogDetails from "./BlogDetails";
 import SmartHome from "./blog/SmartHome";
 import MinimalistInterior from "./blog/MinimalistInterior";
-
-
+import SustainableArchitecture from "./blog/SustainableArchitecture";
+import EcoLiving from "./blog/EcoLiving";
+import ColorTrends from "./blog/ColorTrends";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/smart-home" element={<SmartHome />} />
         <Route path="/blog/minimalist-interior" element={<MinimalistInterior />} />
+        <Route path="/blog/sustainable-architecture" element={<SustainableArchitecture />} />
+        <Route path="/blog/eco" element={<EcoLiving />} />
+        <Route path="/blog/colors" element={<ColorTrends />} />
 
         <Route path="/blog/details" element={<BlogDetails />} />  {/* ✅ ADD THIS */}
 

@@ -21,7 +21,7 @@ const [start, setStart] = useState(0);
 
       {/* 🔹 HERO SECTION */}
       <div
-        className="h-[420px] flex items-center justify-center relative text-white"
+        className="h-[280px] md:h-[420px] flex items-center justify-center relative text-white"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop')",
@@ -32,7 +32,7 @@ const [start, setStart] = useState(0);
         <div className="absolute inset-0 bg-primary-dark/80"></div>
 
         <div className="relative text-center">
-          <h1 className="text-5xl md:text-6xl font-bold">
+          <h1 className="text-3xl md:text-6xl font-bold">
             Services 
           </h1>
 
@@ -47,7 +47,7 @@ const [start, setStart] = useState(0);
       </div>
 
      {/* 🔹 FIND YOUR STYLE */}
-<section className="py-28 bg-[#f6f7f8] text-center">
+<section className="py-16 md:py-28 px-4 md:px-6 bg-[#f6f7f8] text-center">
   
   {/* TOP BADGE */}
   <div className="mb-6 flex justify-center">
@@ -57,7 +57,7 @@ const [start, setStart] = useState(0);
   </div>
 
   {/* HEADING */}
-  <h2 className="text-5xl md:text-6xl font-semibold mb-6 tracking-tight text-[#2d2d2d]">
+  <h2 className="text-3xl md:text-6xl font-semibold mb-6 tracking-tight text-[#2d2d2d]">
     Find Your Signature Look
   </h2>
 
@@ -68,14 +68,14 @@ const [start, setStart] = useState(0);
   </p>
 
   {/* CARDS */}
-  <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto px-6 items-center">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 max-w-6xl mx-auto px-4 md:px-6 items-center">
 
    {/* LEFT CARD */}
 <div className="group flex flex-col items-center">
 
   {/* CARD */}
   {/* CARD */}
-  <div className="relative h-[230px] w-full rounded-[30px] bg-[#eef1ef] overflow-hidden flex items-center justify-center text-center">
+  <div className="relative h-[180px] sm:h-[200px] md:h-[230px] w-full rounded-[30px] bg-[#eef1ef] overflow-hidden flex items-center justify-center text-center">
 
     {/* GRID */}
   <div className="absolute inset-0 overflow-hidden">
@@ -146,7 +146,7 @@ const [start, setStart] = useState(0);
 
   {/* CARD */}
   {/* CARD */}
-  <div className="relative h-[230px] w-full rounded-[30px] bg-[#eef1ef] overflow-hidden flex items-center justify-center text-center">
+  <div className="relative h-[180px] sm:h-[200px] md:h-[230px] w-full rounded-[30px] bg-[#eef1ef] overflow-hidden flex items-center justify-center text-center">
 
     {/* GRID */}
   <div className="absolute inset-0 overflow-hidden">
@@ -216,7 +216,7 @@ bg-gradient-to-br from-transparent via-[#8b6b55]/40 to-transparent
 <div className="group flex flex-col items-center">
 
   {/* CARD */}
-  <div className="relative h-[230px] w-full rounded-[30px] bg-[#eef1ef] overflow-hidden flex items-center justify-center text-center">
+  <div className="relative h-[180px] sm:h-[200px] md:h-[230px] w-full rounded-[30px] bg-[#eef1ef] overflow-hidden flex items-center justify-center text-center">
 
     {/* GRID */}
   <div className="absolute inset-0 overflow-hidden">
@@ -312,7 +312,7 @@ bg-gradient-to-br from-transparent via-[#8b6b55]/40 to-transparent
 </div> */}
 </section>
 <section
-  className="py-28 min-h-[650px] text-white relative"
+  className="py-16 md:py-28 px-4 md:px-6 min-h-[650px] text-white relative"
   style={{
     backgroundImage:
       "url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2070&auto=format&fit=crop')",
@@ -328,7 +328,7 @@ bg-gradient-to-br from-transparent via-[#8b6b55]/40 to-transparent
   {/* SMALL LABEL */}
   <div className="flex justify-center mb-4">
     <div className="flex items-center gap-2 text-white/70 tracking-widest text-sm">
-      <span className="text-lg">✕</span>
+      <span className="text-base md:text-lg">✕</span>
       <span>SERVICES</span>
     </div>
   </div>
@@ -348,12 +348,12 @@ bg-gradient-to-br from-transparent via-[#8b6b55]/40 to-transparent
 {cardData.slice(start, start + 3).map((item, i) => (
   <div
     key={i}
-    className="group relative h-[460px] rounded-3xl border border-white/30 overflow-hidden flex items-center justify-center"
+    className="group relative h-[320px] sm:h-[380px] md:h-[460px] rounded-3xl border border-white/30 overflow-hidden flex items-center justify-center"
   >
 
     {/* 🔥 HOVER IMAGE */}
    <div
-  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 z-0"
+  className="absolute inset-0 opacity-0 opacity-100 md:opacity-0 group-hover:opacity-100:opacity-100 transition duration-500 z-0"
   style={{
     backgroundImage: `url(${item.image})`,
     backgroundSize: "cover",
@@ -372,14 +372,14 @@ bg-gradient-to-br from-transparent via-[#8b6b55]/40 to-transparent
 
     {/* HEADING */}
     <h2 className="absolute top-[38%] -translate-y-1/2 
-      text-[36px] tracking-[6px] text-transparent stroke-text 
+      text-[22px] sm:text-[28px] md:text-[36px]tracking-[6px] text-transparent stroke-text 
       text-center z-30">
       {item.title}
     </h2>
 
     {/* WHITE CARD */}
    <div className="absolute bottom-6 bg-[#8b6b55] text-white p-7 
-  rounded-[30px] w-[78%] shadow-xl z-30 
+  rounded-[30px] w-[90%] sm:w-[80%] md:w-[78%] shadow-xl z-30 
   opacity-100 group-hover:opacity-0 transition duration-300">
 
   <h3 className="font-semibold text-lg mb-2 text-white">
@@ -405,7 +405,7 @@ bg-gradient-to-br from-transparent via-[#8b6b55]/40 to-transparent
 ))} </div>  
 
 {/* 🔥 ADD THIS BELOW GRID */}
-<div className="flex items-center justify-center gap-6 mt-16 text-white/70">
+<div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-16 text-white/70">
 
   {/* PREV */}
   <button

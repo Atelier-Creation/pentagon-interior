@@ -19,7 +19,7 @@ export default function Contact() {
       {/* 🔹 HERO SECTION */}
      
 <div
-  className="h-[420px] flex items-center justify-center relative text-white"
+  className="h-[300px] md:h-[420px] flex items-center justify-center relative text-white px-4 flex items-center justify-center relative text-white"
   style={{
     backgroundImage:
       "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')",
@@ -31,7 +31,7 @@ export default function Contact() {
   <div className="absolute inset-0 bg-primary-dark/80"></div>
 
   <div className="relative text-center">
-    <h1 className="text-5xl md:text-6xl font-bold">
+    <h1 className="text-3xl md:text-6xl font-bold">
       Contact Us
     </h1>
    <p className="mt-4 text-white/70 text-lg flex justify-center gap-2">
@@ -52,7 +52,7 @@ export default function Contact() {
 
   {/* IMAGE (RIGHT SIDE ONLY) */}
   <div
-  className="absolute right-0 top-0 h-full w-[60%]"
+ className="absolute right-0 top-0 h-full w-full md:w-[60%]"
   style={{
     backgroundImage:
       "url('https://images.unsplash.com/photo-1541888941259-7a974dfb9a51?q=80&w=2070&auto=format&fit=crop')",
@@ -70,7 +70,7 @@ export default function Contact() {
 
 </div>
 
-  <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 items-stretch gap-12 items-center">
+  <div className="relative max-w-7xl mx-auto relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-stretch gap-12 items-center">
 
     {/* LEFT SIDE */}
     <div>
@@ -87,14 +87,14 @@ export default function Contact() {
       </p>
 
       {/* FORM */}
-      <div className="bg-white/95 backdrop-blur-md p-12 rounded-3xl shadow-2xl text-black max-w-xl border border-gray-200">
+      <div className="bg-white/95 backdrop-blur-md p-6 md:p-12 rounded-3xl shadow-2xl text-black max-w-xl border border-gray-200">
 
-        <div className="grid grid-cols-2 gap-4 mb-4">
+       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
          <input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Name" />
 <input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Email" />
         </div>
 
-        <div className="grid grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           <input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Subject" />
 <input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Phone" />
         </div>
@@ -119,7 +119,7 @@ export default function Contact() {
     </div>
 
     {/* RIGHT SIDE */}
-<div className="relative flex flex-col justify-center items-start text-left z-10 h-full md:pl-16">
+<div className="relative flex flex-col justify-center flex flex-col justify-center items-center md:items-start text-center md:text-left z-10 h-full md:pl-16">
       
 
       {/* PLANT */}
@@ -183,7 +183,7 @@ export default function Contact() {
   </div>
 
   {/* MAIN HEADING */}
-  <h2 className="text-6xl md:text-7xl font-bold text-center mb-16 tracking-tight">
+  <h2 className="text-3xl md:text-7xl font-bold text-center mb-16 tracking-tight">
     Discover Our Presence
   </h2>
   {["LA", "BOS", "NY"].map((city, i) => (
@@ -212,7 +212,7 @@ export default function Contact() {
       </div>
 
       {/* CENTER IMAGE */}
-      <div className="relative w-full md:w-[420px] h-[240px] rounded-2xl overflow-hidden shadow-md">
+      <div className="relative w-full md:w-[420px] h-[200px] md:h-[240px] h-[240px] rounded-2xl overflow-hidden shadow-md">
         <img
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
           className="w-full h-full object-cover"

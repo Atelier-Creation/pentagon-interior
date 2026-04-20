@@ -26,14 +26,14 @@ export default function BlogPage() {
     category: "ARCHITECTURE",
     title: "Sustainable Architecture Trends Transform Modern...",
     image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
-    path: "/blog/architecture",
+    path: "/blog/sustainable-architecture",
   },
   {
     id: 4,
     category: "MODERN LIVING",
     title: "Innovative Lighting Ideas for Every Home",
     image: "https://images.unsplash.com/photo-1556912173-3bb406ef7e77",
-    path: "/blog/lighting",
+    path: "/blog/details",
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export default function BlogPage() {
     category: "INDUSTRY NEWS",
     title: "Refresh Your Interiors with 2025 Color Trends",
     image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
-    path: "/blog/colors",
+     path: "/blog/colors",
   },
 ];
   return (

@@ -56,7 +56,7 @@ export default function About() {
       {/* 🔹 HERO SECTION */}
 
       <div
-        className="h-[420px] flex items-center justify-center relative text-white"
+        className="h-[280px] md:h-[420px] flex items-center justify-center relative text-white px-4"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')",
@@ -68,7 +68,7 @@ export default function About() {
         <div className="absolute inset-0 bg-primary-dark/80"></div>
 
         <div className="relative text-center">
-          <h1 className="text-5xl md:text-6xl font-bold">
+          <h1 className="text-3xl md:text-6xl font-bold">
             About Us
           </h1>
           <p className="mt-4 text-white/70 text-lg flex justify-center gap-2">
@@ -83,8 +83,8 @@ export default function About() {
 
       {/* 🔹 SECTION 1 (Image + Text) */}
 
-      <div className="py-28 px-6 bg-white">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div className="py-16 md:py-28 px-4 md:px-6 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* LEFT SIDE */}
           {/* LEFT SIDE (FIXED PERFECT ALIGNMENT) */}
           <div className="relative w-full h-[400px] md:h-[560px]">
@@ -92,24 +92,22 @@ export default function About() {
             {/* BIG IMAGE */}
             <img
               src="https://images.unsplash.com/photo-1600585152915-d208bec867a1"
-              className="absolute top-0 left-0 w-[80%] md:w-[370px] h-[300px] md:h-[420px] object-cover rounded-[40px]"
-            />
+className="absolute top-0 left-0 w-[80%] sm:w-[70%] md:w-[370px] h-[220px] sm:h-[260px] md:h-[420px] object-cover rounded-[40px]"            />
 
             {/* SMALL IMAGE (OVERLAP RIGHT) */}
             <img
               src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-              className="absolute top-[150px] md:top-[200px] right-0 md:left-[260px] w-[70%] md:w-[350px] h-[200px] md:h-[260px] object-cover rounded-3xl shadow-xl"
-            />
+className="absolute top-[120px] sm:top-[150px] md:top-[200px] right-0 md:left-[260px] w-[70%] sm:w-[60%] md:w-[350px] h-[160px] sm:h-[200px] md:h-[260px] object-cover rounded-3xl shadow-xl"            />
 
             {/* CARD (BOTTOM LEFT CENTER) */}
-            <div className="absolute left-[5%] md:left-[120px] bottom-[20px] md:bottom-[40px] bg-primary text-white px-8 py-6 rounded-2xl shadow-lg z-10">
+            <div className="absolute left-[5%] md:left-[120px] bottom-[10px] md:bottom-[40px] bg-primary text-white px-5 py-4 md:px-8 md:py-6 rounded-2xl shadow-lg z-10">
               <h3 className="text-3xl md:text-4xl font-bold leading-none">20+</h3>
               <p className="text-sm opacity-80 mt-1">Project Completed</p>
             </div>
 
           </div>
           {/* RIGHT SIDE */}
-          <div className="-ml-6">
+          <div className="md:-ml-6 text-center md:text-left">
 
             {/* FOUNDATION BLOCK */}
             <div className="flex items-start gap-4 mb-8">
@@ -181,7 +179,7 @@ export default function About() {
       {/* 🔹 SECTION 2 (Green + Circle Design) */}
 
       <div
-        className="relative py-32 overflow-hidden"
+        className="relative py-16 md:py-32 px-4 md:px-6 overflow-hidden"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1541888941259-7a974dfb9a51?q=80&w=2070&auto=format&fit=crop')",
@@ -192,7 +190,7 @@ export default function About() {
         {/* DARK GREEN OVERLAY */}
         <div className="absolute inset-0 bg-primary/90"></div>
 
-        <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 items-center px-6">
+        <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center px-6">
 
           {/* LEFT CONTENT */}
           <div className="text-white max-w-xl">
@@ -244,7 +242,7 @@ export default function About() {
           <div
             onMouseEnter={() => setShowCircle(false)}
             onMouseLeave={() => setShowCircle(true)}
-            className={`w-full md:w-[420px] h-[350px] md:h-[420px] bg-white rounded-full flex flex-col items-center justify-center text-center p-10 shadow-xl transition-all duration-300 mt-12 md:mt-0 ${showCircle ? "opacity-100 scale-100" : "md:opacity-0 md:scale-90"
+            className={`w-full md:w-[420px] h-[350px] md:h-[420px] bg-white rounded-full flex flex-col items-center justify-center text-center p-10 shadow-xl transition-all duration-300 mt-12 md:mt-0 ${showCircle ? "opacity-100 scale-100" : "opacity-100 md:opacity-0 md:scale-90"
               }`}
           >
             <Trophy className="w-8 h-8 text-gray-400 mb-2" />
@@ -263,7 +261,7 @@ export default function About() {
       </div>
       {/* 🔹 SECTION 3 (Achievements) */}
 
-      <div className="relative py-32 bg-[#f5f7f6] overflow-hidden">
+      <div className="relative py-16 md:py-32 px-4 md:px-6 bg-[#f5f7f6] overflow-hidden">
 
         {/* LIGHT BACKGROUND IMAGE (PENCIL STYLE) */}
         <div
@@ -284,7 +282,7 @@ export default function About() {
           </p>
 
           {/* TITLE */}
-          <h2 className="text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Recognitions & Milestones
           </h2>
 
@@ -298,11 +296,11 @@ export default function About() {
 
             <img
               src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-              className="w-full md:w-[700px] h-[300px] md:h-[380px] object-cover rounded-3xl shadow-lg"
+              className="w-full md:w-[700px] h-[220px] sm:h-[260px] md:h-[380px] object-cover rounded-3xl shadow-lg"
             />
 
             {/* LEFT CIRCLE */}
-            <div className="md:absolute md:left-[120px] md:top-[40px] w-[240px] h-[240px] bg-white rounded-full shadow-lg flex flex-col items-center justify-center text-center p-6">
+            <div className="md:absolute md:left-[120px] md:top-[40px] w-[200px] h-[200px] md:w-[240px] md:h-[240px] bg-white rounded-full shadow-lg flex flex-col items-center justify-center text-center p-6">
               <Trophy className="w-8 h-8 text-gray-400 mb-2" />
               <p className="text-xs text-gray-400">ND AWARDS</p>
               <h3 className="font-semibold mt-2">Trusted Interior <br /> Design Firm</h3>
@@ -320,7 +318,7 @@ export default function About() {
           </div>
 
           {/* STATS */}
-          <div className="grid md:grid-cols-3 gap-10 mt-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 mt-20">
 
             <div>
               <h3 className="text-4xl font-bold">13+</h3>
@@ -343,11 +341,11 @@ export default function About() {
       </div>
       {/* 🔹 SECTION 4 (EXACT LIKE IMAGE 1) */}
       {/* 🔹 SECTION 4 (SWIPER SLIDER) */}
-<div className="py-24 px-6 bg-white">
+<div className="py-16 md:py-24 px-4 md:px-6 bg-white">
 
   {/* TITLE */}
   <div className="max-w-7xl mx-auto mb-14">
-    <h2 className="text-5xl font-bold">
+    <h2 className="text-3xl md:text-5xl font-bold">
       Our Recent Creations
     </h2>
   </div>
@@ -366,14 +364,13 @@ export default function About() {
   >
     {allMembers.map((item, i) => (
       <SwiperSlide key={i}>
-        <div className="min-w-[90%] sm:min-w-[48%] md:min-w-[31%] lg:min-w-[30%] 
-bg-white rounded-3xl overflow-hidden border shadow-sm hover:shadow-lg transition">
+        <div className="bg-white rounded-3xl overflow-hidden border shadow-sm hover:shadow-lg transition">
 
           {/* IMAGE */}
           <div className="relative group overflow-hidden rounded-t-3xl">
            <img
   src={item.img}
-  className="w-full h-[320px] object-cover rounded-t-3xl transition duration-500 group-hover:scale-110"
+  className="w-full h-[220px] sm:h-[260px] md:h-[320px] object-cover rounded-t-3xl transition duration-500 group-hover:scale-110"
 />
 
             {/* HOVER OVERLAY */}

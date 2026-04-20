@@ -69,7 +69,7 @@ return (
 
       {/* HERO */}
       <section
-        className="h-[420px] flex items-center justify-center text-white relative"
+className="h-[280px] sm:h-[320px] md:h-[420px] flex items-center justify-center text-white relative px-4"
         style={{
           backgroundImage:
             "url(https://images.unsplash.com/photo-1618221195710-dd6b41faaea6)",
@@ -84,11 +84,11 @@ return (
             <Calendar size={16} /> March 16, 2026
           </p>
 
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-6xl font-bold">
             Minimalist Interior Design...
           </h1>
 
-          <div className="flex justify-center gap-6 mt-4 text-sm opacity-80">
+          <div className="flex flex-wrap justify-center gap-4 mt-4 text-sm opacity-80">
             <span className="flex items-center gap-1">
               <User size={16} /> Robert Downey
             </span>
@@ -115,12 +115,11 @@ return (
         </div>
       </div>
       {/* ================= CONTENT ================= */}
-<section className="max-w-7xl mx-auto px-4 py-16 grid lg:grid-cols-3 gap-10 items-start">
+<section className="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
                     {/* LEFT CONTENT */}
         <div className="lg:col-span-2">
  <img
-  src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80"
-  className="rounded-xl w-full"
+src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20"  className="rounded-xl w-full h-[200px] sm:h-[300px] md:h-auto object-cover"
 />
 
           <p className="text-gray-600 leading-7 mb-6">
@@ -387,10 +386,10 @@ are five simple yet impactful ways to start today.
 {/* ================= PREV / NEXT POSTS ================= */}
 <div className="border-t border-gray-200 mt-10 pt-8">
 
-  <div className="flex items-center justify-between">
+  <div className="flex flex-col md:flex-row items-center justify-between gap-6">
 
     {/* LEFT - PREVIOUS POST */}
-    <div className="flex items-center gap-4 max-w-[40%]">
+    <div className="flex flex-col md:flex-row items-center gap-6 p-6 md:p-10 text-center md:text-left max-w-full md:max-w-[40%]">
       <img
         src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
         className="w-14 h-14 rounded-full object-cover"
@@ -415,7 +414,7 @@ are five simple yet impactful ways to start today.
     </div>
 
     {/* RIGHT - NEXT POST */}
-    <div className="flex items-center gap-4 max-w-[40%] justify-end text-right">
+    <div className="flex items-center gap-4 max-w-full md:max-w-[40%] justify-end text-right">
       <div>
         <h4 className="text-sm font-semibold text-gray-900 leading-tight">
           Sustainable <br /> Architecture Trends
@@ -437,7 +436,7 @@ are five simple yet impactful ways to start today.
 </div>
           {/* COMMENT */}
           {/* ================= COMMENT SECTION ================= */}
-<div className="mt-14 bg-[#eef3ef] p-8 md:p-10 rounded-3xl">
+<div className="mt-14 bg-[#eef3ef] p-5 sm:p-6 md:p-10 rounded-3xl">
 
   {/* TITLE */}
   <h3 className="text-2xl font-semibold text-gray-900 mb-2">
@@ -510,7 +509,7 @@ are five simple yet impactful ways to start today.
 </div>        </div>
 
         {/* SIDEBAR */}
-<div className="bg-[#f4f6f4] p-6 md:p-8 rounded-3xl space-y-10">
+<div className="bg-[#f4f6f4] p-5 sm:p-6 md:p-8 mt-10 lg:mt-0 rounded-3xl space-y-10">
       {/* SEARCH */}
   <div>
     <h3 className="text-lg font-semibold mb-4">Search</h3>
@@ -623,7 +622,7 @@ are five simple yet impactful ways to start today.
         {/* HOVER IMAGE */}
         {hoveredIndex === i && (
 <div
-    className="fixed z-[999] pointer-events-none"
+    className="hidden md:block fixed z-[999] pointer-events-none"
     style={{
       left: mousePos.x - 60,
       top: mousePos.y - 60,

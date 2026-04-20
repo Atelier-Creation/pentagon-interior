@@ -69,7 +69,7 @@ return (
       {/* ================= HERO ================= */}
      {/* HERO SECTION (same like your image 3) */}
       <section
-        className="h-[420px] flex items-center justify-center text-white relative"
+        className="h-[300px] sm:h-[380px] md:h-[420px] flex items-center justify-center text-white relative"
         style={{
           backgroundImage:
             "url(https://images.unsplash.com/photo-1600585154340-be6161a56a0c)",
@@ -86,7 +86,7 @@ return (
             <Calendar size={16} /> March 16, 2026
           </p>
 
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Smart Home Technology...
           </h1>
 
@@ -105,7 +105,7 @@ return (
       </section>
       
 <div className="bg-[#eef2ef] py-5">
-  <div className="max-w-7xl mx-auto px-4 flex justify-center items-center text-[15px] text-gray-600">
+  <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-2 text-center text-[15px] text-gray-600">
 
     <Link to="/" className="hover:text-[#8c6d5a]">
       Home
@@ -126,12 +126,12 @@ return (
   </div>
 </div>
       {/* ================= CONTENT ================= */}
-<section className="max-w-7xl mx-auto px-4 py-16 grid lg:grid-cols-3 gap-10 items-start">
+<section className="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 items-start">
                     {/* LEFT CONTENT */}
         <div className="lg:col-span-2">
   <img
     src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80"
-    className="rounded-xl w-full"
+    className="rounded-xl w-full h-[200px] sm:h-[300px] md:h-auto object-cover"
   />
 
 
@@ -141,7 +141,7 @@ are five simple yet impactful ways to start today.
           </p>
 
           {/* SECTION */}
-          <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 flex items-center gap-2">
   <span className="w-3 h-3 bg-[#8c6d5a] rounded-sm"></span>
   Refresh with Color
 </h2>
@@ -199,7 +199,7 @@ are five simple yet impactful ways to start today.
   <div className="absolute inset-0  bg-[#8b6b55]"></div>
 
   {/* Content */}
-  <div className="relative flex items-center gap-6 p-10 text-white">
+  <div className="relative flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 text-center md:text-left p-10 text-white">
 
     {/* Quote Icon Circle */}
     <div className="w-20 h-20 rounded-full border border-white/40 flex items-center justify-center text-4xl">
@@ -362,7 +362,7 @@ are five simple yet impactful ways to start today.
           {/* AUTHOR */}
 <div className="border-t border-gray-200 mt-10 pt-8">
 
-  <div className="flex items-start gap-5">
+  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
 
     {/* PROFILE IMAGE */}
     <img
@@ -399,7 +399,7 @@ are five simple yet impactful ways to start today.
 {/* ================= PREV / NEXT POSTS ================= */}
 <div className="border-t border-gray-200 mt-10 pt-8">
 
-  <div className="flex items-center justify-between">
+  <div className="flex flex-col md:flex-row items-center justify-between gap-6">
 
     {/* LEFT - PREVIOUS POST */}
     <div className="flex items-center gap-4 max-w-[40%]">
@@ -522,7 +522,7 @@ are five simple yet impactful ways to start today.
 </div>        </div>
 
         {/* SIDEBAR */}
-<div className="bg-[#f4f6f4] p-6 md:p-8 rounded-3xl space-y-10">
+<div className="bg-[#f4f6f4] p-4 sm:p-6 md:p-8 rounded-3xl space-y-10">
       {/* SEARCH */}
   <div>
     <h3 className="text-lg font-semibold mb-4">Search</h3>
