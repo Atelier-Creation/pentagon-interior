@@ -1,13 +1,8 @@
 import React from 'react';
-
-const marqItems = [
-  { text: "Quality Assured", img: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=600&q=80" },
-  { text: "Budget Friendly", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" },
-  { text: "Timeless Elegance", img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80" },
-  { text: "Modern Aesthetics", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" },
-];
+import content from '../../data/content';
 
 const MarqueeSection = () => {
+  const marqItems = content.marquee;
   // We mirror the array twice to allow smooth 50% translation infinite loop
   const displayItems = [...marqItems, ...marqItems];
 

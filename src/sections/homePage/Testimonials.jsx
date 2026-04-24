@@ -1,20 +1,11 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-
 import 'swiper/css';
-
-import client1 from '../../assets/client-1.png';
-import client2 from '../../assets/client-2.png';
-import client3 from '../../assets/client-3.png';
-import client4 from '../../assets/client-4.png';
-import client5 from '../../assets/client-5.png';
-import client6 from '../../assets/client-6.png';
-import client7 from '../../assets/client-7.png';
-import client8 from '../../assets/client-8.png';
+import content from '../../data/content';
 
 const Testimonials = () => {
-  const logos = [client1, client2, client3, client4, client5, client6, client7, client8];
+  const logos = content.clientLogos;
 
   return (
     <section className="relative py-5 md:py-28 bg-[#fff9f5] font-text overflow-hidden">
@@ -36,7 +27,7 @@ const Testimonials = () => {
 
         {/* DESC */}
         <p className="max-w-[600px] text-[16px] text-gray-500 leading-relaxed mx-auto">
-          Discover a design style that reflects your personality and transforms your space into something uniquely
+          Discover a design style that reflects your personality and transforms your space into something uniquely yours.
         </p>
       </div>
 

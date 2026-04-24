@@ -7,8 +7,9 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import slidesData from '../../data/heroData.json';
 import content from '../../data/content';
+
+const slidesData = content.hero;
 
 const Hero = () => {
   const prevRef = useRef(null);

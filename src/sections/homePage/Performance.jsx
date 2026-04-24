@@ -1,26 +1,9 @@
 import React from "react";
+import content from "../../data/content";
 
 export default function Performance() {
-  const points = [
-    {
-      id: 1,
-      title: "TV Unit",
-      desc: "to fit Smart TV - 55-inch OLED",
-      position: "top-[80px] left-[80px]"
-    },
-    {
-      id: 2,
-      title: "Window curtains",
-      desc: "Premium curtains with sliding glass door",
-      position: "top-[180px] right-[150px]"
-    },
-    {
-      id: 3,
-      title: "Sofa",
-      desc: "Sectional Sofa - Gray fabric matched to furnishings",
-      position: "bottom-[170px] left-[160px]"
-    }
-  ];
+  const { title, description, stats, points, image } = content.performance;
+
   return (
     <section className="py-10 md:py-15 bg-white">
       <div className="container">
@@ -32,14 +15,9 @@ export default function Performance() {
           <div className="relative w-full h-[350px] md:h-[650px]">
 
             {/* IMAGE WITH CLIP */}
-            <div
-              className="relative  w-full md:h-full"
-            // style={{
-            //   clipPath: "polygon(0% 0%, 100% 0%, 100% 85%, 60% 100%, 0% 85%)",
-            // }}
-            >
+            <div className="relative w-full md:h-full">
               <img
-                src="https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/room-planner-min.png"
+                src={image}
                 className="w-full h-full object-contain md:object-fill"
                 alt=""
               />
@@ -57,13 +35,13 @@ export default function Performance() {
 
                 {/* TOOLTIP */}
                 <div className="
-      absolute top-12 left-0
-      w-[220px]
-      bg-white rounded-xl shadow-lg p-4
-      opacity-0 scale-95
-      group-hover:opacity-100 group-hover:scale-100
-      transition-all duration-300
-    ">
+                  absolute top-12 left-0
+                  w-[220px]
+                  bg-white rounded-xl shadow-lg p-4
+                  opacity-0 scale-95
+                  group-hover:opacity-100 group-hover:scale-100
+                  transition-all duration-300
+                ">
                   <h4 className="font-semibold text-gray-800">{item.title}</h4>
                   <p className="text-sm text-gray-500 mt-1">{item.desc}</p>
                 </div>
@@ -76,78 +54,44 @@ export default function Performance() {
 
             {/* LABEL */}
             <div className="mb-6">
-              <span className="border border-gray-300 rounded-full px-5 py-2 text-sm tracking-widest text-gray-700 uppercase tracking-widest text-gray-700">
+              <span className="border border-gray-300 rounded-full px-5 py-2 text-sm tracking-widest text-gray-700 uppercase">
                 ✦ PERFORMANCE
               </span>
             </div>
 
             {/* TITLE */}
             <h2 className="text-2xl md:text-[64px] md:leading-[1.05] font-semibold text-[#2b2f2b] mb-8 tracking-tight">
-              Our Performance in <br /> Plain View
+              {title}
             </h2>
 
             {/* DESC */}
             <p className="text-[18px] text-gray-500 leading-[1.7] mb-12 max-w-lg">
-              Discover key numbers that reflect our dedication, quality, and the trust we’ve built with clients over time.
+              {description}
             </p>
 
             {/* PROGRESS BARS */}
+            {stats.map((stat, i) => (
+              <div key={i} className="mb-10">
+                <div className="flex justify-between mb-3 text-[16px] font-medium text-[#2b2f2b]">
+                  <span>{stat.label}</span>
+                  <span>{stat.value}%</span>
+                </div>
 
-            {/* ITEM 1 */}
-            <div className="mb-10">
-              <div className="flex justify-between mb-3 text-[16px] font-medium text-[#2b2f2b]">
-                <span>Clients Who Recommend Us</span>
-                <span>72%</span>
-              </div>
+                <div className="relative h-[6px] bg-gray-300/60 overflow-hidden">
+                  <div 
+                    className="h-full bg-[#384238]" 
+                    style={{ width: `${stat.value}%` }}
+                  ></div>
 
-              <div className="relative h-[6px] bg-gray-300/60 overflow-hidden">
-                <div className="h-full bg-[#384238] w-[72%]"></div>
-
-                {/* RIGHT DESIGN LINES */}
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col gap-[3px]">
-                  <span className="w-10 h-[1px] bg-[#384238]"></span>
-                  <span className="w-8 h-[1px] bg-[#384238]"></span>
-                  <span className="w-6 h-[1px] bg-[#384238]"></span>
+                  {/* RIGHT DESIGN LINES */}
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col gap-[3px]">
+                    <span className="w-10 h-[1px] bg-[#384238]"></span>
+                    <span className="w-8 h-[1px] bg-[#384238]"></span>
+                    <span className="w-6 h-[1px] bg-[#384238]"></span>
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* ITEM 2 */}
-            <div className="mb-10">
-              <div className="flex justify-between mb-3 text-[16px] font-medium text-[#2b2f2b]">
-                <span>Client Satisfaction </span>
-                <span>95%</span>
-              </div>
-
-              <div className="relative h-[6px] bg-gray-300/60 overflow-hidden">
-                <div className="h-full bg-[#384238] w-[72%]"></div>
-
-                {/* RIGHT DESIGN LINES */}
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col gap-[3px]">
-                  <span className="w-10 h-[1px] bg-[#384238]"></span>
-                  <span className="w-8 h-[1px] bg-[#384238]"></span>
-                  <span className="w-6 h-[1px] bg-[#384238]"></span>
-                </div>
-              </div>
-            </div>
-
-            {/* ITEM 3 */}
-            <div className="mb-10">
-              <div className="flex justify-between mb-3 text-[16px] font-medium text-[#2b2f2b]">
-                <span>Special Luxury Projects </span>
-                <span>25%</span>
-              </div>
-
-              <div className="relative h-[6px] bg-gray-300/60 overflow-hidden">
-                <div className="h-full bg-[#384238] w-[72%]"></div>
-
-                {/* RIGHT DESIGN LINES */}
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col gap-[3px]">
-                  <span className="w-10 h-[1px] bg-[#384238]"></span>
-                  <span className="w-8 h-[1px] bg-[#384238]"></span>
-                  <span className="w-6 h-[1px] bg-[#384238]"></span>
-                </div>
-              </div>
-            </div>
+            ))}
 
             {/* CTA */}
             <div className="flex items-center gap-4 mt-6">

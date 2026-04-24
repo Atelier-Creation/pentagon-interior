@@ -1,10 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import content from "../../data/content";
+
 export default function PromoVideo() {
+  const { title, subtext, image } = content.promoVideo;
+
   return (
     <section className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
 
-      <div className="absolute inset-0 bg-animate"></div>
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${image})` }}
+      ></div>
 
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/40"></div>
@@ -34,12 +41,12 @@ export default function PromoVideo() {
 
           {/* TITLE */}
           <h2 className="text-[22px] sm:text-[28px] font-semibold leading-snug mb-3">
-            Discover the <br /> Art of Modern Living
+            {title}
           </h2>
 
           {/* SUBTEXT */}
           <p className="text-white/70 text-sm mb-6">
-            Enjoy comfort, style, and innovation.
+            {subtext}
           </p>
 
           {/* BUTTON */}

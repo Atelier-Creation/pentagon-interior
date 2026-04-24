@@ -65,16 +65,16 @@ const WhyChooseUs = () => {
               className="w-full lg:w-[75%]"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12 mb-12">
-                {content.whyChooseUs.values.map((val, i) => (
+                {content.whyChooseUs.values.map((item, i) => (
                   <div key={i} className="flex flex-col gap-3 group">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-accent group-hover:border-accent transition-all duration-300">
                         {i === 0 ? <Award className="text-white w-6 h-6" /> : i === 1 ? <ShieldCheck className="text-white w-6 h-6" /> : i === 2 ? <Clock className="text-white w-6 h-6" /> : <Users className="text-white w-6 h-6" />}
                       </div>
-                      <h3 className="text-xl font-bold font-sans text-white">{val}</h3>
+                      <h3 className="text-xl font-bold font-sans text-white">{item.title}</h3>
                     </div>
                     <p className="text-white/50 text-sm leading-relaxed pl-16">
-                      {i === 0 ? "Premium quality across every layer of design and construction." : i === 1 ? "Craftsmanship that withstands the test of time." : i === 2 ? "Efficient delivery within 6 months." : "Personalized approach for every elite client."}
+                      {item.desc}
                     </p>
                   </div>
                 ))}

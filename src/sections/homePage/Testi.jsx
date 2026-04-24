@@ -3,33 +3,10 @@ import { Star, ArrowLeft, ArrowRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-const testimonials = [
-  {
-    id: 1,
-    name: "Leslie Alexander",
-    company: "Nintendo",
-    text: "Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance.",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    rating: 4.9,
-  },
-  {
-    id: 2,
-    name: "John Carter",
-    company: "Google",
-    text: "Outstanding experience. The UI and performance are top-notch and highly professional.",
-    image: "https://randomuser.me/api/portraits/men/45.jpg",
-    rating: 4.8,
-  },
-  {
-    id: 3,
-    name: "Sophia Lee",
-    company: "Amazon",
-    text: "Clean design and very intuitive interface. Loved working with this system.",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-    rating: 5.0,
-  },
-];
+import content from "../../data/content";
+
 export default function Testimonials() {
+  const testimonials = content.testimonials;
   const swiperRef = React.useRef(null);
 
   const prev = () => {

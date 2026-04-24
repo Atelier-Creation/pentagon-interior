@@ -2,9 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import content from '../../data/content';
 
 const Projects = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const projects = content.projects.featured.slice(0, 3);
+
   return (
     <section className="py-5 md:py-24 bg-white">
       <div className="container mx-auto px-4 max-w-7xl">
@@ -19,11 +22,7 @@ const Projects = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            { id: 1, title: "Modern Urban Apartment", category: "Residential", img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0" },
-            { id: 2, title: "Corporate Suite Office", category: "Commercial", img: "https://images.unsplash.com/photo-1497366216548-37526070297c" },
-            { id: 3, title: "Grand Hotel Atrium", category: "Hospitality", img: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" }
-          ].map((project, idx) => (
+          {projects.map((project, idx) => (
             <motion.div 
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
@@ -34,7 +33,7 @@ const Projects = () => {
             >
               <div className="aspect-[4/5] overflow-hidden">
                 <img 
-                  src={`${project.img}?auto=format&fit=crop&w=800&q=80`} 
+                  src={`${project.image}?auto=format&fit=crop&w=800&q=80`} 
                   alt={project.title} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />

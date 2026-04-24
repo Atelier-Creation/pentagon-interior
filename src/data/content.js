@@ -7,13 +7,24 @@ const content = {
     location: "272/A,VOC Nagar,Ramanadhapuram Coimbatore-045",
     lead: "Er. Ilambharathi B.E.",
   },
-  hero: {
-    // title: "Luxurious Interior Design",
-    subtitle: "Luxurious Interior",
-    description: "Defined by simplicity, clean lines, and functionality. We specialize in creating high-end environments using neutral colors, natural light, and premium materials like glass, steel, and wood. Our furniture is sleek, purposeful, and focused on ultimate comfort.",
-    cta: "Book Now",
-    secondaryCta: "Free Consultation",
-  },
+  hero: [
+    {
+      bgImage: "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/10/decoria-home-1-slider-1-1-min.jpg",
+      line1: "Elevating",
+      line2: "Brands Through",
+      focus: "Design.",
+      subText: "10+ Years of Excellence.",
+      description: "Defined by simplicity, clean lines, and functionality. We specialize in creating high-end environments using neutral colors, natural light, and premium materials like glass, steel, and wood. Our furniture is sleek, purposeful, and focused on ultimate comfort."
+    },
+    {
+      bgImage: "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/10/decoria-home-1-slider-1-2-min.jpg",
+      line1: "Modern",
+      line2: "Living Space",
+      focus: "Innovations.",
+      subText: "Crafting Timeless Homes.",
+      description: "Transforming ordinary spaces into extraordinary experiences with our innovative design solutions and meticulous attention to detail."
+    }
+  ],
   about: {
     title: "About Us",
     description: "We are a passionate interior design studio dedicated to crafting beautiful, functional, and timeless spaces. With a deep understanding of luxury aesthetics, space planning, and lifestyle needs, we transform interiors into premium experiences that inspire comfort, creativity, and connection. Our work spans across high-end residential and commercial projects, blending innovative concepts with refined craftsmanship.",
@@ -66,12 +77,125 @@ const content = {
     title: "Why Choose Us",
     description: "Our team brings years of experience across luxury residential, commercial, and premium interiors. We deliver a blend of creativity and technical excellence that turns any space into a masterpiece. Whether it's a 20,000 sft estate or a dynamic office, we tailor each design to reflect your elite personality and vision.",
     values: [
-      "Excellence in Every Layer",
-      "Sleek, Unornamented Luxury",
-      "Functional Sophistication",
-      "Refined Craftsmanship"
+      {
+        title: "Excellence in Every Layer",
+        desc: "Premium quality across every layer of design and construction."
+      },
+      {
+        title: "Sleek, Unornamented Luxury",
+        desc: "Craftsmanship that withstands the test of time."
+      },
+      {
+        title: "Functional Sophistication",
+        desc: "Efficient delivery within 6 months."
+      },
+      {
+        title: "Refined Craftsmanship",
+        desc: "Personalized approach for every elite client."
+      }
     ]
   },
+  howWeWork: {
+    title: "Design Made Easy in 3 Steps",
+    subtitle: "From concept to completion, we've got you covered with a streamlined, worry-free process.",
+    steps: [
+      {
+        id: 1,
+        title: "Design & Planning",
+        desc: "We transform ideas into visionary designs that balance creativity, functionality, and sustainability.",
+        image: "https://images.unsplash.com/photo-1556761175-b413da4baf72",
+      },
+      {
+        id: 2,
+        title: "Development",
+        desc: "Actionable plans by integrating structural engineering, technologies, and regulatory compliance.",
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      },
+      {
+        id: 3,
+        title: "Execution & Delivery",
+        desc: "We bring designs to life with precision, professionalism, and attention to detail.",
+        image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
+      },
+    ]
+  },
+  performance: {
+    title: "Our Performance in Plain View",
+    description: "Discover key numbers that reflect our dedication, quality, and the trust we’ve built with clients over time.",
+    stats: [
+      { label: "Clients Who Recommend Us", value: 72 },
+      { label: "Client Satisfaction", value: 95 },
+      { label: "Special Luxury Projects", value: 25 },
+    ],
+    points: [
+      {
+        id: 1,
+        title: "TV Unit",
+        desc: "to fit Smart TV - 55-inch OLED",
+        position: "top-[80px] left-[80px]"
+      },
+      {
+        id: 2,
+        title: "Window curtains",
+        desc: "Premium curtains with sliding glass door",
+        position: "top-[180px] right-[150px]"
+      },
+      {
+        id: 3,
+        title: "Sofa",
+        desc: "Sectional Sofa - Gray fabric matched to furnishings",
+        position: "bottom-[170px] left-[160px]"
+      }
+    ],
+    image: "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/room-planner-min.png"
+  },
+  testimonials: [
+    {
+      id: 1,
+      name: "Leslie Alexander",
+      company: "Nintendo",
+      text: "Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance.",
+      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      rating: 4.9,
+    },
+    {
+      id: 2,
+      name: "John Carter",
+      company: "Google",
+      text: "Outstanding experience. The UI and performance are top-notch and highly professional.",
+      image: "https://randomuser.me/api/portraits/men/45.jpg",
+      rating: 4.8,
+    },
+    {
+      id: 3,
+      name: "Sophia Lee",
+      company: "Amazon",
+      text: "Clean design and very intuitive interface. Loved working with this system.",
+      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      rating: 5.0,
+    },
+  ],
+  clientLogos: [
+    "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/client-1-1.png",
+    "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/client-1-2.png",
+    "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/client-1-3.png",
+    "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/client-1-4.png",
+    "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/client-1-5.png",
+    "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/client-1-6.png",
+    "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/client-1-7.png",
+    "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/client-1-8.png",
+  ],
+  promoVideo: {
+    title: "Discover the Art of Modern Living",
+    subtext: "Enjoy comfort, style, and innovation.",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+  },
+  marquee: [
+    { text: "Quality Assured", img: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=600&q=80" },
+    { text: "Budget Friendly", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" },
+    { text: "Timeless Elegance", img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80" },
+    { text: "Modern Aesthetics", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" },
+  ],
   projects: {
     title: "Our Elite Portfolio",
     heroImage: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=1920&q=80",

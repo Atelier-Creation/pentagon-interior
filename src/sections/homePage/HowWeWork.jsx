@@ -1,43 +1,28 @@
 import React from "react";
+import content from "../../data/content";
 
-const steps = [
-  {
-    id: 1,
-    title: "Design & Planning",
-    desc: "We transform ideas into visionary designs that balance creativity, functionality, and sustainability.",
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72",
-    icon: (
+export default function HowWeWork() {
+  const { title, subtitle, steps } = content.howWeWork;
+  
+  const stepIcons = [
+    (
       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
         <path d="M3 21h18M6 18V8m6 10V4m6 14v-6" />
       </svg>
     ),
-  },
-  {
-    id: 2,
-    title: "Development",
-    desc: "Actionable plans by integrating structural engineering, technologies, and regulatory compliance.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-    icon: (
+    (
       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
         <path d="M12 3v18M3 12h18" />
       </svg>
     ),
-  },
-  {
-    id: 3,
-    title: "Execution & Delivery",
-    desc: "We bring designs to life with precision, professionalism, and attention to detail.",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
-    icon: (
+    (
       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
         <rect x="3" y="7" width="18" height="13" rx="2" />
         <path d="M3 7l9 6 9-6" />
       </svg>
-    ),
-  },
-];
+    )
+  ];
 
-export default function HowWeWork() {
   return (
 <section className="relative bg-primary text-white pt-10 pb-40 md:pt-28 md:pb-60 overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 max-w-[1400px] text-center">
@@ -51,11 +36,11 @@ export default function HowWeWork() {
 
         {/* TITLE */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-6 tracking-tight">
-          Design Made Easy in 3 Steps
+          {title}
         </h2>
 
         <p className="text-white/70 mb-12 sm:mb-16 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
-          From concept to completion, we've got you covered with a streamlined, worry-free process.
+          {subtitle}
         </p>
 
         {/* STEPS */}
@@ -88,7 +73,7 @@ export default function HowWeWork() {
 
         {/* ICON */}
         <div className="absolute left-4 top-1/2 -translate-y-1/2 bg-[#8b6b55] w-14 h-14 rounded-full flex items-center justify-center transition-all duration-500 group-hover:left-1/2 group-hover:-translate-x-1/2">
-          {step.icon}
+          {stepIcons[index % stepIcons.length]}
         </div>
       </div>
 
