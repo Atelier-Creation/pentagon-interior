@@ -1,62 +1,23 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-const categories = ["all", "commercial", "residential", "hospitality"];
+import content from "../../data/content";
 
-const projectsData = [
-  // COMMERCIAL
-  {
-    id: 1,
-    category: "commercial",
-    title: "Calm Core Wellness Spa",
-    location: "Boston, United States",
-    date: "20 Aug, 2025",
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
-  },
-  {
-    id: 2,
-    category: "commercial",
-    title: "Prime Axis Co-Working Hub",
-    location: "Miami, United States",
-    date: "18 Aug, 2025",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c",
-  },
+const categories = ["all", "luxury", "residential", "commercial"];
 
-  // RESIDENTIAL
-  {
-    id: 3,
-    category: "residential",
-    title: "Serene Heights Luxury Apartment",
-    location: "Las Vegas, United States",
-    date: "17 Aug, 2025",
-    image: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae",
-  },
-  {
-    id: 4,
-    category: "residential",
-    title: "Tranquil Nest Villa Interior",
-    location: "Australia",
-    date: "15 Jan, 2026",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-  },
-
-  // HOSPITALITY
-  {
-    id: 5,
-    category: "hospitality",
-    title: "Vista Grande Boutique Hotel",
-    location: "New York",
-    date: "15 Aug, 2026",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945",
-  },
-  {
-    id: 6,
-    category: "hospitality",
-    title: "Aurora Grand Hotel Interior",
-    location: "San Francisco",
-    date: "23 Aug, 2025",
-    image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
-  },
-];
+const projectsData = content.projects.featured.map(proj => ({
+  id: proj.id,
+  category: proj.type.toLowerCase().includes('residential') ? 'residential' : proj.type.toLowerCase().includes('commercial') ? 'commercial' : 'luxury',
+  title: proj.client + " - " + proj.type,
+  location: proj.location,
+  date: proj.duration,
+  image: proj.id === 1 
+    ? "https://images.unsplash.com/photo-1507089947368-19c1da9775ae" 
+    : proj.id === 2 
+    ? "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"
+    : "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+  description: proj.description,
+  area: proj.area
+}));
 
 export default function ProjectsSection() {
   const [active, setActive] = useState("all");
@@ -89,7 +50,7 @@ export default function ProjectsSection() {
 
             {/* MAIN HEADING */}
             <h2 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight text-[#2a2d2a]">
-              Our Recent Creations
+              {content.projects.title}
             </h2>
 
           </div>
@@ -153,7 +114,7 @@ export default function ProjectsSection() {
                   </h3>
 
                   <p className="text-[12px] md:text-sm mb-4 md:mb-5 opacity-80">
-                    {item.location} • {item.date}
+                    {item.location} • {item.area} • {item.date}
                   </p>
 
                   <Link to={`/project/${item.id}`} className="text-xs md:text-sm font-bold uppercase tracking-widest inline-flex items-center gap-2 group/btn">

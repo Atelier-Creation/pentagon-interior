@@ -11,13 +11,21 @@ import BlogPage from "./BlogPage";
 import BlogDetails from "./BlogDetails";
 import SmartHome from "./blog/SmartHome";
 import MinimalistInterior from "./blog/MinimalistInterior";
-
+import Loader from "./Loader";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
   return (
-    <Router>
+    <>
+      <AnimatePresence>
+        {loading && <Loader onComplete={() => setLoading(false)} />}
+      </AnimatePresence>
+      <Router>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -35,6 +43,7 @@ function App() {
 
       </Routes>
     </Router>
+    </>
   )
 }
 

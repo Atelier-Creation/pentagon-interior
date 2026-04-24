@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaEnvelope } from 'react-icons/fa';
+import content from '../../data/content';
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
             <p className="text-white/80">
               Send Mail us at{" "}
               <span className="underline font-semibold">
-                pentagondesignfactory@gmail.com
+                {content.contact.email}
               </span>
             </p>
           </div>
@@ -65,12 +66,12 @@ const Footer = () => {
           <div className="space-y-4 pt-4 border-t border-white/10">
             <div>
               <p className="text-white/60 text-sm">Just Mail Us:</p>
-              <p className="font-semibold">272/A,VOC Nagar,Ramanadhapuram Coimbatore-045</p>
+              <p className="font-semibold">{content.contact.address}</p>
             </div>
 
             <div>
               <p className="text-white/60 text-sm">Phone</p>
-              <p className="font-semibold">9176828870</p>
+              <p className="font-semibold">{content.contact.phone}</p>
             </div>
           </div>
         </div>
@@ -90,7 +91,7 @@ const Footer = () => {
       </div>
 
       <div className="relative z-10 text-center mt-12 text-white/60 text-sm px-8">
-        <p>Copyrights © {new Date().getFullYear()} Pentagon Constructions & Interiors. All rights reserved.</p>
+        <p>Copyrights © {new Date().getFullYear()} {content.brand.name}. All rights reserved.</p>
       </div>
     </footer>
   );

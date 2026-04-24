@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import slidesData from '../../data/heroData.json';
+import content from '../../data/content';
 
 const Hero = () => {
   const prevRef = useRef(null);
@@ -34,17 +35,17 @@ const Hero = () => {
         {slidesData.map((slide, i) => (
           <SwiperSlide key={i} className="flex items-center">
             {/* Background Image Layer */}
-            <div 
-              className="absolute inset-0 z-0 bg-cover bg-center" 
+            <div
+              className="absolute inset-0 z-0 bg-cover bg-center"
               style={{ backgroundImage: `linear-gradient(rgba(75, 36, 36, 0.5), rgba(70, 42, 42, 0.5)), url('${slide.bgImage}')` }}
             ></div>
 
             <div className="container-fluid w-full max-w-[1700px] mx-auto px-6 lg:px-16 relative z-10 pt-32 h-full flex items-center">
               <div className="flex flex-col md:flex-row w-full gap-12 lg:gap-24 items-center">
-                
+
                 {/* Left Area */}
                 <div className="md:w-[65%] text-white flex-shrink-0">
-                  <motion.h1 
+                  <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -65,7 +66,7 @@ const Hero = () => {
                   </motion.h1>
 
                   {/* Legacy Badge */}
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
@@ -77,7 +78,7 @@ const Hero = () => {
                       <svg viewBox="0 0 100 100" className="w-full h-full text-white uppercase tracking-[0.1em] font-sans font-bold animate-[spin_12s_linear_infinite]">
                         <path id={`textPath-legacy-${i}`} d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent"></path>
                         <text className="text-[7.7px] fill-current">
-                          <textPath href={`#textPath-legacy-${i}`} startOffset="0%">Pantagon construction & interiors - </textPath>
+                          <textPath href={`#textPath-legacy-${i}`} startOffset="0%">{content.brand.name} - </textPath>
                         </text>
                       </svg>
                       {/* inner Icon */}
@@ -96,7 +97,7 @@ const Hero = () => {
 
                 {/* Right Area */}
                 <div className="md:w-[35%] flex flex-col justify-end h-full pt-8 md:pt-16 pb-12 md:pb-0 items-center md:items-start text-center md:text-left">
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
@@ -104,13 +105,12 @@ const Hero = () => {
                     className="max-w-[400px] mb-12"
                   >
                     <p className="text-white/80 text-[15px] md:text-base leading-relaxed font-text">
-                      Transforming your space with <br /> thoughtful, personalized design that <br />
-                      reflects your lifestyle and vision.
+                      {slide.description}
                     </p>
                   </motion.div>
                   {/* Appointment Button */}
-                  <motion.a 
-                    href="#" 
+                  <motion.a
+                    href="#"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
@@ -135,17 +135,17 @@ const Hero = () => {
 
         {/* Custom Navigation Vertically Right */}
         <div className="absolute right-8 top-1/2 -translate-y-1/2 z-20 hidden lg:flex flex-col gap-8">
-          <div 
+          <div
             ref={prevRef}
             className="swiper-button-prev !static !w-auto !h-auto !mt-0  transition-colors cursor-pointer"
           >
-            <ChevronUp size={48} fill='none'  className='text-white hover:text-white/50' />
+            <ChevronUp size={48} fill='none' className='text-white hover:text-white/50' />
           </div>
-          <div 
+          <div
             ref={nextRef}
             className="swiper-button-next !static !w-auto !h-auto !mt-0 hover:text-white/50 transition-colors cursor-pointer"
           >
-            <ChevronDown size={48} fill='none' className='text-white hover:text-white/50'/>
+            <ChevronDown size={48} fill='none' className='text-white hover:text-white/50' />
           </div>
         </div>
 

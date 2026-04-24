@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, X, Star } from 'lucide-react';
+import content from '../../data/content';
 
 const About = () => {
   return (
@@ -96,7 +97,7 @@ const About = () => {
             </div>
 
             <h2 className="text-4xl lg:text-[44px] font-sans font-bold leading-[1.1] text-[#2a2d2a] mb-6">
-              Innovating Interiors,<br className="hidden lg:block" />Inspiring Lives
+              {content.about.title}
             </h2>
 
             <h3 className="text-xl font-bold text-[#2a2d2a] mb-4 font-sans">
@@ -104,22 +105,17 @@ const About = () => {
             </h3>
 
             <p className="text-gray-500 text-[15px] leading-relaxed mb-8 max-w-[90%]">
-              Dedicated to creating beautiful, sustainable, and personalized outdoor spaces for everyone.
+              {content.about.description}
             </p>
 
             <ul className="space-y-4 mb-10">
-              {[
-                'Deliver Personalized Designs',
-                'Blend Function with Aesthetics',
-                'Inspire Through Innovation',
-                'Maintain Quality at Every Step'
-              ].map((item, i) => (
+              {content.about.highlights.map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-gray-500">
                   <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5 flex-shrink-0 text-text-main">
                     {/* Dotted line ending in an arrow */}
                     <path d="M4 12h1M8 12h1M12 12h8M16 8l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                  <span className="text-[15px]">{item}</span>
+                  <span className="text-[15px]"><span className="font-bold text-primary">{item.title}:</span> {item.description}</span>
                 </li>
               ))}
             </ul>

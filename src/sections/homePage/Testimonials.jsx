@@ -49,7 +49,7 @@ const Testimonials = () => {
           loop={true}
           slidesPerView="auto"
           spaceBetween={-30}
-          className="pb-16 pt-16 [&>.swiper-wrapper]:ease-linear px-4 overflow-visible"
+          className="pb-16 pt-16 [&>.swiper-wrapper]:ease-linear px-4 !overflow-visible"
         >
           {logos.map((logo, i) => (
             <SwiperSlide key={i} className="!w-auto">

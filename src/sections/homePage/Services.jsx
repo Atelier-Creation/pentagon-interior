@@ -1,59 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, X } from 'lucide-react';
+import content from '../../data/content';
 
 const Services = () => {
-  const services = [
-    {
-      num: '01',
-      title: 'Residential Interior Design',
-      image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80',
-      desc: "Creating personalized, functional, and stylish interiors that reflect your home's character and comfort.",
-      details: ['Theme Selection', 'Color & Material', 'Lighting & Décor'],
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
-          <path d="M12 2v4M8 6h8M6 8c0 3 2 4 4 4M18 8c0 3-2 4-4 4M12 12v6M9 15h6M7 18h10M12 22v-4" />
-        </svg>
-      )
-    },
-    {
-      num: '02',
-      title: 'Commercial Interior Design',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80',
-      desc: "Optimizing flow, branding, and productivity through thoughtful office and commercial space designs.",
-      details: ['Brand Integration', 'Workspace Layout', 'Acoustic Planning'],
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
-          <rect x="2" y="10" width="20" height="12" rx="2" />
-          <path d="M2 16h20M12 10v12M8 10V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4M6 16v3M18 16v3" />
-        </svg>
-      )
-    },
-    {
-      num: '03',
-      title: 'Space Planning & Layout',
-      image: 'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=600&q=80',
-      desc: "Strategic structuring of environments to enhance usability and spatial harmony for any property type.",
-      details: ['Floor Plan Drafting', 'Zoning & Flow', 'Ergonomic Review'],
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
-          <path d="M12 2v20M2 12h20M12 2a10 10 0 0 1 10 10M12 22a10 10 0 0 1-10-10M16.5 7.5L7.5 16.5M7.5 7.5l9 9" />
-        </svg>
-      )
-    },
-    {
-      num: '04',
-      title: 'Custom Furniture & Fixtures',
-      image: 'https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&w=600&q=80',
-      desc: "Designing and sourcing bespoke furniture pieces that perfectly match your desired aesthetic and dimensions.",
-      details: ['Bespoke Cabinetry', 'Upholstery Selection', 'Fixture Sourcing'],
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
-          <path d="M4 14h16M5 14v5h2v-5M17 14v5h2v-5M8 6h8v8H8zM6 6H4v8M18 6h2v8" />
-        </svg>
-      )
-    }
-  ];
+  const servicesData = content.services.main.map((srv, idx) => ({
+    num: `0${idx + 1}`,
+    title: srv.title,
+    desc: srv.description,
+    image: idx === 0 
+      ? 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80' 
+      : idx === 1 
+      ? 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80'
+      : 'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=600&q=80',
+    details: content.services.rooms.map(room => room.title),
+    icon: idx === 0 ? (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+        <path d="M12 2v4M8 6h8M6 8c0 3 2 4 4 4M18 8c0 3-2 4-4 4M12 12v6M9 15h6M7 18h10M12 22v-4" />
+      </svg>
+    ) : idx === 1 ? (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+        <rect x="2" y="10" width="20" height="12" rx="2" />
+        <path d="M2 16h20M12 10v12M8 10V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4M6 16v3M18 16v3" />
+      </svg>
+    ) : (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+        <path d="M12 2v20M2 12h20M12 2a10 10 0 0 1 10 10M12 22a10 10 0 0 1-10-10M16.5 7.5L7.5 16.5M7.5 7.5l9 9" />
+      </svg>
+    )
+  }));
 
   return (
     <section className="py-10 md:py-24 bg-primary text-white relative font-text overflow-hidden">
@@ -65,8 +40,8 @@ const Services = () => {
             <X size={12} strokeWidth={3} className="text-white" />
             <span className="text-[11px] font-bold uppercase tracking-wider text-white font-sans">SERVICES</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-[52px] font-bold font-sans mb-4 tracking-tight">Services Crafted for You</h2>
-          <p className="text-white/60 font-text text-[15px] lg:text-base">From concept to completion, we've got you covered.</p>
+          <h2 className="text-4xl md:text-5xl lg:text-[52px] font-bold font-sans mb-4 tracking-tight">{content.services.title}</h2>
+          <p className="text-white/60 font-text text-[15px] lg:text-base">From concept to completion, we've got you covered in {content.brand.location}.</p>
         </div>
 
         {/* Dynamic Grid Layout */}
@@ -78,7 +53,7 @@ const Services = () => {
           <div className="absolute top-0 bottom-0 right-[80px] lg:right-[150px] w-px bg-white/20 z-0 hidden md:block"></div>
 
           <div className="relative z-10 w-full relative">
-            {services.map((srv, idx) => (
+            {servicesData.map((srv, idx) => (
               <div 
                 key={idx}
                 className="group relative w-full min-h-[120px] lg:h-[160px] py-4 lg:py-0 flex items-stretch border-b border-white/20 hover:border-white transition-colors duration-500 cursor-pointer"

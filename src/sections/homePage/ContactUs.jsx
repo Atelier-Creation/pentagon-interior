@@ -1,5 +1,6 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import content from "../../data/content";
 
 const ContactUs = () => {
   return (
@@ -35,7 +36,7 @@ const ContactUs = () => {
           </h2>
 
           <p className="text-white/70 text-base md:text-lg leading-relaxed mb-12 max-w-lg">
-            Reach us anytime, let’s design your dream together.
+            {content.cta.description}
           </p>
 
           {/* FORM */}
@@ -88,8 +89,8 @@ const ContactUs = () => {
                 <FaMapMarkerAlt />
               </div>
               <div>
-                <p className="text-sm text-white/70">Just Mail Us:</p>
-                <p className="font-semibold">272/A,VOC Nagar,Ramanadhapuram Coimbatore-045</p>
+                <p className="text-sm text-white/70">Our Studio:</p>
+                <p className="font-semibold">{content.contact.address}</p>
               </div>
             </div>
 
@@ -100,7 +101,7 @@ const ContactUs = () => {
               </div>
               <div>
                 <p className="text-sm text-white/70">Need help? Call Us:</p>
-                <p className="font-semibold">9176828870</p>
+                <p className="font-semibold">{content.contact.phone}</p>
               </div>
             </div>
 
@@ -111,7 +112,7 @@ const ContactUs = () => {
               </div>
               <div>
                 <p className="text-sm text-white/70">Just Mail Us:</p>
-                <p className="font-semibold">pentagondesignfactory@gmail.com</p>
+                <p className="font-semibold">{content.contact.email}</p>
               </div>
             </div>
           </div>

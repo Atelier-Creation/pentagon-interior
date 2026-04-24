@@ -3,6 +3,8 @@ import { Search, ShoppingCart, ArrowRight, Menu, X } from 'lucide-react';
 import logo from '../../assets/logo-2.png';
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
+import content from '../../data/content';
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,10 +19,7 @@ const Header = () => {
     <>
       <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-primary/95 backdrop-blur-md py-3 shadow-lg' : 'bg-transparent py-3'}`}>
         <div className="container mx-auto px-4 md:px-8 max-w-7xl flex items-center justify-between">
-          <a href="#" className="flex-shrink-0">
-            {/* <img src="https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/logo-2.png" alt="Decoria" className="h-8 md:h-10" style={{ filter: isScrolled ? 'brightness(0) invert(1)' : 'brightness(0) invert(1)' }} /> */}
-            <Link to="/"> <img src={logo} alt="Decoria" className="h-12 md:h-12" style={{ filter: isScrolled ? 'brightness(0) invert(1)' : 'brightness(0) invert(1)' }} /></Link>
-          </a>
+            <Link to="/"> <img src={logo} alt={content.brand.name} className="h-12 md:h-12" style={{ filter: isScrolled ? 'brightness(0) invert(1)' : 'brightness(0) invert(1)' }} /></Link>
 
           <nav className="hidden lg:flex items-center space-x-8 text-white font-medium">
             <Link to="/" className="hover:text-accent transition-colors">
@@ -95,7 +94,7 @@ const Header = () => {
             className="fixed inset-0 bg-[#8c6d5a] z-[999] flex flex-col p-5 overflow-y-auto"
           >
             <div className="flex justify-between items-center mb-16">
-              <Link to="/"><img src={logo} alt="Decoria" className="h-12 brightness-0 invert" /></Link> 
+              <Link to="/"><img src={logo} alt={content.brand.name} className="h-12 brightness-0 invert" /></Link> 
               <button onClick={() => setMobileMenuOpen(false)} className="text-white hover:rotate-90 transition-transform duration-300">
                 <X size={36} />
               </button>
@@ -111,8 +110,8 @@ const Header = () => {
 
             <div className="mt-20 pt-10 border-t border-white/10">
               <p className="text-white/40 text-[10px] uppercase tracking-[0.3em] font-bold mb-6">Let's Talk</p>
-              <h3 className="text-2xl text-white font-sans mb-3 font-bold tracking-tight">info@pentagon.com</h3>
-              <p className="text-white/60 text-lg font-medium">+91 98765 43210</p>
+              <h3 className="text-2xl text-white font-sans mb-3 font-bold tracking-tight">{content.contact.email}</h3>
+              <p className="text-white/60 text-lg font-medium">+91 {content.contact.phone}</p>
             </div>
           </motion.div>
         )}
