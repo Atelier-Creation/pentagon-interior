@@ -1,6 +1,28 @@
 import Header from "../sections/homePage/Header";
 import Footer from "../sections/homePage/Footer";
-import React, { useState } from "export default function SmartHome() {
+import React, { useState } from "react";
+import {
+  Calendar,
+  User,
+  Eye,
+  ThumbsUp,
+  ChevronRight,
+  CheckCircle2,
+  Tag,
+  Share2,
+  ArrowUpRight,
+  ArrowRight,
+  Send,
+  MessageCircle,
+  Mail,
+  Globe,
+  Link as LinkIcon 
+} from "lucide-react";
+import { Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
+import content from "../data/content";
+
+export default function SmartHome() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const sidebar = content.blogSidebar;
