@@ -7,12 +7,19 @@ import { useState } from "react";
 import WhyChooseUs from "./sections/homePage/WhyChooseUs";
 import content from "./data/content";
 
+import { Helmet } from 'react-helmet-async';
+
 export default function Services() {
   const [start, setStart] = useState(0);
   const cardData = content.services.detailed;
 
   return (
     <>
+      <Helmet>
+        <title>Our Services | Pentagon Interior Design Factory</title>
+        <meta name="description" content="Explore our premium services including interior designing, architectural construction, and property maintenance. Custom solutions for luxury homes and executive offices." />
+        <link rel="canonical" href="https://pentagoninteriors.in/services" />
+      </Helmet>
       <Header />
 
       {/* 🔹 HERO SECTION */}

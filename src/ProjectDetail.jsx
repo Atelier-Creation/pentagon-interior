@@ -12,12 +12,19 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import content from "./data/content";
 
+import { Helmet } from 'react-helmet-async';
+
 const ProjectDetail = () => {
   const { id } = useParams();
   const project = content.projectDetails[id] || content.projectDetails.default;
 
   return (
     <div className="font-text text-text-main selection:bg-primary selection:text-white overflow-hidden">
+      <Helmet>
+        <title>{`${project.title} | Projects | Pentagon Interior`}</title>
+        <meta name="description" content={`Case study: ${project.title}. A ${project.category} project by Pentagon Interior. ${project.description.substring(0, 150)}...`} />
+        <link rel="canonical" href={`https://pentagoninteriors.in/project/${id}`} />
+      </Helmet>
       <Header />
       
       <main>

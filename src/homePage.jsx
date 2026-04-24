@@ -16,9 +16,16 @@ import Performance from "./sections/homePage/Performance";
 import Testi from "./sections/homePage/Testi";
 import PromoVideo from "./sections/homePage/PromoVideo";
 import BlogSection from "./sections/homePage/BlogSection";
+import { Helmet } from 'react-helmet-async';
+
 export default function HomePage() {
   return (
     <div className="font-text text-text-main selection:bg-accent selection:text-white overflow-x-hidden">
+      <Helmet>
+        <title>Home | Pentagon Interior - Luxury Design Factory</title>
+        <meta name="description" content="Welcome to Pentagon Interior. We transform spaces into premium experiences with 10+ years of excellence in high-end residential and commercial interior design." />
+        <link rel="canonical" href="https://pentagoninteriors.in/" />
+      </Helmet>
       <Header />
       <main>
         <Hero />

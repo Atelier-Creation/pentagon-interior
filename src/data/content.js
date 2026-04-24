@@ -1,3 +1,12 @@
+import client1 from "../assets/clients/client-1.png";
+import client2 from "../assets/clients/client-2.png";
+import client3 from "../assets/clients/client-3.png";
+import client4 from "../assets/clients/client-4.png";
+import client5 from "../assets/clients/client-5.png";
+import client6 from "../assets/clients/client-6.png";
+import client7 from "../assets/clients/client-7.png";
+import client8 from "../assets/clients/client-8.png";
+
 const content = {
   brand: {
     name: "Pentagon Design Factory",
@@ -9,7 +18,7 @@ const content = {
   },
   hero: [
     {
-      bgImage: "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/10/decoria-home-1-slider-1-1-min.jpg",
+      bgImage: "/assets/hero-1.jpg",
       line1: "Elevating",
       line2: "Brands Through",
       focus: "Design.",
@@ -17,7 +26,7 @@ const content = {
       description: "Defined by simplicity, clean lines, and functionality. We specialize in creating high-end environments using neutral colors, natural light, and premium materials like glass, steel, and wood. Our furniture is sleek, purposeful, and focused on ultimate comfort."
     },
     {
-      bgImage: "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/10/decoria-home-1-slider-1-2-min.jpg",
+      bgImage: "/assets/hero-2.jpg",
       line1: "Modern",
       line2: "Living Space",
       focus: "Innovations.",
@@ -51,25 +60,25 @@ const content = {
         name: "Arun Varma",
         role: "Construction Manager",
         email: "arun@pentagon.com",
-        img: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&q=80&w=800",
+        img: "/assets/team-1.jpg",
       },
       {
         name: "Ananya Sharma",
         role: "Architect Engineer",
         email: "ananya@pentagon.com",
-        img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=800",
+        img: "/assets/team-2.jpg",
       },
       {
         name: "Vikram Singh",
         role: "Site Supervisor",
         email: "vikram@pentagon.com",
-        img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800",
+        img: "/assets/team-3.jpg",
       },
       {
         name: "Priya Iyer",
         role: "Interior Stylist",
         email: "priya@pentagon.com",
-        img: "https://plus.unsplash.com/premium_photo-1682089810582-f7b200217b67?q=80&w=800&auto=format&fit=crop",
+        img: "/assets/team-4.jpg",
       },
     ]
   },
@@ -103,19 +112,19 @@ const content = {
         id: 1,
         title: "Design & Planning",
         desc: "We transform ideas into visionary designs that balance creativity, functionality, and sustainability.",
-        image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1556761175-b413da4baf72",
       },
       {
         id: 2,
         title: "Development",
         desc: "Actionable plans by integrating structural engineering, technologies, and regulatory compliance.",
-        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
       },
       {
         id: 3,
         title: "Execution & Delivery",
         desc: "We bring designs to life with precision, professionalism, and attention to detail.",
-        image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
       },
     ]
   },
@@ -147,7 +156,7 @@ const content = {
         position: "bottom-[170px] left-[160px]"
       }
     ],
-    image: "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/room-planner-min.png"
+    image: "/assets/room-planner.png"
   },
   testimonials: [
     {
@@ -176,14 +185,14 @@ const content = {
     },
   ],
   clientLogos: [
-    "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/client-1-1.png",
-    "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/client-1-2.png",
-    "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/client-1-3.png",
-    "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/client-1-4.png",
-    "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/client-1-5.png",
-    "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/client-1-6.png",
-    "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/client-1-7.png",
-    "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/client-1-8.png",
+    client1,
+    client2,
+    client3,
+    client4,
+    client5,
+    client6,
+    client7,
+    client8,
   ],
   promoVideo: {
     title: "Discover the Art of Modern Living",
@@ -325,7 +334,7 @@ const content = {
         address: "Main Road, Tirupur, Tamil Nadu",
         phone: "7845572870",
         email: "pentagondesignfactory@gmail.com",
-        image: "https://images.unsplash.com/photo-1541888941259-7a974dfb9a51?q=80&w=2070&auto=format&fit=crop"
+        image: "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/project-1-6.jpg"
       }
     ],
     socials: {
@@ -337,7 +346,7 @@ const content = {
   executionDelivery: {
     title: "Execution & Delivery",
     heroImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
-    mainImage: "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2070&auto=format&fit=crop",
+    mainImage: "https://images.unsplash.com/photo-1556761175-b413da4baf72",
     projects: ["Concept Meeting", "Design & Planning", "Execution & Delivery"],
     services: [
       {

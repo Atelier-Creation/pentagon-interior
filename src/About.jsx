@@ -8,6 +8,8 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import content from "./data/content";
 
+import { Helmet } from 'react-helmet-async';
+
 export default function About() {
   const [activeStatement, setActiveStatement] = useState(0);
   const [showCircle, setShowCircle] = useState(true);
@@ -22,6 +24,11 @@ export default function About() {
 
   return (
     <>
+      <Helmet>
+        <title>About Us | Pentagon Interior Design Factory</title>
+        <meta name="description" content="Learn about Pentagon Interior, our foundation, elite team of Indian professionals, and our commitment to innovating interiors and inspiring lives." />
+        <link rel="canonical" href="https://pentagoninteriors.in/about" />
+      </Helmet>
       <Header />
 
       {/* 🔹 HERO SECTION */}

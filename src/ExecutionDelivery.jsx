@@ -13,12 +13,19 @@ const iconMap = {
   "kitchen-design": <Star className="w-12 h-12 text-[#2f4638]" strokeWidth={1.5} />,
 };
 
+import { Helmet } from 'react-helmet-async';
+
 export default function ExecutionDelivery() {
   const [activeIndex, setActiveIndex] = useState(0);
   const data = content.executionDelivery;
 
   return (
     <>
+      <Helmet>
+        <title>Execution & Delivery | Pentagon Interior Design</title>
+        <meta name="description" content="Discover our structured process for luxury interior execution and delivery. From space planning to furniture and decor, we ensure precision and professionalism in every project." />
+        <link rel="canonical" href="https://pentagoninteriors.in/execution-delivery" />
+      </Helmet>
       <Header />
 
       {/* 🔹 HERO */}
@@ -102,9 +109,9 @@ export default function ExecutionDelivery() {
                 <p className="text-[25px] font-semibold mb-6">
                   Make The <br /> First Move Today.
                 </p>
-                <button className="flex items-center gap-3 border border-white rounded-full px-6 py-3 bg-white/10 hover:bg-[#5a3e2b] hover:border-[#5a3e2b] hover:text-white transition-all duration-300">
+                <Link to="/contact" className="flex items-center gap-3 border border-white rounded-full px-6 py-3 bg-white/10 hover:bg-[#5a3e2b] hover:border-[#5a3e2b] hover:text-white transition-all duration-300">
                   Appointment →
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -114,7 +121,7 @@ export default function ExecutionDelivery() {
         <div className="w-full">
           <div className="w-full h-[720px] rounded-[38px] overflow-hidden">
             <img
-              src={data.mainImage}
+              src={`${data.mainImage}?auto=format&fit=crop&q=80&w=1200`}
               className="w-full h-full object-cover"
               alt=""
             />

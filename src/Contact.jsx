@@ -10,11 +10,18 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 
+import { Helmet } from 'react-helmet-async';
+
 export default function Contact() {
   const [open, setOpen] = useState(false);
   
   return (
     <>
+      <Helmet>
+        <title>Contact Us | Pentagon Interior Design Factory</title>
+        <meta name="description" content="Get in touch with Pentagon Interior. Visit our offices in Coimbatore and Tirupur, or contact us for a free consultation on your next luxury interior project." />
+        <link rel="canonical" href="https://pentagoninteriors.in/contact" />
+      </Helmet>
       <Header />
 
       {/* 🔹 HERO SECTION */}

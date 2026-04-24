@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaEnvelope } from 'react-icons/fa';
 import content from '../../data/content';
 
@@ -29,7 +30,10 @@ const Footer = () => {
                 placeholder="Your email address"
                 className="bg-transparent outline-none flex-1 text-white placeholder:text-white/50"
               />
-              <button className="bg-white text-primary rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/90 transition-all shrink-0 shadow-lg">
+              <button 
+                aria-label="Subscribe to newsletter"
+                className="bg-white text-primary rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/90 transition-all shrink-0 shadow-lg"
+              >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
@@ -39,7 +43,11 @@ const Footer = () => {
 
           <div className="flex flex-wrap gap-3">
             {['Instagram', 'Facebook', 'TwitterX'].map((social) => (
-              <button key={social} className="px-4 py-2 border border-white/20 rounded-full flex items-center gap-2 hover:bg-white hover:text-primary transition-all text-xs font-bold uppercase tracking-widest">
+              <button 
+                key={social} 
+                aria-label={`Visit our ${social} page`}
+                className="px-4 py-2 border border-white/20 rounded-full flex items-center gap-2 hover:bg-white hover:text-primary transition-all text-xs font-bold uppercase tracking-widest"
+              >
                 {social}
               </button>
             ))}
@@ -48,29 +56,36 @@ const Footer = () => {
 
         <div>
           <h3 className="text-xl font-semibold mb-6 font-sans">Essentials</h3>
-          <ul className="space-y-3 text-white/60">
-            {['Our Story', 'How We Work', 'Services & Solutions', 'Case Studies', 'Client Testimonials', 'FAQs & Help', 'Blog & Insights'].map((item) => (
-              <li key={item} className="hover:text-white transition-colors cursor-pointer">{item}</li>
-            ))}
+          <ul className="space-y-3 text-white/80">
+            <li><Link to="/about" className="hover:text-white transition-colors">Our Story</Link></li>
+            <li><Link to="/services" className="hover:text-white transition-colors">How We Work</Link></li>
+            <li><Link to="/services" className="hover:text-white transition-colors">Services & Solutions</Link></li>
+            <li><Link to="/projects" className="hover:text-white transition-colors">Case Studies</Link></li>
+            <li><Link to="/contact" className="hover:text-white transition-colors">Client Testimonials</Link></li>
+            <li><Link to="/contact" className="hover:text-white transition-colors">FAQs & Help</Link></li>
+            <li><Link to="/blog" className="hover:text-white transition-colors">Blog & Insights</Link></li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-xl font-semibold mb-6 font-sans">Quick Links</h3>
-          <ul className="space-y-3 text-white/60 mb-10">
-            {['Explore Our Work', 'Start Your Project', 'Meet the Team', 'Read Our Insights', 'Request a Quote', 'Let’s Connect'].map((item) => (
-              <li key={item} className="hover:text-white transition-colors cursor-pointer">{item}</li>
-            ))}
+          <ul className="space-y-3 text-white/80 mb-10">
+            <li><Link to="/projects" className="hover:text-white transition-colors">Explore Our Work</Link></li>
+            <li><Link to="/contact" className="hover:text-white transition-colors">Start Your Project</Link></li>
+            <li><Link to="/about" className="hover:text-white transition-colors">Meet the Team</Link></li>
+            <li><Link to="/blog" className="hover:text-white transition-colors">Read Our Insights</Link></li>
+            <li><Link to="/contact" className="hover:text-white transition-colors">Request a Quote</Link></li>
+            <li><Link to="/contact" className="hover:text-white transition-colors">Let’s Connect</Link></li>
           </ul>
 
           <div className="space-y-4 pt-4 border-t border-white/10">
             <div>
-              <p className="text-white/60 text-sm">Just Mail Us:</p>
+              <p className="text-white/80 text-sm">Visit Us At:</p>
               <p className="font-semibold">{content.contact.address}</p>
             </div>
 
             <div>
-              <p className="text-white/60 text-sm">Phone</p>
+              <p className="text-white/80 text-sm">Phone</p>
               <p className="font-semibold">{content.contact.phone}</p>
             </div>
           </div>
@@ -90,7 +105,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="relative z-10 text-center mt-12 text-white/60 text-sm px-8">
+      <div className="relative z-10 text-center mt-12 text-white/80 text-sm px-8">
         <p>Copyrights © {new Date().getFullYear()} {content.brand.name}. All rights reserved.</p>
       </div>
     </footer>

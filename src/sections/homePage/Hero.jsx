@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronUp, ChevronDown, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
@@ -110,23 +111,26 @@ const Hero = () => {
                     </p>
                   </motion.div>
                   {/* Appointment Button */}
-                  <motion.a
-                    href="#"
+                  <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
                     viewport={{ once: true }}
-                    className="inline-flex items-center rounded-[3rem] border border-white/40 p-1 w-fit transition-colors group bg-black/20 backdrop-blur-sm"
                   >
-                    <div className="w-12 h-12 rounded-full bg-[#1B1B1B] flex items-center justify-center text-white mr-3 flex-shrink-0 group-hover:bg-primary transition-colors">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                    <div className="bg-white text-accent font-sans font-bold uppercase text-xs tracking-[0.1em] px-8 h-12 rounded-[3rem] flex items-center justify-center group-hover:text-primary transition-colors">
-                      Appointment
-                    </div>
-                  </motion.a>
+                    <Link
+                      to="/contact"
+                      className="inline-flex items-center rounded-[3rem] border border-white/40 p-1 w-fit transition-colors group bg-black/20 backdrop-blur-sm"
+                    >
+                      <div className="w-12 h-12 rounded-full bg-[#1B1B1B] flex items-center justify-center text-white mr-3 flex-shrink-0 group-hover:bg-primary transition-colors">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                      <div className="bg-white text-primary-dark font-sans font-bold uppercase text-xs tracking-[0.1em] px-8 h-10 rounded-[3rem] flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+                        Appointment
+                      </div>
+                    </Link>
+                  </motion.div>
                 </div>
 
               </div>
@@ -138,12 +142,16 @@ const Hero = () => {
         <div className="absolute right-8 top-1/2 -translate-y-1/2 z-20 hidden lg:flex flex-col gap-8">
           <div
             ref={prevRef}
+            role="button"
+            aria-label="Previous slide"
             className="swiper-button-prev !static !w-auto !h-auto !mt-0  transition-colors cursor-pointer"
           >
             <ChevronUp size={48} fill='none' className='text-white hover:text-white/50' />
           </div>
           <div
             ref={nextRef}
+            role="button"
+            aria-label="Next slide"
             className="swiper-button-next !static !w-auto !h-auto !mt-0 hover:text-white/50 transition-colors cursor-pointer"
           >
             <ChevronDown size={48} fill='none' className='text-white hover:text-white/50' />

@@ -148,13 +148,13 @@ const LogoText = ({ progress, color }) => (
 // --- Loader Component ---
 
 const icons = [
-  { id: 'plan', Component: LayoutPanelTopIcon, displayDuration: 3000 },
-  { id: 'construction', Component: ConstructionIcon, displayDuration: 3000 },
-  { id: 'pickaxe', Component: PickaxeIcon, displayDuration: 2800 },
-  { id: 'home', Component: HomeIcon, displayDuration: 3000 },
-  { id: 'sparkles', Component: SparklesIcon, displayDuration: 2400 },
-  { id: 'furniture', Component: RockingChairIcon, displayDuration: 3600 },
-  { id: 'logo', isLogo: true, displayDuration: 3000 }
+  { id: 'plan', Component: LayoutPanelTopIcon, displayDuration: 800 },
+  { id: 'construction', Component: ConstructionIcon, displayDuration: 800 },
+  { id: 'pickaxe', Component: PickaxeIcon, displayDuration: 800 },
+  { id: 'home', Component: HomeIcon, displayDuration: 800 },
+  { id: 'sparkles', Component: SparklesIcon, displayDuration: 800 },
+  { id: 'furniture', Component: RockingChairIcon, displayDuration: 800 },
+  { id: 'logo', isLogo: true, displayDuration: 1200 }
 ];
 
 const BRAND_COLOR = "#8c6d5a";

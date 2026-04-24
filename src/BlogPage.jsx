@@ -4,11 +4,18 @@ import { Link } from "react-router-dom";
 import { Eye, Heart, ChevronRight, ArrowRight } from "lucide-react";
 import content from "./data/content";
 
+import { Helmet } from 'react-helmet-async';
+
 export default function BlogPage() {
   const blogs = content.blogs;
 
   return (
     <>
+      <Helmet>
+        <title>Interior Design Blog | Pentagon Interior Factory</title>
+        <meta name="description" content="Stay updated with the latest interior design trends, smart home technologies, and sustainable architecture tips on the Pentagon Interior blog." />
+        <link rel="canonical" href="https://pentagoninteriors.in/blog" />
+      </Helmet>
       <Header />
 
       {/* 🔹 HERO SECTION */}

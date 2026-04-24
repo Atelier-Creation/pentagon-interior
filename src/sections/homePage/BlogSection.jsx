@@ -50,6 +50,7 @@ export default function BlogSection() {
                   src={`${blog.image}?auto=format&fit=crop&w=800&q=80`}
                   className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                   alt={blog.title}
+                  loading="lazy"
                 />
                 
                 {/* FLOATING CATEGORY */}

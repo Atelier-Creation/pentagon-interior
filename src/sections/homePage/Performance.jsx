@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import content from "../../data/content";
 
 export default function Performance() {
@@ -114,9 +115,11 @@ export default function Performance() {
                   Impressed? Send your interest to start.
                 </p>
 
-                <p className="font-semibold text-[18px] mt-2 text-[#2b2f2b]">
-                  → Let’s get started!
-                </p>
+                <Link to="/contact" className="block hover:opacity-80 transition-opacity">
+                  <p className="font-semibold text-[18px] mt-2 text-[#2b2f2b]">
+                    → Let’s get started!
+                  </p>
+                </Link>
               </div>
 
             </div>

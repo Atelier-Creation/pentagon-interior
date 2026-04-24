@@ -54,9 +54,9 @@ const About = () => {
                   <line x1="38" y1="40" x2="40" y2="42" strokeLinecap="round" />
                 </svg>
 
-                <h3 className="text-[17px] font-bold text-text-main font-sans leading-snug">
+                <h2 className="text-[17px] font-bold text-text-main font-sans leading-snug">
                   Years of Interior & Architectural<br />Brilliance
-                </h3>
+                </h2>
               </div>
 
               {/* Giant Stroke 13 */}
@@ -73,6 +73,7 @@ const About = () => {
                   src="https://decoria.steelthemes.com/demo/wp-content/uploads/2025/10/decoria-home-1-slider-1-1-min.jpg"
                   alt="Architect at work"
                   className="w-full h-full object-cover object-top"
+                  loading="lazy"
                 />
               </div>
 
@@ -122,7 +123,7 @@ const About = () => {
 
             {/* Pill Button */}
             <a href="#" className="inline-flex items-center rounded-[3rem] border border-gray-400 p-1.5 w-fit hover:border-sidebar-primary transition-colors group">
-              <div className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-text-main mr-2 group-hover:border-primary group-hover:text-primary transition-colors">
+              <div className="w-10 h-10 lg:w-14 lg:h-14 rounded-full border border-gray-300 flex items-center justify-center text-text-main mr-2 group-hover:border-primary group-hover:text-primary transition-colors">
                 <ArrowRight size={18} />
               </div>
               <div className="bg-primary text-white font-sans font-bold text-[13px] tracking-wide px-6 h-10 rounded-[3rem] flex items-center justify-center group-hover:bg-primary transition-colors">
@@ -164,11 +165,11 @@ const About = () => {
 
                 {/* Avatar Group */}
                 <div className="flex items-center justify-center -space-x-4 mb-2 relative">
-                  <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=150&q=80" alt="Reviewer" className="w-[66px] h-[66px] rounded-full border-[3px] border-white object-cover" />
+                  <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=150&q=80" alt="Reviewer" className="w-[66px] h-[66px] rounded-full border-[3px] border-white object-cover" loading="lazy" />
                   <div className="w-[76px] h-[76px] rounded-full border-[3px] border-white bg-primary text-white flex items-center justify-center font-bold text-[22px] z-10 font-sans shadow-md">
                     4.5
                   </div>
-                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Reviewer" className="w-[66px] h-[66px] rounded-full border-[3px] border-white object-cover z-0" />
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Reviewer" className="w-[66px] h-[66px] rounded-full border-[3px] border-white object-cover z-0" loading="lazy" />
                 </div>
 
               </div>

@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Building2, Home, Layout, Coffee } from 'lucide-react';
 import content from "./data/content";
 
+import { Helmet } from 'react-helmet-async';
+
 const iconMap = {
   "Residential": <Home size={16} />,
   "Commercial": <Building2 size={16} />,
@@ -34,6 +36,11 @@ const ProjectsPage = () => {
 
   return (
     <div className="font-text text-text-main selection:bg-primary selection:text-white overflow-hidden">
+      <Helmet>
+        <title>Portfolio | Pentagon Interior Design Factory</title>
+        <meta name="description" content="Browse our elite portfolio of luxury residential, commercial, and hospitality interior design projects. Discover our expertise in creating sophisticated urban spaces." />
+        <link rel="canonical" href="https://pentagoninteriors.in/projects" />
+      </Helmet>
       <Header />
       
       <main>

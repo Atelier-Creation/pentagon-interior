@@ -21,6 +21,8 @@ import { Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import content from "./data/content";
 
+import { Helmet } from 'react-helmet-async';
+
 export default function BlogDetails() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -30,6 +32,11 @@ export default function BlogDetails() {
 
   return (
     <>
+      <Helmet>
+        <title>{`${currentPost.title} | Blog | Pentagon Interior`}</title>
+        <meta name="description" content={`Read our latest blog post: ${currentPost.title}. Learn more about ${currentPost.category.toLowerCase()} and modern interior design trends.`} />
+        <link rel="canonical" href={`https://pentagoninteriors.in/blog/details`} />
+      </Helmet>
       <Header />
 
       {/* ================= HERO ================= */}

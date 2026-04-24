@@ -106,7 +106,10 @@ const Services = () => {
 
                 {/* Col 4: Arrow CTA Button */}
                 <div className="w-[60px] md:w-auto lg:w-[150px] shrink-0 flex items-center justify-end md:justify-center relative z-10 w-full pr-2 md:pr-0">
-                  <button className="w-10 h-10 lg:w-14 lg:h-14 rounded-full border border-white/20 bg-transparent flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-500 hover:scale-105 active:scale-95">
+                  <button 
+                    aria-label="View Service Details"
+                    className="w-10 h-10 lg:w-14 lg:h-14 rounded-full border border-white/20 bg-transparent flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-500 hover:scale-105 active:scale-95"
+                  >
                     <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6 text-white group-hover:text-primary-dark transition-colors duration-500" />
                   </button>
                 </div>

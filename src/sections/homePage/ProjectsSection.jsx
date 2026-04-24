@@ -92,6 +92,7 @@ export default function ProjectsSection() {
                 src={`${item.image}?auto=format&fit=crop&w=1200&q=80`}
                 className="w-full h-full object-cover"
                 alt=""
+                loading="lazy"
               />
 
               {/* LEFT CARD */}

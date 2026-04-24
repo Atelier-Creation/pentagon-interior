@@ -86,7 +86,7 @@ const WhyChooseUs = () => {
                    <img src={signImg} alt="Signature" className="w-full object-contain" />
                  </div>
                  <div>
-                   <h5 className="text-[15px] font-bold text-[#2a2d2a] font-sans">Ilam Bharathi,</h5>
+                   <h4 className="text-[15px] font-bold text-[#e5af14] font-sans">Ilam Bharathi,</h4>
                    <p className="text-gray-400 text-[13.5px]">Founder & Lead Designer</p>
                  </div>
                </div>
