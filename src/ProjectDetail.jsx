@@ -10,63 +10,11 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
-// Dummy data for projects
-const projectsData = {
-  1: {
-    id: 1,
-    title: "Modern Urban Apartment",
-    category: "Residential",
-    client: "Alex Johnson",
-    date: "Dec 15, 2025",
-    area: "1,200 sq.ft",
-    location: "Downtown, Sydney",
-    duration: "4 Months",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1920&q=80",
-    description: "A sophisticated urban sanctuary designed for modern living. This apartment maximizes natural light and space through an open-concept layout, featuring premium finishes and custom-built cabinetry that blends seamlessly with the architecture.",
-    overview: "Our team transformed a standard city apartment into a bespoke luxury residence. We focused on creating a cohesive flow between living areas, utilizing a neutral color palette with bold accent textures to create a sense of timeless elegance.",
-    highlights: [
-      "Custom Italian marble breakfast bar and integrated appliances.",
-      "Smart-home lighting and climate control systems.",
-      "Handcrafted wooden flooring with acoustic insulation.",
-      "Floor-to-ceiling panoramic windows with automated blinds."
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
-    ]
-  },
-  // Default fallback project (Majestic Crown Resort style)
-  default: {
-    id: "majestic-crownresort",
-    title: "Majestic Crown Resort",
-    category: "Hospitality",
-    client: "Crown International Hotels",
-    date: "Nov 22, 2025",
-    area: "45,000 sq.ft",
-    location: "Gold Coast, QLD",
-    duration: "18 Months",
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80",
-    description: "A world-class luxury resort that redefines coastal hospitality. The Majestic Crown Resort combines grand architectural scales with intimate interior details, creating a harmonious environment for relaxation and leisure.",
-    overview: "The primary objective was to create a destination that feels both grandiose and welcoming. We utilized locally sourced limestone and exotic hardwoods to root the building in its coastal context, while the interior design emphasizes fluid transitions between indoor and outdoor spaces.",
-    highlights: [
-      "Grand atrium with a 30-foot vertical garden and water feature.",
-      "Bespoke modular furniture specifically designed for oceanic humidity.",
-      "The signature 'Blue Horizon' infinity pool lounge area.",
-      "Energy-efficient glazing that reduces heat gain by 40%."
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
-      "https://images.unsplash.com/photo-1618773928121-c32242e63f39"
-    ]
-  }
-};
+import content from "./data/content";
 
 const ProjectDetail = () => {
   const { id } = useParams();
-  const project = projectsData[id] || projectsData.default;
+  const project = content.projectDetails[id] || content.projectDetails.default;
 
   return (
     <div className="font-text text-text-main selection:bg-primary selection:text-white overflow-hidden">
@@ -272,7 +220,7 @@ const ProjectDetail = () => {
           </div>
         </section>
 
-        {/* 🔹 RELATED PROJECTS (Mockup of footer nav) */}
+        {/* 🔹 RELATED PROJECTS */}
         <section className="py-14 bg-white border-t border-gray-100">
           <div className="container mx-auto px-4 max-w-7xl">
             <div className="flex items-end justify-between mb-16">
@@ -287,19 +235,15 @@ const ProjectDetail = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { title: "Luxe Residences", category: "Residential", img: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" },
-                { title: "Corporate Suite", category: "Commercial", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" },
-                { title: "Modern Studio", category: "Residential", img: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" }
-              ].map((item, idx) => (
-                <div key={idx} className="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-white shadow-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-                  <img src={item.img} alt={item.title} className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" />
+              {content.projects.featured.slice(0, 3).map((item, idx) => (
+                <Link key={idx} to={`/project/${item.id}`} className="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-white shadow-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
                   <div className="absolute inset-x-8 bottom-8 p-1 flex flex-col justify-end text-white">
                       <span className="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 opacity-70">{item.category}</span>
                       <h4 className="text-xl font-bold font-sans group-hover:-translate-y-2 transition-transform duration-300">{item.title}</h4>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

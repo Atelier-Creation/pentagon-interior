@@ -4,80 +4,21 @@ import Footer from './sections/homePage/Footer';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from "react-router-dom";
 import { ArrowRight, Building2, Home, Layout, Coffee } from 'lucide-react';
+import content from "./data/content";
 
-const projectsData = [
-  {
-    id: 1,
-    title: "Modern Urban Apartment",
-    category: "Residential",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80",
-    icon: <Home size={16} />
-  },
-  {
-    id: 2,
-    title: "Corporate Headquarters",
-    category: "Commercial",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
-    icon: <Building2 size={16} />
-  },
-  {
-    id: 3,
-    title: "Luxury Boutique Hotel",
-    category: "Hospitality",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
-    icon: <Coffee size={16} />
-  },
-  {
-    id: 4,
-    title: "Minimalist Loft",
-    category: "Residential",
-    image: "https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=800&q=80",
-    icon: <Home size={16} />
-  },
-  {
-    id: 5,
-    title: "Co-working Space",
-    category: "Space Planning",
-    image: "https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?auto=format&fit=crop&w=800&q=80",
-    icon: <Layout size={16} />
-  },
-  {
-    id: 6,
-    title: "Tech Startup Office",
-    category: "Commercial",
-    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80",
-    icon: <Building2 size={16} />
-  },
-  {
-    id: 7,
-    title: "Contemporary Villa",
-    category: "Residential",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-    icon: <Home size={16} />
-  },
-  {
-    id: 8,
-    title: "Chic Café Interior",
-    category: "Hospitality",
-    image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
-    icon: <Coffee size={16} />
-  },
-  {
-    id: 9,
-    title: "Executive Penthouse",
-    category: "Residential",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
-    icon: <Home size={16} />
-  }
-];
+const iconMap = {
+  "Residential": <Home size={16} />,
+  "Commercial": <Building2 size={16} />,
+  "Hospitality": <Coffee size={16} />,
+  "Space Planning": <Layout size={16} />
+};
 
-const categories = [
-  "Show All",
-  "Commercial",
-  "Hospitality",
-  "Residential",
-  "Space Planning"
-];
+const projectsData = content.projects.featured.map(p => ({
+  ...p,
+  icon: iconMap[p.category] || <Layout size={16} />
+}));
+
+const categories = content.projects.categories;
 
 const ProjectsPage = () => {
   const [activeCategory, setActiveCategory] = useState("Show All");
@@ -101,7 +42,7 @@ const ProjectsPage = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center" 
             style={{ 
-              backgroundImage: "url('https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=1920&q=80')",
+              backgroundImage: `url('${content.projects.heroImage}')`,
             }}
           >
             <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
