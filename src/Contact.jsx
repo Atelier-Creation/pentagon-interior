@@ -19,7 +19,7 @@ export default function Contact() {
 
       {/* 🔹 HERO SECTION */}
       <div
-        className="h-[420px] flex items-center justify-center relative text-white"
+        className="h-[300px] md:h-[420px] flex items-center justify-center relative text-white px-4"
         style={{
           backgroundImage: `url('${content.contact.heroImage}')`,
           backgroundSize: "cover",
@@ -28,7 +28,7 @@ export default function Contact() {
       >
         <div className="absolute inset-0 bg-primary-dark/80"></div>
         <div className="relative text-center">
-          <h1 className="text-5xl md:text-6xl font-bold">
+          <h1 className="text-3xl md:text-6xl font-bold">
             Contact Us
           </h1>
           <p className="mt-4 text-white/70 text-lg flex justify-center gap-2">
@@ -45,7 +45,7 @@ export default function Contact() {
       <div className="relative py-32 px-8 bg-primary text-white overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div
-            className="absolute right-0 top-0 h-full w-[60%]"
+            className="absolute right-0 top-0 h-full w-full md:w-[60%]"
             style={{
               backgroundImage: "url('https://images.unsplash.com/photo-1541888941259-7a974dfb9a51?q=80&w=2070&auto=format&fit=crop')",
               backgroundSize: "cover",
@@ -57,7 +57,7 @@ export default function Contact() {
           <div className="absolute right-[10%] md:right-[20%] top-[-100px] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-primary-light rounded-full opacity-40 blur-3xl"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 items-stretch gap-12 items-center">
+        <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
             <div className="inline-flex items-center gap-2 border border-white/20 px-4 py-2 rounded-full text-xs uppercase tracking-widest mb-6 opacity-80">
               ✕ GET IN TOUCH
@@ -70,12 +70,12 @@ export default function Contact() {
             </p>
 
             {/* FORM */}
-            <div className="bg-white/95 backdrop-blur-md p-12 rounded-3xl shadow-2xl text-black max-w-xl border border-gray-200">
-              <div className="grid grid-cols-2 gap-4 mb-4">
+            <div className="bg-white/95 backdrop-blur-md p-6 md:p-12 rounded-3xl shadow-2xl text-black max-w-xl border border-gray-200">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Name" />
                 <input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Email" />
               </div>
-              <div className="grid grid-cols-2 gap-4 mb-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Subject" />
                 <input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Phone" />
               </div>
@@ -94,33 +94,33 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="relative flex flex-col justify-center items-start text-left z-10 h-full md:pl-16">
+          <div className="relative flex flex-col justify-center items-center md:items-start text-center md:text-left z-10 h-full md:pl-16">
             <div className="space-y-8 text-white mt-10">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+              <div className="flex items-start gap-4 w-full">
+                <div className="w-12 h-12 min-w-[48px] rounded-full bg-white/10 flex items-center justify-center">
                   <FaMapMarkerAlt />
                 </div>
-                <div>
+                <div className="flex-1 text-left">
                   <p className="text-sm text-white/70">Visit Us:</p>
                   <p className="font-semibold">{content.contact.address}</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+              <div className="flex items-start gap-4 w-full">
+                <div className="w-12 h-12 min-w-[48px] rounded-full bg-white/10 flex items-center justify-center">
                   <FaPhoneAlt />
                 </div>
-                <div>
+                <div className="flex-1 text-left">
                   <p className="text-sm text-white/70">Need help? Call Us:</p>
                   <p className="font-semibold">{content.contact.phone}</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+              <div className="flex items-start gap-4 w-full">
+                <div className="w-12 h-12 min-w-[48px] rounded-full bg-white/10 flex items-center justify-center">
                   <FaEnvelope />
                 </div>
-                <div>
+                <div className="flex-1 text-left">
                   <p className="text-sm text-white/70">Email Us:</p>
-                  <p className="font-semibold">{content.contact.email}</p>
+                  <p className="font-semibold break-all text-sm leading-relaxed">{content.contact.email}</p>
                 </div>
               </div>
             </div>
@@ -135,7 +135,7 @@ export default function Contact() {
             ✕ OFFICES NEAR YOU
           </div>
         </div>
-        <h2 className="text-6xl md:text-7xl font-bold text-center mb-16 tracking-tight">
+        <h2 className="text-3xl md:text-7xl font-bold text-center mb-16 tracking-tight">
           Discover Our Presence
         </h2>
         {content.contact.offices.map((office, i) => (
@@ -156,32 +156,33 @@ export default function Contact() {
                 </span>
               </button>
             </div>
-            <div className="relative w-full md:w-[420px] h-[240px] rounded-2xl overflow-hidden shadow-md">
+            <div className="relative w-full md:w-[420px] h-[200px] md:h-[240px] rounded-2xl overflow-hidden shadow-md">
               <img
                 src={office.image}
                 className="w-full h-full object-cover"
+                alt=""
               />
               <div className="absolute top-4 left-4 w-12 h-12 bg-white rounded-full flex items-center justify-center font-semibold shadow">
                 {office.city.substring(0, 3).toUpperCase()}
               </div>
             </div>
             <div className="w-full md:w-1/3 space-y-6 flex flex-col items-center md:items-start">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full border flex items-center justify-center text-gray-600">
+              <div className="flex items-start gap-4 w-full">
+                <div className="w-12 h-12 min-w-[48px] rounded-full border flex items-center justify-center text-gray-600">
                   <FaPhoneAlt />
                 </div>
-                <div>
+                <div className="flex-1 text-left">
                   <p className="text-sm text-gray-500">Call Us:</p>
                   <p className="font-semibold">{office.phone}</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full border flex items-center justify-center text-gray-600">
+              <div className="flex items-start gap-4 w-full">
+                <div className="w-12 h-12 min-w-[48px] rounded-full border flex items-center justify-center text-gray-600">
                   <FaEnvelope />
                 </div>
-                <div>
+                <div className="flex-1 text-left">
                   <p className="text-sm text-gray-500">Email Us:</p>
-                  <p className="font-semibold">{office.email}</p>
+                  <p className="font-semibold text-sm">{office.email}</p>
                 </div>
               </div>
             </div>

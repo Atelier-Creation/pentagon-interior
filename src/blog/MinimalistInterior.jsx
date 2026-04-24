@@ -34,7 +34,7 @@ export default function MinimalistInterior() {
 
       {/* HERO */}
       <section
-        className="h-[420px] flex items-center justify-center text-white relative"
+        className="h-[280px] sm:h-[320px] md:h-[420px] flex items-center justify-center text-white relative px-4"
         style={{
           backgroundImage: `url(${currentPost.image})`,
           backgroundSize: "cover",
@@ -48,11 +48,11 @@ export default function MinimalistInterior() {
             <Calendar size={16} /> {currentPost.date.month} {currentPost.date.day}, 2026
           </p>
 
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-6xl font-bold leading-tight">
             {currentPost.title}
           </h1>
 
-          <div className="flex justify-center gap-6 mt-4 text-sm opacity-80">
+          <div className="flex flex-wrap justify-center gap-4 mt-4 text-sm opacity-80">
             <span className="flex items-center gap-1">
               <User size={16} /> {content.about.team[0].name}
             </span>
@@ -78,11 +78,12 @@ export default function MinimalistInterior() {
       </div>
 
       {/* ================= CONTENT ================= */}
-      <section className="max-w-7xl mx-auto px-4 py-16 grid lg:grid-cols-3 gap-10 items-start">
+      <section className="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+        {/* LEFT CONTENT */}
         <div className="lg:col-span-2">
           <img
             src={`${currentPost.image}?auto=format&fit=crop&w=1200&q=80`}
-            className="rounded-xl w-full"
+            className="rounded-xl w-full h-[200px] sm:h-[300px] md:h-auto object-cover"
             alt=""
           />
 
@@ -123,11 +124,6 @@ export default function MinimalistInterior() {
           </ul> 
 
           <div className="relative mb-10 rounded-[40px] overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1505691938895-1758d7feb511"
-              className="absolute inset-0 w-full h-full object-cover"
-              alt=""
-            />
             <div className="absolute inset-0 bg-[#8b6b55]"></div>
             <div className="relative flex items-center gap-6 p-10 text-white">
               <div className="w-20 h-20 rounded-full border border-white/40 flex items-center justify-center text-4xl">❝</div>
@@ -234,7 +230,7 @@ export default function MinimalistInterior() {
         </div>
 
         {/* SIDEBAR */}
-        <div className="bg-[#f4f6f4] p-6 md:p-8 rounded-3xl space-y-10">
+        <div className="bg-[#f4f6f4] p-5 sm:p-6 md:p-8 mt-10 lg:mt-0 rounded-3xl space-y-10">
           <div>
             <h3 className="text-lg font-semibold mb-4">Search</h3>
             <input placeholder="Search for posts..." className="w-full p-4 rounded-xl border border-gray-200 bg-white focus:outline-none" />

@@ -56,13 +56,13 @@ export default function BlogPage() {
 
                     {/* CATEGORY */}
                     <div className="absolute top-5 left-5">
-                      <span className="bg-white/90 backdrop-blur-md text-[#8c6d5a] text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full shadow-sm">
+                      <span className="bg-white/90 backdrop-blur-md text-primary text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full shadow-sm">
                         {blog.category}
                       </span>
                     </div>
 
                     {/* DATE */}
-                    <div className="absolute bottom-5 right-5 bg-[#8c6d5a] text-white w-14 h-14 rounded-2xl flex flex-col items-center justify-center shadow-lg transform group-hover:rotate-6 transition-transform">
+                    <div className="absolute bottom-5 right-5 bg-primary text-white w-14 h-14 rounded-2xl flex flex-col items-center justify-center shadow-lg transform group-hover:rotate-6 transition-transform">
                       <span className="text-[10px] font-bold uppercase opacity-80">{blog.date.month}</span>
                       <span className="text-xl font-bold leading-none">{blog.date.day}</span>
                     </div>
@@ -73,24 +73,24 @@ export default function BlogPage() {
                     {/* STATS */}
                     <div className="flex items-center gap-6 mb-5 text-[11px] font-bold text-gray-400 uppercase tracking-widest">
                       <span className="flex items-center gap-2">
-                        <Eye size={14} className="text-[#8c6d5a]" /> {blog.views} Views
+                        <Eye size={14} className="text-primary" /> {blog.views} Views
                       </span>
                       <span className="flex items-center gap-2">
-                        <Heart size={14} className="text-[#8c6d5a]" /> {blog.likes}
+                        <Heart size={14} className="text-primary" /> {blog.likes}
                       </span>
                     </div>
 
                     {/* TITLE */}
                     <h3 className="text-2xl font-bold text-[#2a2d2a] leading-tight mb-8 
-                      group-hover:text-[#8c6d5a] transition-colors line-clamp-2">
+                      group-hover:text-primary transition-colors line-clamp-2">
                       {blog.title}
                     </h3>
 
                     {/* READ MORE */}
                     <div className="pt-6 border-t border-gray-100 flex items-center justify-between">
-                      <button className="flex items-center gap-3 text-[#8c6d5a] text-[11px] font-bold uppercase tracking-[0.2em] group/link">
+                      <button className="flex items-center gap-3 text-primary text-[11px] font-bold uppercase tracking-[0.2em] group/link">
                         <span className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center 
-                        transition-all group-hover/link:bg-[#8c6d5a] group-hover/link:text-white group-hover/link:border-[#8c6d5a]">
+                        transition-all group-hover/link:bg-primary group-hover/link:text-white group-hover/link:border-primary">
                           <ArrowRight size={14} />
                         </span>
                         Read More
@@ -103,10 +103,6 @@ export default function BlogPage() {
           </div>
         </div>
       </div>
-      <Footer />
-    </>
-  );
-}
       <Footer />
     </>
   );

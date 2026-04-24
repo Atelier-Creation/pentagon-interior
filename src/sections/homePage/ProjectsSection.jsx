@@ -1,27 +1,24 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import content from "../../data/content";
 
 const categories = ["all", "luxury", "residential", "commercial"];
 
-const projectsData = content.projects.featured.map(proj => ({
-  id: proj.id,
-  category: proj.type.toLowerCase().includes('residential') ? 'residential' : proj.type.toLowerCase().includes('commercial') ? 'commercial' : 'luxury',
-  title: proj.client + " - " + proj.type,
-  location: proj.location,
-  date: proj.duration,
-  image: proj.id === 1 
-    ? "https://images.unsplash.com/photo-1507089947368-19c1da9775ae" 
-    : proj.id === 2 
-    ? "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"
-    : "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-  description: proj.description,
-  area: proj.area
-}));
-
 export default function ProjectsSection() {
   const [active, setActive] = useState("all");
   const [index, setIndex] = useState(0);
+
+  const projectsData = content.projects.featured.map(proj => ({
+    id: proj.id,
+    category: proj.type?.toLowerCase().includes('residential') ? 'residential' : proj.type?.toLowerCase().includes('commercial') ? 'commercial' : 'luxury',
+    title: (proj.client || "Client") + " - " + (proj.type || "Project"),
+    location: proj.location,
+    date: proj.duration,
+    image: proj.image,
+    description: proj.description,
+    area: proj.area
+  }));
 
   const data =
     active === "all"
@@ -61,7 +58,7 @@ export default function ProjectsSection() {
                 key={cat}
                 onClick={() => {
                   setActive(cat);
-                  setIndex(0); // 🔥 IMPORTANT FIX
+                  setIndex(0); 
                 }}
                 className={`transition ${active === cat
                     ? "text-black font-semibold"
@@ -100,11 +97,10 @@ export default function ProjectsSection() {
               {/* LEFT CARD */}
               <div className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-[calc(100%-2rem)] md:w-auto overflow-hidden">
                 <div className="
-          bg-white w-full md:w-[340px] px-6 py-6 md:px-4 md:py-4 rounded-[20px] md:rounded-[25px] shadow-xl
-          transition-all duration-500
-          group-hover:bg-[#8b6b55] group-hover:text-white
-          group-hover:bg-primary group-hover:text-white
-        ">
+                  bg-white w-full md:w-[340px] px-6 py-6 md:px-4 md:py-4 rounded-[20px] md:rounded-[25px] shadow-xl
+                  transition-all duration-500
+                  group-hover:bg-primary group-hover:text-white
+                ">
                   <p className="text-[10px] uppercase mb-2 md:mb-3 tracking-widest opacity-70">
                     {item.category}
                   </p>
@@ -118,7 +114,7 @@ export default function ProjectsSection() {
                   </p>
 
                   <Link to={`/project/${item.id}`} className="text-xs md:text-sm font-bold uppercase tracking-widest inline-flex items-center gap-2 group/btn">
-                    View Details <span className="transition-transform group-hover/btn:translate-x-1">→</span>
+                    <ArrowRight size={16} /> 
                   </Link>
                 </div>
               </div>
