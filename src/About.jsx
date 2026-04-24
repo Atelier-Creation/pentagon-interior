@@ -2,13 +2,14 @@ import Header from "./sections/homePage/Header";
 import Footer from "./sections/homePage/Footer";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Trophy, Building2, ChevronRight } from "lucide-react";
+import { Trophy, Building2, ChevronRight, ArrowRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import content from "./data/content";
 
 export default function About() {
+  const [activeStatement, setActiveStatement] = useState(0);
   const [showCircle, setShowCircle] = useState(true);
   const [page, setPage] = useState(0);
   const itemsPerPage = 3;
@@ -56,14 +57,14 @@ export default function About() {
           <div className="relative w-full h-[400px] md:h-[560px]">
             {/* BIG IMAGE */}
             <img
-              src="https://images.unsplash.com/photo-1600585152915-d208bec867a1"
+              src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&q=80&w=800"
               className="absolute top-0 left-0 w-[80%] sm:w-[70%] md:w-[370px] h-[220px] sm:h-[260px] md:h-[420px] object-cover rounded-[40px]"
               alt=""
             />
 
             {/* SMALL IMAGE (OVERLAP RIGHT) */}
             <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800"
               className="absolute top-[120px] sm:top-[150px] md:top-[200px] right-0 md:left-[260px] w-[70%] sm:w-[60%] md:w-[350px] h-[160px] sm:h-[200px] md:h-[260px] object-cover rounded-3xl shadow-xl"
               alt=""
             />
@@ -153,32 +154,52 @@ export default function About() {
 
             <div className="space-y-4 mb-10">
               {content.whyChooseUs.values.map((value, idx) => (
-                <div key={idx} className="flex justify-between border-b border-white/20 pb-3">
-                  <span className="font-medium">{value}</span>
-                  <span>→</span>
+                <div 
+                  key={idx} 
+                  onClick={() => setActiveStatement(idx)}
+                  className={`flex justify-between border-b pb-3 cursor-pointer transition-all duration-300 group ${activeStatement === idx ? 'border-white text-white' : 'border-white/20 text-white/60 hover:text-white'}`}
+                >
+                  <span className={`font-medium ${activeStatement === idx ? 'translate-x-2' : 'group-hover:translate-x-1'} transition-transform duration-300`}>
+                    {value.title}
+                  </span>
+                  <span className={`${activeStatement === idx ? 'rotate-90' : ''} transition-transform duration-300`}>
+                    <ArrowRight size={18} />
+                  </span>
                 </div>
               ))}
             </div>
 
             <button className="border border-white px-8 py-3 rounded-full flex items-center gap-2 hover:bg-white hover:text-black transition">
-              Get Started →
+              Get Started <ArrowRight size={18} />
             </button>
           </div>
 
           {/* RIGHT SIDE (BIG CIRCLE) */}
           <div
-            onMouseEnter={() => setShowCircle(false)}
-            onMouseLeave={() => setShowCircle(true)}
-            className={`w-full md:w-[420px] h-[350px] md:h-[420px] bg-white rounded-full flex flex-col items-center justify-center text-center p-10 shadow-xl transition-all duration-300 mt-12 md:mt-0 ${showCircle ? "opacity-100 scale-100" : "opacity-100 md:opacity-0 md:scale-90"}`}
+            className="w-full md:w-[420px] h-[350px] md:h-[420px] bg-white rounded-full flex flex-col items-center justify-center text-center p-10 shadow-xl transition-all duration-500 mt-12 md:mt-0 relative overflow-hidden group/circle"
           >
-            <Trophy className="w-8 h-8 text-gray-400 mb-2" />
-            <p className="text-gray-500">Clean & Minimal</p>
-            <h3 className="text-xl md:text-2xl font-bold mt-2 mb-4">
-              Contemporary Design
-            </h3>
-            <p className="text-gray-400 text-sm">
-              Elegant, functional spaces with clean lines and neutral palettes.
-            </p>
+            {/* Subtle background icon */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none group-hover/circle:scale-110 transition-transform duration-700">
+               <Trophy size={300} />
+            </div>
+
+            <div className="relative z-10 flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center mb-4 transition-colors group-hover/circle:bg-primary/10">
+                <Trophy className="w-8 h-8 text-primary/40" />
+              </div>
+              
+              <p className="text-primary text-[11px] font-bold uppercase tracking-[0.2em] mb-2 opacity-60">
+                {content.whyChooseUs.values[activeStatement].title}
+              </p>
+              
+              <h3 className="text-xl md:text-2xl font-bold mt-2 mb-4 text-[#2a2d2a] px-4 leading-tight">
+                Crafting Excellence With Purpose
+              </h3>
+              
+              <p className="text-gray-400 text-sm leading-relaxed max-w-[280px]">
+                {content.whyChooseUs.values[activeStatement].desc}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -208,7 +229,7 @@ export default function About() {
 
           <div className="relative flex flex-col md:flex-row justify-center items-center gap-8">
             <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200"
               className="w-full md:w-[700px] h-[220px] sm:h-[260px] md:h-[380px] object-cover rounded-3xl shadow-lg"
               alt=""
             />
@@ -276,7 +297,7 @@ export default function About() {
                 </div>
                 <div className="flex justify-between items-center px-6 py-5 border-t text-gray-600 text-sm">
                   <span>✉ {item.email}</span>
-                  <span>→</span>
+                  <ArrowRight size={18} />
                 </div>
               </div>
             </SwiperSlide>
