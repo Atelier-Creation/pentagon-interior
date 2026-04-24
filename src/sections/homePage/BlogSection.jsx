@@ -1,78 +1,45 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-const blogs = [
-  {
-    id: 1,
-    category: "SMART HOMES",
-    title: "Smart Home Technology Reshaping Interior...",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-    views: 3,
-    likes: 0,
-  },
-  {
-    id: 2,
-    category: "INTERIOR DESIGN",
-    title: "Minimalist Interior Design Remains a Top Trend...",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6",
-    views: 2,
-    likes: 0,
-  },
-  {
-    id: 3,
-    category: "ARCHITECTURE",
-    title: "Sustainable Architecture Trends Transform Modern...",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
-    views: 8,
-    likes: 0,
-  },
-];
+import content from "../../data/content";
 
 export default function BlogSection() {
-  return (
-<section className="py-5 md:py-24 bg-white">
-      <div className="max-w-[1350px] mx-auto px-6 lg:px-10">
+  const blogs = content.blogs;
 
+  return (
+    <section className="py-5 md:py-24 bg-white">
+      <div className="max-w-[1350px] mx-auto px-6 lg:px-10">
         {/* TOP */}
         <div className="flex flex-col md:flex-row items-start justify-between gap-8 mb-12 md:mb-16">
+          {/* LEFT SIDE */}
+          <div>
+            {/* BADGE */}
+            <div className="flex items-center gap-3 mb-6">
+              <span className="w-10 h-[1px] bg-gray-300"></span>
+              <div className="flex items-center gap-2 border border-gray-200 rounded-full px-5 py-2 text-[10px] md:text-[11px] font-semibold uppercase tracking-[2px] text-gray-600 bg-white shadow-sm">
+                ✦ OUR BLOG
+              </div>
+            </div>
+            {/* HEADING */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-[64px] leading-[1.1] font-semibold text-[#2a2d2a] tracking-tight max-w-[700px]">
+              Latest Articles & Updates
+            </h2>
+          </div>
 
-  {/* LEFT SIDE */}
-  <div>
-
-    {/* BADGE */}
-    <div className="flex items-center gap-3 mb-6">
-
-      <span className="w-10 h-[1px] bg-gray-300"></span>
-
-      <div className="flex items-center gap-2 border border-gray-200 rounded-full px-5 py-2 text-[10px] md:text-[11px] font-semibold uppercase tracking-[2px] text-gray-600 bg-white shadow-sm">
-        ✦ OUR BLOG
-      </div>
-
-    </div>
-
-    {/* HEADING */}
-    <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-[64px] leading-[1.1] font-semibold text-[#2a2d2a] tracking-tight max-w-[700px]">
-      Latest Articles & Updates
-    </h2>
-
-  </div>
-
-  {/* RIGHT SIDE LINK */}
-  <div className="md:mt-16">
-    <a
-      href="/"
-      className="flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-[11px] hover:text-text-main transition group"
-    >
-      <span className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center transition-colors group-hover:bg-primary group-hover:text-white">→</span>
-      <span>View All Posts</span>
-    </a>
-  </div>
-
-</div>
+          {/* RIGHT SIDE LINK */}
+          <div className="md:mt-16">
+            <Link
+              to="/blog"
+              className="flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-[11px] hover:text-text-main transition group"
+            >
+              <span className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center transition-colors group-hover:bg-primary group-hover:text-white">→</span>
+              <span>View All Posts</span>
+            </Link>
+          </div>
+        </div>
 
         {/* CARDS */}
         <div className="grid md:grid-cols-3 gap-10">
-          {blogs.map((blog) => (
+          {blogs.slice(0, 3).map((blog) => (
             <div
               key={blog.id} 
               className="group bg-white rounded-[2rem] overflow-hidden border border-gray-100/80 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:-translate-y-2 transition-all duration-500"
@@ -94,8 +61,8 @@ export default function BlogSection() {
 
                 {/* DATE OVERLAY */}
                 <div className="absolute bottom-5 right-5 bg-primary text-white w-14 h-14 rounded-2xl flex flex-col items-center justify-center shadow-lg transform group-hover:rotate-6 transition-transform">
-                  <span className="text-[10px] font-bold uppercase tracking-tighter opacity-80">Mar</span>
-                  <span className="text-xl font-bold leading-none">16</span>
+                  <span className="text-[10px] font-bold uppercase tracking-tighter opacity-80">{blog.date.month}</span>
+                  <span className="text-xl font-bold leading-none">{blog.date.day}</span>
                 </div>
               </div>
 
@@ -119,17 +86,16 @@ export default function BlogSection() {
 
                 {/* BOTTOM LINK */}
                 <div className="pt-6 border-t border-gray-100 flex items-center justify-between">
-                  <a href="#" className="flex items-center gap-3 text-primary text-[11px] font-bold uppercase tracking-[0.2em] group/link">
+                  <Link to={blog.path} className="flex items-center gap-3 text-primary text-[11px] font-bold uppercase tracking-[0.2em] group/link">
                     <span className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center transition-all group-hover/link:bg-primary group-hover/link:text-white group-hover/link:border-primary">
                       →
                     </span>
                     Read More
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
           ))}
-
         </div>
       </div>
     </section>
