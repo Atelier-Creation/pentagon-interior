@@ -115,7 +115,7 @@ export default function ProjectsSection() {
                   </p>
 
                   <Link to={`/project/${item.id}`} className="text-xs md:text-sm font-bold uppercase tracking-widest inline-flex items-center gap-2 group/btn">
-                    <ArrowRight size={16} /> 
+                    View Project <ArrowRight size={16} /> 
                   </Link>
                 </div>
               </div>

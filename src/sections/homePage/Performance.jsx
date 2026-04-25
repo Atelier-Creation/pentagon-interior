@@ -21,6 +21,7 @@ export default function Performance() {
                 src={image}
                 className="w-full h-full object-contain md:object-fill"
                 alt=""
+                loading="lazy"
               />
             </div>
 

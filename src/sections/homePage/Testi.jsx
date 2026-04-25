@@ -36,6 +36,9 @@ export default function Testimonials() {
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         loop={true}
         slidesPerView={1}
+        observer={false}
+        observeParents={false}
+        watchSlidesProgress={true}
         className="pt-10 !overflow-visible"
         onSwiper={(swiper) => (swiperRef.current = swiper)}
       >
@@ -48,8 +51,11 @@ export default function Testimonials() {
               <div className="absolute -top-10 left-1/2 -translate-x-1/2">
                 <img
                   src={t.image}
-                  className="w-20 h-20 rounded-full border-4 border-white shadow"
-                  alt=""
+                  className="w-20 h-20 rounded-full border-4 border-white shadow object-cover"
+                  alt={t.name}
+                  loading="lazy"
+                  width="80"
+                  height="80"
                 />
               </div>
 

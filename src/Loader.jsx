@@ -148,13 +148,13 @@ const LogoText = ({ progress, color }) => (
 // --- Loader Component ---
 
 const icons = [
-  { id: 'plan', Component: LayoutPanelTopIcon, displayDuration: 800 },
-  { id: 'construction', Component: ConstructionIcon, displayDuration: 800 },
-  { id: 'pickaxe', Component: PickaxeIcon, displayDuration: 800 },
-  { id: 'home', Component: HomeIcon, displayDuration: 800 },
-  { id: 'sparkles', Component: SparklesIcon, displayDuration: 800 },
-  { id: 'furniture', Component: RockingChairIcon, displayDuration: 800 },
-  { id: 'logo', isLogo: true, displayDuration: 1200 }
+  { id: 'plan', Component: LayoutPanelTopIcon, displayDuration: 1000 },
+  { id: 'construction', Component: ConstructionIcon, displayDuration: 1000 },
+  { id: 'pickaxe', Component: PickaxeIcon, displayDuration: 1000 },
+  { id: 'home', Component: HomeIcon, displayDuration: 1000 },
+  { id: 'sparkles', Component: SparklesIcon, displayDuration: 1000 },
+  { id: 'furniture', Component: RockingChairIcon, displayDuration: 1000 },
+  { id: 'logo', isLogo: true, displayDuration: 3000 }
 ];
 
 const BRAND_COLOR = "#8c6d5a";
@@ -186,7 +186,6 @@ export default function Loader({ onComplete }) {
       transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
       className="fixed inset-0 flex flex-col items-center justify-center bg-white z-[9999] overflow-hidden"
     >
-      {/* Background Pattern */}
       <div 
         className="absolute inset-0 z-0 pointer-events-none opacity-[0.05]"
         style={{ 
@@ -201,10 +200,10 @@ export default function Loader({ onComplete }) {
           {currentIconData && (
             <motion.div
               key={currentIconData.id}
-              initial={{ opacity: 0, scale: 0.8, filter: 'blur(15px)', rotate: -15 }}
-              animate={{ opacity: 1, scale: 1, filter: 'blur(0px)', rotate: 0 }}
-              exit={{ opacity: 0, scale: 1.2, filter: 'blur(15px)', rotate: 15 }}
-              transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
+              initial={{ opacity: 0, scale: 0.8, rotate: -15 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              exit={{ opacity: 0, scale: 1.2, rotate: 15 }}
+              transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
               className="absolute flex items-center justify-center"
             >
               {currentIconData.isLogo ? (
@@ -223,7 +222,6 @@ export default function Loader({ onComplete }) {
         </AnimatePresence>
       </div>
       
-      {/* Progress Indicator */}
       <div className="flex flex-col items-center">
         <LogoText progress={(currentIndex + 1) / icons.length} color={BRAND_COLOR} />
         <div className="w-64 h-[2px] bg-gray-100 rounded-full overflow-hidden">

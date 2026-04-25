@@ -5,12 +5,12 @@ import content from '../../data/content';
 
 const Footer = () => {
   return (
-    <footer className="relative bg-primary text-white overflow-hidden pt-8 md:pt-24 pb-12">
+    <footer className="relative bg-primary-dark text-white overflow-hidden pt-8 md:pt-24 pb-12">
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
         <div className="space-y-10">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-sans uppercase tracking-tight">Need Help?</h2>
-            <p className="text-white/80">
+            <p className="text-white">
               Send Mail us at{" "}
               <span className="underline font-semibold">
                 {content.contact.email}
@@ -20,25 +20,66 @@ const Footer = () => {
 
           <div>
             <h3 className="text-2xl font-semibold mb-2 font-sans">Newsletter</h3>
-            <p className="text-white/80 mb-4">
+            <p className="text-white mb-4">
               Get exclusive offers and news delivered monthly.
             </p>
 
-            <div className="flex items-center bg-white/10 rounded-xl px-4 py-3">
-              <FaEnvelope className="text-white/80 mr-3" />
-              <input
-                placeholder="Your email address"
-                className="bg-transparent outline-none flex-1 text-white placeholder:text-white/50"
-              />
-              <button 
-                aria-label="Subscribe to newsletter"
-                className="bg-white text-primary rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/90 transition-all shrink-0 shadow-lg"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-              </button>
-            </div>
+            <form 
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const btn = e.target.querySelector('button');
+                const originalContent = btn.innerHTML;
+                btn.innerHTML = '<span class="text-[10px]">...</span>';
+                btn.disabled = true;
+
+                const formData = new FormData(e.target);
+                formData.append("access_key", content.web3forms.access_key);
+                formData.append("subject", "Newsletter Subscription");
+
+                try {
+                  const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData
+                  });
+                  const data = await response.json();
+                  if (data.success) {
+                    btn.innerHTML = '✓';
+                    e.target.reset();
+                  } else {
+                    btn.innerHTML = '✕';
+                  }
+                } catch (err) {
+                  btn.innerHTML = '✕';
+                } finally {
+                  setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.disabled = false;
+                  }, 3000);
+                }
+              }}
+              className="space-y-4"
+            >
+              <div className="h-captcha" data-captcha="true" data-size="compact"></div>
+              <div className="flex items-center bg-white/10 rounded-xl px-4 py-3">
+                <FaEnvelope className="text-white mr-3" />
+                <input
+                  name="email"
+                  required
+                  type="email"
+                  placeholder="Your email address"
+                  className="bg-transparent outline-none flex-1 text-white placeholder:text-white/70"
+                />
+                <button 
+                  type="submit"
+                  aria-label="Subscribe to newsletter"
+                  className="bg-white text-primary rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/90 transition-all shrink-0 shadow-lg disabled:opacity-50"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </button>
+              </div>
+            </form>
           </div>
 
           <div className="flex flex-wrap gap-3">
@@ -55,37 +96,32 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-xl font-semibold mb-6 font-sans">Essentials</h3>
-          <ul className="space-y-3 text-white/80">
+          <h3 className="text-xl font-semibold mb-6 font-sans">Explore</h3>
+          <ul className="space-y-3 text-white">
             <li><Link to="/about" className="hover:text-white transition-colors">Our Story</Link></li>
-            <li><Link to="/services" className="hover:text-white transition-colors">How We Work</Link></li>
-            <li><Link to="/services" className="hover:text-white transition-colors">Services & Solutions</Link></li>
-            <li><Link to="/projects" className="hover:text-white transition-colors">Case Studies</Link></li>
-            <li><Link to="/contact" className="hover:text-white transition-colors">Client Testimonials</Link></li>
-            <li><Link to="/contact" className="hover:text-white transition-colors">FAQs & Help</Link></li>
-            <li><Link to="/blog" className="hover:text-white transition-colors">Blog & Insights</Link></li>
+            <li><Link to="/services" className="hover:text-white transition-colors">Services</Link></li>
+            <li><Link to="/projects" className="hover:text-white transition-colors">Portfolio</Link></li>
+            <li><Link to="/execution-delivery" className="hover:text-white transition-colors">How We Work</Link></li>
+            <li><Link to="/blog" className="hover:text-white transition-colors">Insights</Link></li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-xl font-semibold mb-6 font-sans">Quick Links</h3>
-          <ul className="space-y-3 text-white/80 mb-10">
-            <li><Link to="/projects" className="hover:text-white transition-colors">Explore Our Work</Link></li>
-            <li><Link to="/contact" className="hover:text-white transition-colors">Start Your Project</Link></li>
-            <li><Link to="/about" className="hover:text-white transition-colors">Meet the Team</Link></li>
-            <li><Link to="/blog" className="hover:text-white transition-colors">Read Our Insights</Link></li>
+          <h3 className="text-xl font-semibold mb-6 font-sans">Company</h3>
+          <ul className="space-y-3 text-white mb-10">
+            <li><Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
             <li><Link to="/contact" className="hover:text-white transition-colors">Request a Quote</Link></li>
-            <li><Link to="/contact" className="hover:text-white transition-colors">Let’s Connect</Link></li>
+            <li><Link to="/contact" className="hover:text-white transition-colors">Free Consultation</Link></li>
           </ul>
 
           <div className="space-y-4 pt-4 border-t border-white/10">
             <div>
-              <p className="text-white/80 text-sm">Visit Us At:</p>
+              <p className="text-white text-sm">Visit Us At:</p>
               <p className="font-semibold">{content.contact.address}</p>
             </div>
 
             <div>
-              <p className="text-white/80 text-sm">Phone</p>
+              <p className="text-white text-sm">Phone</p>
               <p className="font-semibold">{content.contact.phone}</p>
             </div>
           </div>

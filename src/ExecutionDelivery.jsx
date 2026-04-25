@@ -100,6 +100,7 @@ export default function ExecutionDelivery() {
               <img
                 src={content.about.team[0].img}
                 className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-[#2f4638]/60"></div>
               <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 w-[80px] h-[80px] border border-white/70 rounded-full flex items-center justify-center z-10 backdrop-blur-sm">
@@ -124,6 +125,7 @@ export default function ExecutionDelivery() {
               src={`${data.mainImage}?auto=format&fit=crop&q=80&w=1200`}
               className="w-full h-full object-cover"
               alt=""
+              loading="lazy"
             />
           </div>
           <p className="mt-8 text-[16px] leading-[1.8] text-[#6b7280]">
@@ -286,6 +288,7 @@ export default function ExecutionDelivery() {
                           src={item.img}
                           className="w-full md:w-[180px] h-[140px] object-cover rounded-[14px]"
                           alt=""
+                          loading="lazy"
                         />
                         <div className="flex-1">
                           <p className="text-[#6b7280] text-sm md:text-base leading-[1.8] mb-5">

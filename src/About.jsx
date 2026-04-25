@@ -64,16 +64,18 @@ export default function About() {
           <div className="relative w-full h-[400px] md:h-[560px]">
             {/* BIG IMAGE */}
             <img
-              src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&q=80&w=800"
+              src="/assets/projects/pentagon-11.jpg"
               className="absolute top-0 left-0 w-[80%] sm:w-[70%] md:w-[370px] h-[220px] sm:h-[260px] md:h-[420px] object-cover rounded-[40px]"
               alt=""
+              loading="lazy"
             />
 
             {/* SMALL IMAGE (OVERLAP RIGHT) */}
             <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800"
+              src="/assets/projects/pentagon-12.jpg"
               className="absolute top-[120px] sm:top-[150px] md:top-[200px] right-0 md:left-[260px] w-[70%] sm:w-[60%] md:w-[350px] h-[160px] sm:h-[200px] md:h-[260px] object-cover rounded-3xl shadow-xl"
               alt=""
+              loading="lazy"
             />
 
             {/* CARD (BOTTOM LEFT CENTER) */}
@@ -136,7 +138,7 @@ export default function About() {
       <div
         className="relative py-16 md:py-32 px-4 md:px-6 overflow-hidden"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1541888941259-7a974dfb9a51?q=80&w=2070&auto=format&fit=crop')",
+          backgroundImage: "url('/assets/projects/pentagon-13.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -216,7 +218,7 @@ export default function About() {
         <div
           className="absolute inset-0 opacity-[0.06]"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1600585152915-d208bec867a1?q=80&w=2070&auto=format&fit=crop')",
+            backgroundImage: "url('/assets/projects/pentagon-14.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -236,9 +238,10 @@ export default function About() {
 
           <div className="relative flex flex-col md:flex-row justify-center items-center gap-8">
             <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200"
+              src="/assets/projects/pentagon-15.jpg"
               className="w-full md:w-[700px] h-[220px] sm:h-[260px] md:h-[380px] object-cover rounded-3xl shadow-lg"
               alt=""
+              loading="lazy"
             />
             <div className="md:absolute md:left-[120px] md:top-[40px] w-[200px] h-[200px] md:w-[240px] md:h-[240px] bg-white rounded-full shadow-lg flex flex-col items-center justify-center text-center p-6">
               <Trophy className="w-8 h-8 text-gray-400 mb-2" />
@@ -292,6 +295,7 @@ export default function About() {
                     src={item.img}
                     className="w-full h-[220px] sm:h-[260px] md:h-[320px] object-cover rounded-t-3xl transition duration-500 group-hover:scale-110"
                     alt={item.name}
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-primary text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 rounded-t-3xl">
                     <h3 className="text-xl font-semibold">{item.name}</h3>

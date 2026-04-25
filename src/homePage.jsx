@@ -1,22 +1,37 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+
+// Eagerly loaded (Above the fold or critical)
 import Header from './sections/homePage/Header';
 import Hero from './sections/homePage/Hero';
 import About from './sections/homePage/About';
 import Services from './sections/homePage/Services';
 import WhyChooseUs from './sections/homePage/WhyChooseUs';
-import MarqueeSection from './sections/homePage/MarqueeSection';
-import Projects from './sections/homePage/Projects';
-import Testimonials from './sections/homePage/Testimonials';
-import ContactUs from './sections/homePage/ContactUs';
-import Footer from './sections/homePage/Footer';
 import ProjectsSection from "./sections/homePage/ProjectsSection";
-import HowWeWork from "./sections/homePage/HowWeWork";
-import Performance from "./sections/homePage/Performance";
-import Testi from "./sections/homePage/Testi";
-import PromoVideo from "./sections/homePage/PromoVideo";
-import BlogSection from "./sections/homePage/BlogSection";
-import { Helmet } from 'react-helmet-async';
+import Footer from './sections/homePage/Footer';
+
+// Lazily loaded (Below the fold)
+const HowWeWork = lazy(() => import("./sections/homePage/HowWeWork"));
+const Performance = lazy(() => import("./sections/homePage/Performance"));
+const Testi = lazy(() => import("./sections/homePage/Testi"));
+const PromoVideo = lazy(() => import("./sections/homePage/PromoVideo"));
+const MarqueeSection = lazy(() => import("./sections/homePage/MarqueeSection"));
+const BlogSection = lazy(() => import("./sections/homePage/BlogSection"));
+const Projects = lazy(() => import("./sections/homePage/Projects"));
+const Testimonials = lazy(() => import("./sections/homePage/Testimonials"));
+const ContactUs = lazy(() => import("./sections/homePage/ContactUs"));
+
+const SectionWrapper = ({ children }) => (
+  <motion.div 
+    initial={{ opacity: 0, y: 20 }} 
+    whileInView={{ opacity: 1, y: 0 }} 
+    viewport={{ once: true, margin: "-50px" }}
+    transition={{ duration: 0.6 }}
+  >
+    {children}
+  </motion.div>
+);
 
 export default function HomePage() {
   return (
@@ -26,127 +41,67 @@ export default function HomePage() {
         <meta name="description" content="Welcome to Pentagon Interior. We transform spaces into premium experiences with 10+ years of excellence in high-end residential and commercial interior design." />
         <link rel="canonical" href="https://pentagoninteriors.in/" />
       </Helmet>
+      
       <Header />
+      
       <main>
         <Hero />
         
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-        >
+        <SectionWrapper>
           <About />
-        </motion.div>
+        </SectionWrapper>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-        >
+        <SectionWrapper>
           <Services />
-        </motion.div>
+        </SectionWrapper>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-        >
+        <SectionWrapper>
           <WhyChooseUs />
-        </motion.div>
+        </SectionWrapper>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-        >
+        <SectionWrapper>
           <ProjectsSection />
-        </motion.div>
+        </SectionWrapper>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-        >
-          <HowWeWork />
-        </motion.div>
+        <Suspense fallback={<div className="h-40" />}>
+          <SectionWrapper>
+            <HowWeWork />
+          </SectionWrapper>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-        >
-          <Performance />
-        </motion.div>
+          <SectionWrapper>
+            <Performance />
+          </SectionWrapper>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-        >
-          <Testi />
-        </motion.div>
+          <SectionWrapper>
+            <Testi />
+          </SectionWrapper>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-        >
-          <PromoVideo />
-        </motion.div>
+          <SectionWrapper>
+            <PromoVideo />
+          </SectionWrapper>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-        >
-          <MarqueeSection />
-        </motion.div>
+          <SectionWrapper>
+            <MarqueeSection />
+          </SectionWrapper>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-        >
-          <BlogSection />
-        </motion.div>
+          <SectionWrapper>
+            <BlogSection />
+          </SectionWrapper>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-        >
-          <Projects />
-        </motion.div>
+          <SectionWrapper>
+            <Projects />
+          </SectionWrapper>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-        >
-          <Testimonials />
-        </motion.div>
+          <SectionWrapper>
+            <Testimonials />
+          </SectionWrapper>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-        >
-          <ContactUs />
-        </motion.div>
+          <SectionWrapper>
+            <ContactUs />
+          </SectionWrapper>
+        </Suspense>
       </main>
+      
       <Footer />
     </div>
   );

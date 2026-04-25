@@ -32,15 +32,21 @@ const Hero = () => {
           swiper.params.navigation.nextEl = nextRef.current;
         }}
         loop={true}
+        watchSlidesProgress={true}
+        observer={false}
+        observeParents={false}
         className="hero-swiper h-full w-full"
       >
         {slidesData.map((slide, i) => (
           <SwiperSlide key={i} className="flex items-center">
             {/* Background Image Layer */}
-            <div
-              className="absolute inset-0 z-0 bg-cover bg-center"
-              style={{ backgroundImage: `linear-gradient(rgba(75, 36, 36, 0.5), rgba(70, 42, 42, 0.5)), url('${slide.bgImage}')` }}
-            ></div>
+            <img 
+              src={slide.bgImage} 
+              alt="" 
+              className="absolute inset-0 z-0 w-full h-full object-cover brightness-[0.4]"
+              loading={i === 0 ? "eager" : "lazy"}
+              fetchpriority={i === 0 ? "high" : "low"}
+            />
 
             <div className="container-fluid w-full max-w-[1700px] mx-auto px-6 lg:px-16 relative z-10 pt-32 h-full flex items-center">
               <div className="flex flex-col md:flex-row w-full gap-12 lg:gap-24 items-center">
@@ -77,7 +83,12 @@ const Hero = () => {
                   >
                     <div className="w-24 h-24 sm:w-32 sm:h-32 relative sm:mr-8 flex-shrink-0 mb-2 sm:mb-0">
                       {/* Rotating text SVG */}
-                      <svg viewBox="0 0 100 100" className="w-full h-full text-white uppercase tracking-[0.1em] font-sans font-bold animate-[spin_12s_linear_infinite]">
+                      <svg 
+                        viewBox="0 0 100 100" 
+                        width="128" 
+                        height="128" 
+                        className="w-full h-full text-white uppercase tracking-[0.1em] font-sans font-bold animate-[spin_12s_linear_infinite]"
+                      >
                         <path id={`textPath-legacy-${i}`} d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent"></path>
                         <text className="text-[7.7px] fill-current">
                           <textPath href={`#textPath-legacy-${i}`} startOffset="0%">{content.brand.name} - </textPath>
@@ -85,7 +96,7 @@ const Hero = () => {
                       </svg>
                       {/* inner Icon */}
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <img src="/fav-logo.png" alt="Pentagon Construction & Interiors" className='w-10 h-10 brightness-0 invert' />
+                        <img src="/favicon.svg" alt="Pentagon Construction & Interiors" className='w-10 h-10 brightness-0 invert' />
                       </div>
                     </div>
                     <div>

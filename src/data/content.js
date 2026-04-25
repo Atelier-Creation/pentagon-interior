@@ -1,6 +1,6 @@
-import client1 from "../assets/clients/client-1.png";
-import client2 from "../assets/clients/client-2.png";
-import client3 from "../assets/clients/client-3.png";
+import client1 from "../assets/clients/elimsolutions.png";
+import client2 from "../assets/clients/TVS_Motor_Logo.png";
+import client3 from "../assets/clients/puravankara.png";
 import client4 from "../assets/clients/client-4.png";
 import client5 from "../assets/clients/client-5.png";
 import client6 from "../assets/clients/client-6.png";
@@ -37,7 +37,7 @@ const content = {
   about: {
     title: "About Us",
     description: "We are a passionate interior design studio dedicated to crafting beautiful, functional, and timeless spaces. With a deep understanding of luxury aesthetics, space planning, and lifestyle needs, we transform interiors into premium experiences that inspire comfort, creativity, and connection. Our work spans across high-end residential and commercial projects, blending innovative concepts with refined craftsmanship.",
-    heroImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
+    heroImage: "/assets/projects/pentagon-1.jpg",
     stats: {
       projectsCompleted: "1500+",
       yearsExperience: "13+",
@@ -54,7 +54,7 @@ const content = {
         name: "Er. Ilambharathi B.E.",
         role: "Principal Designer & Founder",
         email: "pentagondesignfactory@gmail.com",
-        img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
+        img: "/assets/team-1.jpg",
       },
       {
         name: "Arun Varma",
@@ -112,19 +112,19 @@ const content = {
         id: 1,
         title: "Design & Planning",
         desc: "We transform ideas into visionary designs that balance creativity, functionality, and sustainability.",
-        image: "https://images.unsplash.com/photo-1556761175-b413da4baf72",
+        image: "/assets/projects/pentagon-2.jpg",
       },
       {
         id: 2,
         title: "Development",
         desc: "Actionable plans by integrating structural engineering, technologies, and regulatory compliance.",
-        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+        image: "/assets/projects/pentagon-3.jpg",
       },
       {
         id: 3,
         title: "Execution & Delivery",
         desc: "We bring designs to life with precision, professionalism, and attention to detail.",
-        image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
+        image: "/assets/projects/pentagon-4.jpg",
       },
     ]
   },
@@ -164,7 +164,7 @@ const content = {
       name: "Ramesh Babu",
       company: "TCS",
       text: "Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance.",
-      image: "https://randomuser.me/api/portraits/men/11.jpg",
+      image: "/assets/projects/pentagon-47.jpg",
       rating: 4.9,
     },
     {
@@ -172,7 +172,7 @@ const content = {
       name: "Kavitha S",
       company: "Wipro",
       text: "Outstanding experience. The UI and performance are top-notch and highly professional.",
-      image: "https://randomuser.me/api/portraits/women/12.jpg",
+      image: "/assets/projects/pentagon-48.jpg",
       rating: 4.8,
     },
     {
@@ -180,7 +180,7 @@ const content = {
       name: "Arjun Reddy",
       company: "Infosys",
       text: "Clean design and very intuitive interface. Loved working with this system.",
-      image: "https://randomuser.me/api/portraits/men/13.jpg",
+      image: "/assets/projects/pentagon-49.jpg",
       rating: 5.0,
     },
   ],
@@ -197,17 +197,17 @@ const content = {
   promoVideo: {
     title: "Discover the Art of Modern Living",
     subtext: "Enjoy comfort, style, and innovation.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200",
+    image: "/assets/projects/pentagon-5.jpg",
   },
   marquee: [
-    { text: "Quality Assured", img: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=600&q=80" },
-    { text: "Budget Friendly", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" },
-    { text: "Timeless Elegance", img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80" },
-    { text: "Modern Aesthetics", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" },
+    { text: "Quality Assured", img: "/assets/projects/pentagon-6.jpg" },
+    { text: "Budget Friendly", img: "/assets/projects/pentagon-7.jpg" },
+    { text: "Timeless Elegance", img: "/assets/projects/pentagon-8.jpg" },
+    { text: "Modern Aesthetics", img: "/assets/projects/pentagon-9.jpg" },
   ],
   projects: {
     title: "Our Elite Portfolio",
-    heroImage: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=1920&q=80",
+    heroImage: "/assets/projects/pentagon-45.jpg",
     categories: ["Show All", "Commercial", "Hospitality", "Residential", "Space Planning"],
     featured: [
       {
@@ -220,7 +220,7 @@ const content = {
         type: "Construction & Interior Designing",
         category: "Residential",
         status: "Completed",
-        image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80",
+        image: "/assets/projects/pentagon-10.jpg",
         description: "A massive 20,000 sft project blending architectural construction with premium interior aesthetics."
       },
       {
@@ -233,7 +233,7 @@ const content = {
         type: "Luxurious Interior Design",
         category: "Commercial",
         status: "Completed",
-        image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+        image: "/assets/projects/pentagon-11.jpg",
         description: "A sprawling 10,000 sft luxury interior project in the heart of Tirupur."
       },
       {
@@ -246,14 +246,14 @@ const content = {
         type: "Construction & Interior Designing",
         category: "Residential",
         status: "Completed",
-        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+        image: "/assets/projects/pentagon-12.jpg",
         description: "Boutique construction and interior design project focused on elegance and functionality."
       },
       {
         id: 4,
         title: "Luxury Boutique Hotel",
         category: "Hospitality",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+        image: "/assets/projects/pentagon-13.jpg",
         location: "Coimbatore",
         type: "Interior Design",
         description: "High-end hospitality project focused on guest experience and luxury finishes."
@@ -262,7 +262,7 @@ const content = {
         id: 5,
         title: "Minimalist Loft",
         category: "Residential",
-        image: "https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=800&q=80",
+        image: "/assets/projects/pentagon-14.jpg",
         location: "Tirupur",
         type: "Interior Styling",
         description: "Clean lines and functional design for a modern urban lifestyle."
@@ -271,7 +271,7 @@ const content = {
         id: 6,
         title: "Tech Startup Office",
         category: "Commercial",
-        image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80",
+        image: "/assets/projects/pentagon-15.jpg",
         location: "Coimbatore",
         type: "Space Planning",
         description: "Dynamic and productive workspace designed for a growing tech team."
@@ -280,16 +280,16 @@ const content = {
   },
   services: {
     title: "Our Services",
-    heroImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
+    heroImage: "/assets/projects/pentagon-46.jpg",
     main: [
       { id: "designing", title: "Designing", description: "Elite planning, material selection, and luxury color schemes." },
       { id: "constructing", title: "Constructing", description: "Precision-driven construction of premium architectural spaces." },
       { id: "maintaining", title: "Maintaining", description: "Ensuring your luxury investments remain in pristine condition." }
     ],
     detailed: [
-      { title: "PRE-DESIGN", image: "https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&q=80&w=800", description: "We discuss your needs, style, and vision to create a clear, personalized design concept." },
-      { title: "EXECUTION", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800", description: "Precision in every detail ensuring smooth and timely delivery of your dream space." },
-      { title: "PLANNING", image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=800", description: "Detailed architectural planning and space optimization for maximum luxury." },
+      { title: "PRE-DESIGN", image: "/assets/projects/pentagon-16.jpg", description: "We discuss your needs, style, and vision to create a clear, personalized design concept." },
+      { title: "EXECUTION", image: "/assets/projects/pentagon-17.jpg", description: "Precision in every detail ensuring smooth and timely delivery of your dream space." },
+      { title: "PLANNING", image: "/assets/projects/pentagon-18.jpg", description: "Detailed architectural planning and space optimization for maximum luxury." },
     ],
     rooms: [
       {
@@ -320,21 +320,21 @@ const content = {
     whatsapp: "9176828870",
     alternate: "7845572870",
     address: "272/A,VOC Nagar,Ramanadhapuram Coimbatore-045",
-    heroImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
+    heroImage: "/assets/projects/pentagon-19.jpg",
     offices: [
       {
         city: "Coimbatore",
         address: "272/A,VOC Nagar,Ramanadhapuram Coimbatore-045",
         phone: "9176828870",
         email: "pentagondesignfactory@gmail.com",
-        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800"
+        image: "/assets/projects/pentagon-20.jpg"
       },
       {
         city: "Tirupur",
         address: "Main Road, Tirupur, Tamil Nadu",
         phone: "7845572870",
         email: "pentagondesignfactory@gmail.com",
-        image: "https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/project-1-6.jpg"
+        image: "/assets/projects/pentagon-21.jpg"
       }
     ],
     socials: {
@@ -345,8 +345,8 @@ const content = {
   },
   executionDelivery: {
     title: "Execution & Delivery",
-    heroImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
-    mainImage: "https://images.unsplash.com/photo-1556761175-b413da4baf72",
+    heroImage: "/assets/projects/pentagon-22.jpg",
+    mainImage: "/assets/projects/pentagon-23.jpg",
     projects: ["Concept Meeting", "Design & Planning", "Execution & Delivery"],
     services: [
       {
@@ -406,22 +406,22 @@ const content = {
       {
         title: "Space Optimization",
         desc: "Maximize every inch with smart layouts, functional furniture, and creative storage solutions for a seamless, clutter-free home.",
-        img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800",
+        img: "/assets/projects/pentagon-24.jpg",
       },
       {
         title: "Color Harmony",
         desc: "Choose balanced color palettes that enhance mood and visual appeal.",
-        img: "https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=800",
+        img: "/assets/projects/pentagon-25.jpg",
       },
       {
         title: "Material Selection",
         desc: "Pick durable and aesthetic materials that elevate design.",
-        img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=800",
+        img: "/assets/projects/pentagon-26.jpg",
       },
       {
         title: "Trendy Inspirations",
         desc: "Stay updated with modern trends while keeping timeless elegance.",
-        img: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=800",
+        img: "/assets/projects/pentagon-27.jpg",
       },
     ]
   },
@@ -430,7 +430,7 @@ const content = {
       id: 1,
       category: "SMART HOMES",
       title: "Smart Home Technology Reshaping Interior...",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800",
+      image: "/assets/projects/pentagon-28.jpg",
       path: "/blog/smart-home",
       date: { month: "Mar", day: "16" },
       views: 12,
@@ -440,7 +440,7 @@ const content = {
       id: 2,
       category: "INTERIOR DESIGN",
       title: "Minimalist Interior Design Remains a Top Trend...",
-      image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800",
+      image: "/assets/projects/pentagon-29.jpg",
       path: "/blog/minimalist-interior",
       date: { month: "Mar", day: "16" },
       views: 8,
@@ -450,7 +450,7 @@ const content = {
       id: 3,
       category: "ARCHITECTURE",
       title: "Sustainable Architecture Trends Transform Modern...",
-      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800",
+      image: "/assets/projects/pentagon-30.jpg",
       path: "/blog/architecture",
       date: { month: "Mar", day: "16" },
       views: 15,
@@ -460,7 +460,7 @@ const content = {
       id: 4,
       category: "MODERN LIVING",
       title: "Innovative Lighting Ideas for Every Home",
-      image: "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&q=80&w=800",
+      image: "/assets/projects/pentagon-31.jpg",
       path: "/blog/lighting",
       date: { month: "Mar", day: "16" },
       views: 10,
@@ -470,7 +470,7 @@ const content = {
       id: 5,
       category: "LIFESTYLE",
       title: "Eco-Friendly Living: Small Changes, Big Impact",
-      image: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&q=80&w=800",
+      image: "/assets/projects/pentagon-32.jpg",
       path: "/blog/eco",
       date: { month: "Mar", day: "16" },
       views: 20,
@@ -480,7 +480,7 @@ const content = {
       id: 6,
       category: "INDUSTRY NEWS",
       title: "Refresh Your Interiors with 2025 Color Trends",
-      image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=80&w=800",
+      image: "/assets/projects/pentagon-33.jpg",
       path: "/blog/colors",
       date: { month: "Mar", day: "16" },
       views: 14,
@@ -492,14 +492,14 @@ const content = {
       id: 1,
       title: "Modern Urban Apartment",
       category: "Residential",
-      client: "Mr. Senthil Kumar",
+      client: "Mr. Akkash",
       date: "Dec 15, 2025",
-      area: "1,200 sq.ft",
-      location: "Downtown, Sydney",
-      duration: "4 Months",
-      image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1920&q=80",
+      area: "20,000 sft",
+      location: "Coimbatore",
+      duration: "6 Months",
+      image: "/assets/projects/pentagon-10.jpg",
       description: "A sophisticated urban sanctuary designed for modern living. This apartment maximizes natural light and space through an open-concept layout, featuring premium finishes and custom-built cabinetry that blends seamlessly with the architecture.",
-      overview: "Our team transformed a standard city apartment into a bespoke luxury residence. We focused on creating a cohesive flow between living areas, utilizing a neutral color palette with bold accent textures to create a sense of timeless elegance.",
+      overview: "Our team transformed a massive 20,000 sft space into a bespoke luxury residence. We focused on creating a cohesive flow between living areas, utilizing a neutral color palette with bold accent textures to create a sense of timeless elegance.",
       highlights: [
         "Custom Italian marble breakfast bar and integrated appliances.",
         "Smart-home lighting and climate control systems.",
@@ -507,33 +507,153 @@ const content = {
         "Floor-to-ceiling panoramic windows with automated blinds."
       ],
       gallery: [
-        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
-        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
+        "/assets/projects/pentagon-10.jpg",
+        "/assets/projects/pentagon-35.jpg",
+        "/assets/projects/pentagon-36.jpg"
+      ]
+    },
+    2: {
+      id: 2,
+      title: "Corporate Headquarters",
+      category: "Commercial",
+      client: "Mr. Manimaran K",
+      date: "Jan 10, 2026",
+      area: "10,000 sft",
+      location: "Tirupur",
+      duration: "6 Months",
+      image: "/assets/projects/pentagon-11.jpg",
+      description: "A sprawling 10,000 sft luxury interior project in the heart of Tirupur. Designed for a forward-thinking corporate identity, this space balances executive sophistication with collaborative flexibility.",
+      overview: "We implemented a design that reflects status and productivity. The headquarters feature executive suites with panoramic views, soundproof meeting pods, and an open-plan workstation area that promotes team synergy.",
+      highlights: [
+        "Executive suites with custom mahogany and glass finishes.",
+        "High-performance acoustic ceiling systems.",
+        "Integrated conferencing technology in all boardrooms.",
+        "Ergonomic workstations designed for long-term comfort."
+      ],
+      gallery: [
+        "/assets/projects/pentagon-11.jpg",
+        "/assets/projects/pentagon-34.jpg",
+        "/assets/projects/pentagon-35.jpg"
+      ]
+    },
+    3: {
+      id: 3,
+      title: "Boutique Residence",
+      category: "Residential",
+      client: "Private Client",
+      date: "Feb 05, 2026",
+      area: "5,000 sft",
+      location: "Coimbatore",
+      duration: "6 Months",
+      image: "/assets/projects/pentagon-12.jpg",
+      description: "Boutique construction and interior design project focused on elegance and functionality. This residence is a masterpiece of space optimization and refined material selection.",
+      overview: "A focus on 'Quiet Luxury' was the guiding principle for this project. We used a palette of warm oaks, brushed brass, and soft linens to create an atmosphere of calm and comfort for the private client.",
+      highlights: [
+        "Hand-carved wooden main door with biometric security.",
+        "Double-height living area with custom crystal chandelier.",
+        "Modular gourmet kitchen with premium stone countertops.",
+        "Private home theater with 7.1 surround sound."
+      ],
+      gallery: [
+        "/assets/projects/pentagon-12.jpg",
+        "/assets/projects/pentagon-36.jpg",
+        "/assets/projects/pentagon-37.jpg"
+      ]
+    },
+    4: {
+      id: 4,
+      title: "Luxury Boutique Hotel",
+      category: "Hospitality",
+      client: "Hotel Group",
+      date: "Mar 12, 2026",
+      area: "15,000 sft",
+      location: "Coimbatore",
+      duration: "8 Months",
+      image: "/assets/projects/pentagon-13.jpg",
+      description: "High-end hospitality project focused on guest experience and luxury finishes. Every room tells a story of comfort and high-style design.",
+      overview: "The hotel design emphasizes the 'Arrival Experience'. From the grand lobby to the thematic suites, every touchpoint was designed to leave a lasting impression of exclusivity and warmth.",
+      highlights: [
+        "Grand lobby with 30ft vertical garden feature.",
+        "Thematic guest suites with personalized climate control.",
+        "Rooftop infinity pool and lounge area.",
+        "Smart-key integration for seamless guest check-in."
+      ],
+      gallery: [
+        "/assets/projects/pentagon-13.jpg",
+        "/assets/projects/pentagon-38.jpg",
+        "/assets/projects/pentagon-39.jpg"
+      ]
+    },
+    5: {
+      id: 5,
+      title: "Minimalist Loft",
+      category: "Residential",
+      client: "Arun Kumar",
+      date: "Apr 20, 2026",
+      area: "2,500 sft",
+      location: "Tirupur",
+      duration: "3 Months",
+      image: "/assets/projects/pentagon-14.jpg",
+      description: "Clean lines and functional design for a modern urban lifestyle. This loft is the epitome of the 'Less is More' philosophy.",
+      overview: "We stripped away the unnecessary to focus on light and volume. The result is a highly breathable space that feels much larger than its footprint, perfect for a modern urbanite.",
+      highlights: [
+        "Polished concrete flooring for an industrial-chic look.",
+        "Floating staircase with hidden structural supports.",
+        "Exposed brick feature walls with soft-wash lighting.",
+        "Hidden storage solutions built into the wall panels."
+      ],
+      gallery: [
+        "/assets/projects/pentagon-14.jpg",
+        "/assets/projects/pentagon-40.jpg",
+        "/assets/projects/pentagon-41.jpg"
+      ]
+    },
+    6: {
+      id: 6,
+      title: "Tech Startup Office",
+      category: "Commercial",
+      client: "NeoTech Solutions",
+      date: "May 15, 2026",
+      area: "4,000 sft",
+      location: "Coimbatore",
+      duration: "4 Months",
+      image: "/assets/projects/pentagon-15.jpg",
+      description: "Dynamic and productive workspace designed for a growing tech team. Focus on flexibility, branding, and employee well-being.",
+      overview: "Our team designed a 'Culture-First' workspace. We included breakout zones, a cafe-style pantry, and flexible stand-up desks to foster innovation and energy within the tech team.",
+      highlights: [
+        "Interactive whiteboard walls in all collaboration zones.",
+        "Biophilic design elements with indoor oxygen-rich plants.",
+        "Acoustic felt panels for noise reduction in open areas.",
+        "Dedicated focus pods for deep-work sessions."
+      ],
+      gallery: [
+        "/assets/projects/pentagon-15.jpg",
+        "/assets/projects/pentagon-42.jpg",
+        "/assets/projects/pentagon-43.jpg"
       ]
     },
     default: {
-      id: "majestic-crownresort",
-      title: "Majestic Crown Resort",
-      category: "Hospitality",
-      client: "Crown International Hotels",
-      date: "Nov 22, 2025",
-      area: "45,000 sq.ft",
-      location: "Gold Coast, QLD",
-      duration: "18 Months",
-      image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80",
-      description: "A world-class luxury resort that redefines coastal hospitality. The Majestic Crown Resort combines grand architectural scales with intimate interior details, creating a harmonious environment for relaxation and leisure.",
-      overview: "The primary objective was to create a destination that feels both grandiose and welcoming. We utilized locally sourced limestone and exotic hardwoods to root the building in its coastal context, while the interior design emphasizes fluid transitions between indoor and outdoor spaces.",
+      id: "default",
+      title: "Premium Project Detail",
+      category: "Luxury Interior",
+      client: "Pentagon Client",
+      date: "Oct 20, 2025",
+      area: "Various",
+      location: "Tamil Nadu",
+      duration: "Flexible",
+      image: "/assets/projects/pentagon-38.jpg",
+      description: "A showcase of our commitment to excellence, quality, and personalized design across high-end projects.",
+      overview: "This project represents our standard for premium interiors. We utilize the finest materials and the most innovative space-planning techniques to deliver environments that exceed expectations.",
       highlights: [
-        "Grand atrium with a 30-foot vertical garden and water feature.",
-        "Bespoke modular furniture specifically designed for oceanic humidity.",
-        "The signature 'Blue Horizon' infinity pool lounge area.",
-        "Energy-efficient glazing that reduces heat gain by 40%."
+        "Premium material selection.",
+        "Expert space optimization.",
+        "Personalized design approach.",
+        "On-time project delivery."
       ],
       gallery: [
-        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb",
-        "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
-        "https://images.unsplash.com/photo-1618773928121-c32242e63f39"
+        "/assets/projects/pentagon-39.jpg",
+        "/assets/projects/pentagon-40.jpg",
+        "/assets/projects/pentagon-41.jpg"
       ]
     }
   },
@@ -551,19 +671,19 @@ const content = {
         id: 1,
         category: "LIFESTYLE & TRENDS",
         title: "5 Simple Ways to Upgrade Your Living Space",
-        image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511"
+        image: "/assets/projects/pentagon-42.jpg"
       },
       {
         id: 2,
         category: "INDUSTRY NEWS",
         title: "Refresh Your Interiors with 2025 Color Trends",
-        image: "https://images.unsplash.com/photo-1493666438817-866a91353ca9"
+        image: "/assets/projects/pentagon-43.jpg"
       },
       {
         id: 3,
         category: "LIFESTYLE & TRENDS",
         title: "Eco-Friendly Living: Small Changes, Big Impact",
-        image: "https://images.unsplash.com/photo-1501183638710-841dd1904471"
+        image: "/assets/projects/pentagon-44.jpg"
       }
     ],
     popularTags: [
@@ -580,6 +700,9 @@ const content = {
     title: "Ready to transform your home or office into a masterpiece?",
     description: "Our Interior Design Agency brings your vision to life with modern, stylish, and functional designs tailored just for you.",
     buttonText: "Free Consultation Today"
+  },
+  web3forms: {
+    access_key: "bb04b4cb-6bff-4bd4-b247-49327b30ba3f"
   }
 };
 

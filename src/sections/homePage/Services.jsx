@@ -9,10 +9,10 @@ const Services = () => {
     title: srv.title,
     desc: srv.description,
     image: idx === 0 
-      ? 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80' 
+      ? '/assets/projects/pentagon-47.jpg' 
       : idx === 1 
-      ? 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80'
-      : 'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=600&q=80',
+      ? '/assets/projects/pentagon-48.jpg'
+      : '/assets/projects/pentagon-49.jpg',
     details: content.services.rooms.map(room => room.title),
     icon: idx === 0 ? (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
@@ -86,7 +86,12 @@ const Services = () => {
 
                   {/* Absolute Popup Card that appears on right side */}
                   <div className="absolute right-0 top-1/2 -translate-y-1/2 z-[100] w-[340px] h-[360px] rounded-[1.5rem] overflow-hidden opacity-0 invisible scale-95 group-hover:opacity-100 group-hover:visible group-hover:scale-100 group-hover:pointer-events-auto shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 transition-all duration-500 origin-center hidden lg:block mr-8 pointer-events-none">
-                    <img src={srv.image} className="absolute inset-0 w-full h-full object-cover" alt={srv.title} />
+                    <img 
+                      src={srv.image} 
+                      className="absolute inset-0 w-full h-full object-cover" 
+                      alt={srv.title} 
+                      loading="lazy"
+                    />
                     {/* Glassmorphism Inner Card Overlay */}
                     <div className="absolute inset-3 rounded-[1.2rem] bg-gradient-to-br from-primary/65 to-primary/50 backdrop-blur-xs p-7 flex flex-col justify-center border border-white/10">
                       <p className="text-white/80 text-[14px] leading-relaxed mb-6 font-text">

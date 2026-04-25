@@ -17,11 +17,14 @@ const ProjectDetail = lazy(() => import("./ProjectDetail"));
 const ExecutionDelivery = lazy(() => import("./ExecutionDelivery"));
 const BlogPage = lazy(() => import("./BlogPage"));
 const BlogDetails = lazy(() => import("./BlogDetails"));
+const ThankYou = lazy(() => import("./ThankYou"));
 const SmartHome = lazy(() => import("./blog/SmartHome"));
 const MinimalistInterior = lazy(() => import("./blog/MinimalistInterior"));
 const SustainableArchitecture = lazy(() => import("./blog/SustainableArchitecture"));
 const EcoLiving = lazy(() => import("./blog/EcoLiving"));
 const ColorTrends = lazy(() => import("./blog/ColorTrends"));
+
+import WhatsAppFloatButton from "./WhatsAppFloatButton";
 
 function App() {
   const [loading, setLoading] = useState(() => {
@@ -65,7 +68,10 @@ function App() {
             <Route path="/blog/eco" element={<EcoLiving />} />
             <Route path="/blog/colors" element={<ColorTrends />} />
             <Route path="/blog/details" element={<BlogDetails />} />
+            <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/contact/status=thankyou" element={<ThankYou />} />
           </Routes>
+          <WhatsAppFloatButton />
         </Suspense>
       </Router>
     </>

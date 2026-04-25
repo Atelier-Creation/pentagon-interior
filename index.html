@@ -2,19 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/fav-logo.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Preconnect to Font Servers -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://images.unsplash.com">
-    <link rel="preconnect" href="https://randomuser.me">
-    <link rel="preconnect" href="https://decoria.steelthemes.com/demo/">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Outfit:wght@100..900&display=swap" as="style">
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     <!-- Preload LCP Image -->
-    <link rel="preload" as="image" href="/assets/hero-1.jpg" />
+    <link rel="preload" as="image" href="/assets/hero-1.jpg" fetchpriority="high" />
 
     <!-- Primary Meta Tags -->
     <title>Pentagon Interior | Luxurious & Premium Interior Design Factory</title>
@@ -44,5 +42,6 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
   </body>
 </html>

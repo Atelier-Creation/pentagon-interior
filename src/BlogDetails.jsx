@@ -120,7 +120,7 @@ export default function BlogDetails() {
 
           <div className="relative mb-10 rounded-[40px] overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1505691938895-1758d7feb511"
+              src="/assets/projects/pentagon-14.jpg"
               className="absolute inset-0 w-full h-full object-cover"
               alt=""
             />

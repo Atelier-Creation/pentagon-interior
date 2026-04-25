@@ -8,10 +8,12 @@ export default function PromoVideo() {
   return (
     <section className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
 
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${image})` }}
-      ></div>
+      <img 
+        src={image} 
+        alt="" 
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
 
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/40"></div>

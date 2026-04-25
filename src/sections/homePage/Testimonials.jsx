@@ -10,7 +10,7 @@ const Testimonials = () => {
   return (
     <section className="relative py-5 md:py-28 bg-[#fff9f5] font-text overflow-hidden">
       {/* The Background Plus Pattern */}
-      <div className="absolute inset-0 bg-[url('https://decoria.steelthemes.com/demo/wp-content/uploads/2025/11/pattern-dot-1-1.png')] bg-center bg-cover opacity-10 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-primary/5 bg-center bg-cover opacity-10 pointer-events-none"></div>
       
       <div className="container relative mx-auto px-4 z-10 mb-20 flex flex-col items-center text-center">
         {/* BADGE */}

@@ -12,7 +12,10 @@ import {
 
 import { Helmet } from 'react-helmet-async';
 
+import { useNavigate } from "react-router-dom";
+
 export default function Contact() {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   
   return (
@@ -53,11 +56,11 @@ export default function Contact() {
         <div className="absolute inset-0 pointer-events-none">
           <div
             className="absolute right-0 top-0 h-full w-full md:w-[60%]"
-            style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1541888941259-7a974dfb9a51?q=80&w=2070&auto=format&fit=crop')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            // style={{
+            //   backgroundImage: "url('/assets/projects/pentagon-16.jpg')",
+            //   backgroundSize: "cover",
+            //   backgroundPosition: "center",
+            // }}
           >
             <div className="absolute inset-0 bg-primary/60"></div>
           </div>
@@ -78,26 +81,64 @@ export default function Contact() {
 
             {/* FORM */}
             <div className="bg-white/95 backdrop-blur-md p-6 md:p-12 rounded-3xl shadow-2xl text-black max-w-xl border border-gray-200">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Name" />
-                <input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Email" />
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Subject" />
-                <input className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Phone" />
-              </div>
-              <textarea
-                placeholder="Your message"
-                className="w-full p-4 border border-gray-300 rounded-xl h-36 mb-4 focus:outline-none focus:ring-2 focus:ring-primary transition"
-              ></textarea>
-              <button className="flex items-center gap-3 border border-primary rounded-full px-6 py-3 group hover:bg-primary transition">
-                <span className="w-10 h-10 flex items-center justify-center rounded-full border border-primary group-hover:bg-white group-hover:text-primary transition">
-                  →
-                </span>
-                <span className="text-primary group-hover:text-white font-medium">
-                  Submit
-                </span>
-              </button>
+              <form 
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  const btn = e.target.querySelector('button');
+                  const btnText = btn.querySelector('.btn-text');
+                  const originalText = btnText.innerText;
+                  btnText.innerText = "Sending...";
+                  btn.disabled = true;
+
+                  const formData = new FormData(e.target);
+                  formData.append("access_key", content.web3forms.access_key);
+
+                  try {
+                    const response = await fetch("https://api.web3forms.com/submit", {
+                      method: "POST",
+                      body: formData
+                    });
+                    const data = await response.json();
+                    if (data.success) {
+                      navigate('/thank-you');
+                    } else {
+                      btnText.innerText = "Error!";
+                    }
+                  } catch (err) {
+                    btnText.innerText = "Error!";
+                  } finally {
+                    setTimeout(() => {
+                      btnText.innerText = originalText;
+                      btn.disabled = false;
+                    }, 3000);
+                  }
+                }}
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <input name="name" required className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Name" />
+                  <input name="email" required type="email" className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Email" />
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <input name="subject" required className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Subject" />
+                  <input name="phone" required className="p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition" placeholder="Phone" />
+                </div>
+                <textarea
+                  name="message"
+                  required
+                  placeholder="Your message"
+                  className="w-full p-4 border border-gray-300 rounded-xl h-36 mb-4 focus:outline-none focus:ring-2 focus:ring-primary transition"
+                ></textarea>
+                <div className="h-captcha mb-4" data-captcha="true"></div>
+
+                <button type="submit" className="flex items-center gap-3 border border-primary rounded-full px-6 py-3 group hover:bg-primary transition disabled:opacity-50 disabled:cursor-not-allowed">
+                  <span className="w-10 h-10 flex items-center justify-center rounded-full border border-primary group-hover:bg-white group-hover:text-primary transition">
+                    →
+                  </span>
+                  <span className="text-primary group-hover:text-white font-medium btn-text">
+                    Submit
+                  </span>
+                </button>
+              </form>
             </div>
           </div>
 

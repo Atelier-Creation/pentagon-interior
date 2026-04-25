@@ -68,6 +68,7 @@ export default function HowWeWork() {
             src={`${step.image}?auto=format&fit=crop&w=600&q=80`}
             className="w-full h-full object-cover rounded-full"
             alt=""
+            loading="lazy"
           />
         </div>
 

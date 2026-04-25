@@ -109,7 +109,7 @@ export default function Services() {
       <section
         className="py-16 md:py-28 px-4 md:px-6 min-h-[500px] md:min-h-[650px] text-white relative"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2070&auto=format&fit=crop')",
+          backgroundImage: "url('/assets/projects/pentagon-17.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

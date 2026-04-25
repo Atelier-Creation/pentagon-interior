@@ -70,7 +70,7 @@ const About = () => {
               {/* Background Image (Lower Half) */}
               <div className="absolute bottom-0 left-0 right-0 h-[45%] z-10 w-full overflow-hidden bg-gray-100">
                 <img
-                  src="https://decoria.steelthemes.com/demo/wp-content/uploads/2025/10/decoria-home-1-slider-1-1-min.jpg"
+                  src="/assets/projects/pentagon-11.jpg"
                   alt="Architect at work"
                   className="w-full h-full object-cover object-top"
                   loading="lazy"
@@ -143,7 +143,7 @@ const About = () => {
             {/* The Background Dark Box */}
             <div className="bg-primary rounded-t-[2.5rem] rounded-b-[15rem] w-full relative overflow-hidden h-[400px] sm:h-[450px] flex flex-col items-center text-center shadow-md pt-12 pb-8">
               {/* Internal Image layer */}
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&w=600&q=80')] bg-cover bg-center mix-blend-overlay opacity-30"></div>
+              <div className="absolute inset-0 bg-[url('/assets/projects/pentagon-10.jpg')] bg-cover bg-center mix-blend-overlay opacity-30"></div>
               {/* Gradient overlay for readability */}
               <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/60 to-primary/90 z-10"></div>
 
@@ -165,11 +165,11 @@ const About = () => {
 
                 {/* Avatar Group */}
                 <div className="flex items-center justify-center -space-x-4 mb-2 relative">
-                  <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=150&q=80" alt="Reviewer" className="w-[66px] h-[66px] rounded-full border-[3px] border-white object-cover" loading="lazy" />
+                  <img src="/assets/projects/pentagon-12.jpg" alt="Reviewer" width="66" height="66" className="w-[66px] h-[66px] rounded-full border-[3px] border-white object-cover" loading="lazy" />
                   <div className="w-[76px] h-[76px] rounded-full border-[3px] border-white bg-primary text-white flex items-center justify-center font-bold text-[22px] z-10 font-sans shadow-md">
                     4.5
                   </div>
-                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Reviewer" className="w-[66px] h-[66px] rounded-full border-[3px] border-white object-cover z-0" loading="lazy" />
+                  <img src="/assets/projects/pentagon-13.jpg" alt="Reviewer" width="66" height="66" className="w-[66px] h-[66px] rounded-full border-[3px] border-white object-cover z-0" loading="lazy" />
                 </div>
 
               </div>

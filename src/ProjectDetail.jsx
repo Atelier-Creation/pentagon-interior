@@ -209,48 +209,78 @@ const ProjectDetail = () => {
         {/* 🔹 GALLERY SECTION */}
         <section className="py-10 bg-[#fffbf3]">
           <div className="container mx-auto px-4 max-w-7xl">
-            <Swiper
-              modules={[Autoplay, Pagination]}
-              spaceBetween={30}
-              slidesPerView={1}
-              pagination={{ clickable: true }}
-              autoplay={{ delay: 5000 }}
-              loop={project.gallery.length > 2}
-              className="rounded-[2rem] overflow-hidden shadow-xl h-[250px] sm:h-[300px] md:h-[700px]"
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
             >
-              {project.gallery.map((img, i) => (
-                <SwiperSlide key={i}>
-                  <img src={img} alt="Gallery" className="w-full h-full object-cover" />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+              <Swiper
+                modules={[Autoplay, Pagination, Navigation]}
+                spaceBetween={30}
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+                navigation={true}
+                autoplay={{ delay: 5000 }}
+                loop={project.gallery.length > 2}
+                className="rounded-[2rem] overflow-hidden shadow-2xl h-[300px] sm:h-[400px] md:h-[750px]"
+              >
+                {project.gallery.map((img, i) => (
+                  <SwiperSlide key={i}>
+                    <img src={img} alt="Gallery" className="w-full h-full object-cover" />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </motion.div>
           </div>
         </section>
 
         {/* 🔹 RELATED PROJECTS */}
-        <section className="py-8 md:py-14 bg-white border-t border-gray-100">
+        <section className="py-16 md:py-24 bg-white border-t border-gray-100">
           <div className="container mx-auto px-4 max-w-7xl">
-            <div className="flex items-end justify-between mb-16">
-              <div>
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
                 <span className="text-primary font-bold uppercase tracking-[0.2em] text-[11px] block mb-4">Discover More</span>
                 <h2 className="text-4xl md:text-5xl font-bold font-sans tracking-tight">Our Exceptional Portfolios</h2>
-              </div>
-              <Link to="/projects" className="hidden md:flex items-center gap-3 bg-gray-50 hover:bg-primary text-text-main hover:text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-500 group">
-                All Projects
-                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <Link to="/projects" className="flex items-center gap-3 bg-gray-50 hover:bg-primary text-text-main hover:text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-500 group">
+                  All Projects
+                  <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </motion.div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {content.projects.featured.slice(0, 3).map((item, idx) => (
-                <Link key={idx} to={`/project/${item.id}`} className="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-white shadow-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-                  <img src={item.image} alt={item.title} className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
-                  <div className="absolute inset-x-8 bottom-8 p-1 flex flex-col justify-end text-white">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 opacity-70">{item.category}</span>
-                      <h4 className="text-xl font-bold font-sans group-hover:-translate-y-2 transition-transform duration-300">{item.title}</h4>
-                  </div>
-                </Link>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {content.projects.featured.filter(p => p.id !== parseInt(id)).slice(0, 3).map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                >
+                  <Link to={`/project/${item.id}`} className="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-white shadow-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 flex flex-col">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                    <div className="absolute inset-x-8 bottom-8 p-1 flex flex-col justify-end text-white">
+                        <span className="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 opacity-70">{item.category}</span>
+                        <h4 className="text-xl md:text-2xl font-bold font-sans group-hover:-translate-y-2 transition-transform duration-300">{item.title}</h4>
+                        <div className="mt-4 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <span className="text-[10px] font-bold uppercase tracking-widest">View Case Study</span>
+                          <ArrowRight size={14} />
+                        </div>
+                    </div>
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </div>

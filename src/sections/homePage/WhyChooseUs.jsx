@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
               viewport={{ once: true }}
               className="w-full lg:w-[25%] relative flex flex-col items-center justify-center h-[520px] hidden md:flex"
             >
-              <img src={lampImg} alt="Pendant Lamp Diagram" className="absolute top-0 w-auto h-full object-contain z-10 drop-shadow-xl" />
+              <img src={lampImg} alt="Pendant Lamp Diagram" className="absolute top-0 w-auto h-full object-contain z-10 drop-shadow-xl" loading="lazy" />
               
               <div className="absolute top-[30%] lg:top-[1%] left-1/2 -translate-x-1/2 z-20 w-[180px] h-[180px] lg:w-[200px] lg:h-[200px] flex items-center justify-center">
                 <svg viewBox="0 0 160 160" className="absolute inset-0 w-full h-full animate-[spin_12s_linear_infinite]">
@@ -83,7 +83,7 @@ const WhyChooseUs = () => {
                {/* Bottom Signature Endorsement */}
                <div className="mt-10 flex items-center gap-6 border-t border-gray-200 pt-7 w-[90%]">
                  <div className="w-[110px] shrink-0 opacity-80">
-                   <img src={signImg} alt="Signature" className="w-full object-contain" />
+                   <img src={signImg} alt="Signature" className="w-full object-contain" loading="lazy" />
                  </div>
                  <div>
                    <h4 className="text-[15px] font-bold text-[#e5af14] font-sans">Ilam Bharathi,</h4>
